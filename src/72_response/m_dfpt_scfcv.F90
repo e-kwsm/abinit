@@ -1930,7 +1930,7 @@ end subroutine newfermie1
 !!    Computations are done either on the fine FFT grid or the coarse grid (depending on dtset%pawmixdg)
 !!    All variables (nfft,ngfft,mgfft) refer to the fine FFT grid.
 !!    All arrays (densities/potentials...) are computed on this fine FFT grid.
-!!    Developpers have to be careful when introducing others arrays:
+!!    Developers have to be careful when introducing others arrays:
 !!      they have to be stored on the fine FFT grid.
 !!  In case of norm-conserving calculations the FFT grid is the usual FFT grid.
 !!
@@ -2063,7 +2063,7 @@ subroutine dfpt_newvtr(cplex,dbl_nnsclo,dielar,dtset,etotal,ffttomix,&
 & dtset%paral_kgb,qphon,rprimd,vresid0,vrespc)
 
 !PAW only : precondition the rhoij quantities (augmentation occupancies) residuals.
-!Use a simple preconditionning with the same mixing factor
+!Use a simple preconditioning with the same mixing factor
 !as the model dielectric function.
  if (usepaw==1.and.my_natom>0) then
    ABI_ALLOCATE(rhoijrespc,(npawmix))

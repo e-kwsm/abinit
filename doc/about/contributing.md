@@ -206,5 +206,5 @@ available to Xavier.
 e. Xavier thanks David very much, transfers the work to the official version
 5.5.y and performs the final modification of the names of the (new) input
 variables, including the propagation through the routines that were not
-allocated to the developper.
+allocated to the developer.
 

@@ -9,7 +9,7 @@
 #
 # (c) Oleg Rubel	Jan. 20, 2010
 
-# debuging option: debug=0 - no debug; debug>1 - print extended output
+# debugging option: debug=0 - no debug; debug>1 - print extended output
 debug=1
 
 # check if the file name is speciefied

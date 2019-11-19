@@ -211,7 +211,7 @@ end subroutine frskerker1__newvres
 !! frskerker1__pf
 !!
 !! FUNCTION
-!! penalty function associated with the preconditionned residuals
+!! penalty function associated with the preconditioned residuals
 !!
 !! INPUTS
 !!

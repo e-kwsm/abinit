@@ -50,7 +50,7 @@ class About(QtGui.QWidget):
                           +'-the RDF is corrected\n'\
                           +'-add integral of the RDF\n'\
                           +'-add angular distribution function (ADF)\n'\
-                          +'-add neibhor distribution function (NDF)\n'\
+                          +'-add neighbor distribution function (NDF)\n'\
                           +'-add deconvolution of the RDF\n'\
                           +'-add survival probability (BETA)\n'\
                           +'-add graphic options for axis view : XY XZ or YZ\n'\
@@ -65,11 +65,11 @@ class About(QtGui.QWidget):
                           +'-mean squared displacement calculation\n'\
                           +'\n03/18/2013 -- Version 1.0.5'+'\n'\
                           +'-no windows version can read input file\n'\
-                          +'-add fotran calculation for g(r)\n'\
-                          +'-add fotran calculation for average\n'\
-                          +'-add fotran calculation for standard deviation\n'\
+                          +'-add fortran calculation for g(r)\n'\
+                          +'-add fortran calculation for average\n'\
+                          +'-add fortran calculation for standard deviation\n'\
                           +'\n02/12/2013 -- Version 1.0.4'+'\n'\
-                          +'-Corecting bug relating to the g(r)\n'\
+                          +'-Correcting bug relating to the g(r)\n'\
                           +'\n02/12/2013 -- Version 1.0.3'+'\n'\
                           +'-Reading file use threading\n'\
                           +'-Change the loading bar when reading file\n'\

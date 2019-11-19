@@ -3201,7 +3201,7 @@ subroutine setup_sigma(codvsn,wfk_fname,acell,rprim,ngfftf,Dtset,Dtfil,Psps,Pawt
  !
  ! === Find optimal value for G-sphere enlargment due to oscillator matrix elements ===
  ! * Here I have to be sure that Qmesh%bz is always inside the BZ, not always true size bz is buggy
- ! * -one is used because we loop over all the possibile differences, unlike screening
+ ! * -one is used because we loop over all the possible differences, unlike screening
 
  call get_ng0sh(Sigp%nkptgw,Sigp%kptgw,Kmesh%nbz,Kmesh%bz,Qmesh%nbz,Qmesh%bz,-one,ng0sh_opt)
  call wrtout(std_out, sjoin(' Optimal value for ng0sh ', ltoa(ng0sh_opt)), "COLL")

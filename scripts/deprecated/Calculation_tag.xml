@@ -56,7 +56,7 @@
 <!--45--><KEYBOARDENTRY instruction='Preconditioning of the residual potential to be transferred in the SCF (Default 1.0)' variablename='diemix' textlen='1' tag='45'/>
 <!--46--><KEYBOARDENTRY instruction='Give model for the Dielectric Macroscopic constant (speed up SCF procedure, Default 1d6)' variablename='diemac' textlen='1' tag='46'/>
 <!--47--><MOUSEENTRY instruction='Control the self consistency' tag='47'>
-<!--48--><OPTION description='1.  Get the largest eigenvalue of the SCF cycle (developper option)' variablename='iscf' variablevalue='1' tag='48'/>
+<!--48--><OPTION description='1.  Get the largest eigenvalue of the SCF cycle (developer option)' variablename='iscf' variablevalue='1' tag='48'/>
 <!--49--><OPTION description='2.  SCF cycle, simple mixing of the potential' variablename='iscf' variablevalue='2' tag='49'/>
 <!--50--><OPTION description='3.  SCF cycle, Anderson mixing of the potential' variablename='iscf' variablevalue='3' tag='50'/>
 <!--51--><OPTION description='4.  SCF cycle, Anderson mixing of the potential based on the two previous iterations' variablename='iscf' variablevalue='4' tag='51'/>

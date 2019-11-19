@@ -81,7 +81,7 @@ MODULE m_invovl
 
    real(dp), allocatable :: inv_s_approx(:,:,:,:)
    ! inv_s_approx(cplx, lmnmax, lmnmax, ntypat)
-   ! preconditionner
+   ! preconditioner
 
 end type invovl_kpt_type
 !!***
@@ -702,7 +702,7 @@ subroutine solve_inner(invovl, ham, cplx, mpi_enreg, proj, ndat, sm1proj, PtPsm1
    end if
    previous_maxerr=maxerr
 
-   ! add preconditionned residual
+   ! add preconditioned residual
    call apply_block(ham, cplx, invovl%inv_s_approx, nprojs, ndat, resid, precondresid)
    sm1proj = sm1proj + precondresid
  end do

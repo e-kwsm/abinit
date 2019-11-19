@@ -828,7 +828,7 @@ end subroutine anharmonics_terms_evaluateElastic
 !!  anharmonics_terms_evaluateIFCStrainCoupling
 !!
 !! FUNCTION
-!!  This fonction compute the harmonic part of the energy
+!!  This function compute the harmonic part of the energy
 !!  of the supercell in the eff_pot
 !! INPUTS
 !!  strain_phonon(6)<type(ifc_type) = strain-phonon coupling

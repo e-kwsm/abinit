@@ -279,7 +279,7 @@ subroutine effective_potential_file_read(filename,eff_pot,inp,comm,hist)
     if (.not.(present(inp))) then
       write(message, '(4a)' )&
 &        ' effective_potential_file_read: you need to give input file to compute ',&
-&        'the response fonction from DDB file ',ch10
+&        'the response function from DDB file ',ch10
       MSG_ERROR(message)
     end if
 

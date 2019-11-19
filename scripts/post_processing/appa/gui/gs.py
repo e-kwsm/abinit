@@ -169,7 +169,7 @@ class Ouput_GS(QtGui.QWidget):
 	    return res
 
     def GraphOutput(self):
-	#The purpose of this fonction is to create or update
+	#The purpose of this function is to create or update
 	#the graph of the output file
 	if self.checkbox1.isChecked():
 		

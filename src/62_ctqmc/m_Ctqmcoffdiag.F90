@@ -2965,7 +2965,7 @@ SUBROUTINE Ctqmcoffdiag_measN(op, iflavor, updated)
     op%measN(2,iflavor) = op%measN(2,iflavor) + op%measN(4,iflavor)
 
 !  --- Compute the occupation for this configuration (will be put in
-!  --- op%measN(1,iflavor) at the next occurence of updated=.true.), with
+!  --- op%measN(1,iflavor) at the next occurrence of updated=.true.), with
 !  --- the corresponding weight  op%measN(4,iflavor) (we do not now it yet)
     op%measN(3,iflavor) = ImpurityOperator_measN(op%impurity)
 
@@ -4729,7 +4729,7 @@ END SUBROUTINE Ctqmcoffdiag_printPerturbation
 !!  Ctqmcoffdiag_printCorrelation
 !!
 !! FUNCTION
-!!  print correlation fonctions
+!!  print correlation functions
 !!
 !! COPYRIGHT
 !!  Copyright (C) 2013 ABINIT group (J. Bieder)

@@ -16,7 +16,7 @@
 !! For the initials of contributors, see ~abinit/doc/developers/contributors.txt.
 !!
 !! NOTES
-!!  FOR DEVELOPPERS: in order to preserve the portability of libPAW library,
+!!  FOR DEVELOPERS: in order to preserve the portability of libPAW library,
 !!  please consult ~abinit/src/??_libpaw/libpaw-coding-rules.txt
 !!
 !! SOURCE
@@ -4550,7 +4550,7 @@ end subroutine pawdijfr
 !!  paw_ij(natom)%cplex_dij=1 if dij are REAL, 2 if they are COMPLEX
 !!  paw_ij(natom)%lmn_size=number of (l,m,n) elements for the paw basis
 !!  paw_ij(natom)%nspden=number of spin-density components
-!!  paw_ij(natom)%nsppol=number of independant spin-density components
+!!  paw_ij(natom)%nsppol=number of independent spin-density components
 !!  paw_ij(natom)%dij(lmn2_size,nspden)=non-symmetrized paw dij quantities
 !!  pawang <type(pawang_type)>=angular mesh discretization and related data
 !!  pawprtvol=control print volume and debugging output for PAW
@@ -5297,7 +5297,7 @@ end subroutine symdij
 !!  paw_ij(natom)%cplex_dij=1 if dij are REAL, 2 if they are COMPLEX
 !!  paw_ij(natom)%lmn_size=number of (l,m,n) elements for the paw basis
 !!  paw_ij(natom)%nspden=number of spin-density components
-!!  paw_ij(natom)%nsppol=number of independant spin-density components
+!!  paw_ij(natom)%nsppol=number of independent spin-density components
 !!  paw_ij(natom)%dij(lmn2_size,nspden)=non-symmetrized paw dij quantities
 !!  pawang <type(pawang_type)>=angular mesh discretization and related data
 !!  pawprtvol=control print volume and debugging output for PAW

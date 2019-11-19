@@ -31,7 +31,7 @@ class xcopier(copier):
                  ouf=sys.stdout, dbg=0, dbgOuf=sys.stdout):
         ' set default regular expressions required by yaptu.copier '
 
-        # Default regexps for yaptu delimeters (what xyaptu tags are first converted to)
+        # Default regexps for yaptu delimiters (what xyaptu tags are first converted to)
         # These must be in sync with what is output in self._x2y_translate
         _reExpression = re.compile('_:@([^:@]+)@:_')
         _reOpen       = re.compile('\++yaptu ')
@@ -81,7 +81,7 @@ class xcopier(copier):
         yinf.close()
 
     def _x2y_translate(self, xStr):
-        ' Converts xyaptu markup in input string to yaptu delimeters '
+        ' Converts xyaptu markup in input string to yaptu delimiters '
 
         # Define regexps to match xml elements on.
         # The variations (all except for py-expr, py-close) we look for are:
@@ -356,7 +356,7 @@ expressions that do not evaluate are written out (surrounded with '! ' and ' !')
 specified output stream, and, if in debug mode, an error message is written out to the
 debug stream (which defaults to the output stream). To change this behaviour (and that of
 debug in general) you would need to override the methods _handleBadExps and _preprocessDbg
-in a sublcassed xyaptu.
+in a subclassed xyaptu.
 
 Mark-up syntax: A template may contain anything acceptable to targeted clients will
 accept, plus the following xyaptu tags and 1 expression, to mark-up python expressions and

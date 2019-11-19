@@ -320,7 +320,7 @@ subroutine opernl2(choice,dgxdis,dgxds,d2gxdis,d2gxds2,dgxdt,&
 
        if(istwf_k>=2)then
 !        Impose parity of resulting scalar (this operation could be
-!        replaced by direct saving of CPU time in the preceeding section)
+!        replaced by direct saving of CPU time in the preceding section)
          do iffkg=1,nffkg
            scalars(parity(iffkg),iffkg)=0.0d0
          end do
@@ -943,7 +943,7 @@ subroutine opernl3(choice,dgxdis,dgxds,d2gxdis,d2gxds2,dgxdt,&
 
        if(istwf_k>=2)then
 !        Impose parity of resulting scalar (this operation could be
-!        replaced by direct saving of CPU time in the preceeding section)
+!        replaced by direct saving of CPU time in the preceding section)
          do iffkg=1,nffkg
            scalars(parity(iffkg),iffkg)=0.0d0
          end do
@@ -1737,7 +1737,7 @@ subroutine opernl4a(choice,dgxdis,dgxds,d2gxdis,d2gxds2,dgxdt,&
 !      Now treat big nffkg
 
 !      2) Here, initialize big nffkg. The only difference with the
-!      preceeding case is that the intermediate results are stored.
+!      preceding case is that the intermediate results are stored.
 
        select case(jump)
 
@@ -2113,7 +2113,7 @@ subroutine opernl4a(choice,dgxdis,dgxds,d2gxdis,d2gxds2,dgxdt,&
 
      if(istwf_k>=2)then
 !      Impose parity of resulting scalar (this operation could be
-!      replaced by direct saving of CPU time in the preceeding section)
+!      replaced by direct saving of CPU time in the preceding section)
        do iffkg=1,nffkg
          scalars(parity(iffkg),iffkg)=0.0d0
        end do

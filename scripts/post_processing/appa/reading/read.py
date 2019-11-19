@@ -156,27 +156,27 @@ class MolecularDynamicFile:
               self.rprimd[:,:,1,:] = self.rprimd[:,:,1,:] * self.acell[1,:]
               self.rprimd[:,:,2,:] = self.rprimd[:,:,2,:] * self.acell[2,:]
           
-          #Reading velocity of particules:
-          message = "Unable to read the velocity of particules"
+          #Reading velocity of particles:
+          message = "Unable to read the velocity of particles"
           temp = commands.getoutput(' grep -A '+str(self.natom)+'  \"Cartesian velocities\" '\
                                           + self.namefile2 + '  | awk \'{print $1,$2,$3 }\'| sed \'/--/d\' | sed \'/Cartesian velocities (vel)/d\' ' )
           self.vel = np.reshape(np.array(temp.split()[0:self.n_image*self.Nbtime*self.natom*3],dtype=float),(self.Nbtime,self.n_image,self.natom,3))
 
-          #Reading position of particules (Cartesian):
-          message = "Unable to read the position of particules (cart)"
+          #Reading position of particles (Cartesian):
+          message = "Unable to read the position of particles (cart)"
           temp = commands.getoutput(' grep -A '+str(self.natom)+'  \"Cartesian coordinates\" '\
                                         + self.namefile2 + '  | awk \'{print $1,$2,$3 }\'| sed \'/--/d\' | sed \'/Cartesian coordinates/d\' ' )
           self.xcart = np.reshape(np.array(temp.split()[0:self.n_image*self.Nbtime*self.natom*3],dtype=float),(self.Nbtime,self.n_image,self.natom,3))
 
-          #Reading position of particules (Reduced):
-          message = "Unable to read the position of particules (red)"
+          #Reading position of particles (Reduced):
+          message = "Unable to read the position of particles (red)"
           temp = commands.getoutput(' grep -A '+str(self.natom)+'  \"Reduced coordinates\" '\
                                         + self.namefile2 + '  | awk \'{print $1,$2,$3 }\'| sed \'/--/d\' | sed \'/Reduced coordinates/d\' ' )
           
           self.xred = np.reshape(np.array(temp.split()[0:self.n_image*self.Nbtime*self.natom*3],dtype=float),(self.Nbtime,self.n_image,self.natom,3))
 
-          #Reading stress of particules:
-          message = "Unable to read stress of particules"
+          #Reading stress of particles:
+          message = "Unable to read stress of particles"
           if self.n_image==1:
               temp = commands.getoutput(' grep -A 3  \"Cartesian components of stress\" '+ self.namefile2\
                                         + '  | awk \'{print $3,$6 }\'| sed \'/^\s/d\' | sed \'/of/d\' ')
@@ -197,13 +197,13 @@ class MolecularDynamicFile:
           self.stress[ni:,:,4]= self.temp[:,:,3]
           del self.temp
             
-          #Reading the type of particules:
-          message = "Unable to read the type of particules"
+          #Reading the type of particles:
+          message = "Unable to read the type of particles"
           temp = commands.getoutput('grep -A '+str(int(self.natom/20))+ '  \" typat \" '+self.namefile2+' |  sed \'s/typat//\'')
           self.typat = np.array(temp.split(), dtype=int)
 
 
-          #Reading mass of particules:
+          #Reading mass of particles:
           temp = commands.getoutput('grep -P -A' + str(int(max(self.typat))/3) +' \'amu\s(.*)\' '+self.namefile2+' | sed \'s/amu//\'')
           self.amu = np.array(temp.split(), dtype=float)
 
@@ -277,13 +277,13 @@ class MolecularDynamicFile:
           #Reading acell:
           self.acell = np.reshape(getattr(self.hist_file.variables['acell'],module),(self.Nbtime,self.n_image,3))
           
-          #Reading stress of particules:
+          #Reading stress of particles:
           self.stress = np.reshape(getattr(self.hist_file.variables['strten'],module),(self.Nbtime,self.n_image,6))
 
-          #Reading the type of particules:
+          #Reading the type of particles:
           self.typat = getattr(self.nc_file.variables['typat'],module)
           
-          #Reading mass of particules:
+          #Reading mass of particles:
           self.amu = getattr(self.nc_file.variables['amu'],module)
           
           #Reading potential energy:
@@ -295,15 +295,15 @@ class MolecularDynamicFile:
           #Reading potential energy:
           self.mdtime = getattr(self.hist_file.variables['mdtime'],module)
             
-          #Reading position of particules:
+          #Reading position of particles:
           self.xcart = np.reshape(getattr(self.hist_file.variables['xcart'],module),(self.Nbtime,self.n_image,self.natom,3))
           self.xred = np.reshape(getattr(self.hist_file.variables['xred'] ,module),(self.Nbtime,self.n_image,self.natom,3))
 
-          #Reading forces of particules:
+          #Reading forces of particles:
           self.fcart = np.reshape(getattr(self.hist_file.variables['fcart'],module),(self.Nbtime,self.n_image,self.natom,3))
           self.fred  = np.reshape(getattr(self.hist_file.variables['fred'] ,module),(self.Nbtime,self.n_image,self.natom,3))
           
-          #Reading velocity of particules:
+          #Reading velocity of particles:
           self.vel = np.reshape(getattr(self.hist_file.variables['vel'],module),(self.Nbtime,self.n_image,self.natom,3))
           
           #Reading dtion:
@@ -314,7 +314,7 @@ class MolecularDynamicFile:
               # If dtion doesn't exist, it's set to default abinit value => 100 :
               self.dtion = 100
 
-          #Reading znucl of particules:
+          #Reading znucl of particles:
           self.znucl = getattr(self.nc_file.variables['znucl'],module)            
           #----------------------------------------------------
           self.goodFile = True
@@ -422,14 +422,14 @@ class MolecularDynamicFile:
           return 0
 
   def getTypat(self):
-      # return 1D array with the type of particules
+      # return 1D array with the type of particles
       if self.goodFile:
           return self.typat
       else:
           return 0
 
   def getNTypat(self):
-      # return the number of type of particules
+      # return the number of type of particles
       if self.goodFile:
           return np.max(self.typat)
       else:
@@ -450,7 +450,7 @@ class MolecularDynamicFile:
           return 0
 
   def getMass(self):
-      # return 1D array with the mass of all particules
+      # return 1D array with the mass of all particles
       if self.goodFile:
           return self.mass
       else:
@@ -492,7 +492,7 @@ class MolecularDynamicFile:
           return 0
 
   def getVel(self,image = 1):
-      # return 3D array with the velocity (vx,vy,z) for all particule at each time ( V[t][[at][vx,vy,vz]) for one image
+      # return 3D array with the velocity (vx,vy,z) for all particle at each time ( V[t][[at][vx,vy,vz]) for one image
       # between ni and nf
       if self.goodFile:
           if self.n_image == 1:
@@ -503,7 +503,7 @@ class MolecularDynamicFile:
           return 0
 
   def getXCart(self,image = 1):
-      # return 3D array with the position (x, y, z) for all particule at each time ( pos[t][at][x,y,z]) for one image in cartesian coordiantes
+      # return 3D array with the position (x, y, z) for all particle at each time ( pos[t][at][x,y,z]) for one image in cartesian coordinates
       # between ni and nf
       if self.goodFile:
           if self.n_image == 1:
@@ -514,7 +514,7 @@ class MolecularDynamicFile:
           return 0
 
   def getXRed(self,image = 1):
-      # return 3D array with the position (x, y, z) for all particule at each time ( pos[t][at][x,y,z]) for one image in reduced coordinates
+      # return 3D array with the position (x, y, z) for all particle at each time ( pos[t][at][x,y,z]) for one image in reduced coordinates
       # between ni and nf
       if self.goodFile:
           if self.n_image == 1:
@@ -525,7 +525,7 @@ class MolecularDynamicFile:
           return 0
 
   def getFCart(self,image = 1):
-      # return 3D array with the forces (x, y, z) for all particule at each time ( pos[t][at][x,y,z]) for one image in cartesian coordinates
+      # return 3D array with the forces (x, y, z) for all particle at each time ( pos[t][at][x,y,z]) for one image in cartesian coordinates
       # between ni and nf
       if self.goodFile:
           if self.n_image == 1:
@@ -536,7 +536,7 @@ class MolecularDynamicFile:
           return 0
 
   def getFRed(self,image = 1):
-      # return 3D array with the forces (x, y, z) for all particule at each time ( f[t][at][x,y,z]) for one image in reduced coordinates
+      # return 3D array with the forces (x, y, z) for all particle at each time ( f[t][at][x,y,z]) for one image in reduced coordinates
       # between ni and nf
       if self.goodFile:
           if self.n_image == 1:
@@ -547,7 +547,7 @@ class MolecularDynamicFile:
           return 0
 
   def getVelCentroid(self):
-      # return 3D array with the velocity (vx,vy,z) for all particule at each time ( V[t][[at][vx,vy,vz]) for the centroid
+      # return 3D array with the velocity (vx,vy,z) for all particle at each time ( V[t][[at][vx,vy,vz]) for the centroid
       # between ni and nf
       if self.goodFile:
           return np.sqrt(np.mean(self.vel[self.ni:self.nf,:]**2,axis=1))   # Temporarily because vel[t=0] = 0. put (ni-1) for start slicing at 0 
@@ -555,7 +555,7 @@ class MolecularDynamicFile:
           return 0
 
   def getXCartCentroid(self,xred=False):
-      # return 3D array with the position (x, y, z) for all particule at each time ( pos[t][at][x,y,z]) for the centroid
+      # return 3D array with the position (x, y, z) for all particle at each time ( pos[t][at][x,y,z]) for the centroid
       # between ni and nf
       if self.goodFile:
           if(xred):
@@ -778,7 +778,7 @@ class outputFile:
 		self.b = np.array(commands.getoutput('grep -A '+ str(len(self.E)+1)+ ' \"after computation\" '+ self.namefile+ '| sed \'/acell/!d\' | awk \'{print $3}\'').split(), dtype=float)
 		self.c = np.array(commands.getoutput('grep -A '+ str(len(self.E)+1)+ ' \"after computation\" '+ self.namefile+ '| sed \'/acell/!d\' | awk \'{print $4}\'').split(), dtype=float)
 
-		#Reading stress of particules:
+		#Reading stress of particles:
 		temp = commands.getoutput(' grep -A 3  \"stress tensor (GPa)\" '+ self.namefile + '|sed \'/Car/d\' |sed \'/--/d\' | awk \'{print $4,$7}\' ')
 		temp = temp.split()
 		s = (len(self.E),6)

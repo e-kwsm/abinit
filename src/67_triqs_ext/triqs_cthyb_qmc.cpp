@@ -114,7 +114,7 @@ void ctqmc_triqs_run(bool rot_inv, bool leg_measure, bool hist,     /*boolean*/
 
         // Include density-density term (J != 0) spin flips and pair hopping => density-density term case
     }else{ // if(rot_inv){
-	    if(rank==0 && verbo>0)std::cout <<"   == Rotationnaly Invariant Terms Included ==	"<< endl << endl;
+	    if(rank==0 && verbo>0)std::cout <<"   == Rotationally Invariant Terms Included ==	"<< endl << endl;
 	
 	    if(tot_not)
             H = init_fullHamiltonian( epsi, num_orbitals, umat_ijkl );

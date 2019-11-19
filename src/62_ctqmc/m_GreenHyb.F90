@@ -416,7 +416,7 @@ END SUBROUTINE GreenHyb_setOperW
 !! INPUTS
 !!  this=Green
 !!  Mthis=M this for the current flavor
-!!  ListCdagC_1=list of all creator and annhilator operators
+!!  ListCdagC_1=list of all creator and annihilator operators
 !!  updated=should we accumulate or not
 !!
 !! OUTPUT

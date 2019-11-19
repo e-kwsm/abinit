@@ -4636,7 +4636,7 @@ subroutine slk_single_fview_read(Slk_mat,uplo,etype,slk_type,offset_err,is_fortr
 !Note that the view assumes that the file pointer points to the first Fortran record marker.
  offset_err=0
  select case (uplo(1:1))
- case ("A","a") ! The entire global matrix is stored on disk. TODO can use contigous vectors for better access.
+ case ("A","a") ! The entire global matrix is stored on disk. TODO can use contiguous vectors for better access.
    ij_loc=0
    do jloc=1,Slk_mat%sizeb_local(2)
      do iloc=1,Slk_mat%sizeb_local(1)
@@ -4857,7 +4857,7 @@ subroutine slk_single_fview_write(Slk_mat,uplo,nelw,elw2slk,etype,slk_type,offse
  offset_err=0
  select case (uplo(1:1))
 
- case ("A","a") ! The entire global matrix is written on disk. TODO can use contigous vectors for better access.
+ case ("A","a") ! The entire global matrix is written on disk. TODO can use contiguous vectors for better access.
 
    grow_min=1; grow_max=nrows_glob
    gcol_min=1; gcol_max=ncols_glob

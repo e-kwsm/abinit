@@ -1057,7 +1057,7 @@ subroutine ingeo (acell,amu,dtset,bravais,&
      write(message, '(a,a,a,i0,a,i4,a,a,a)' )&
 &     'The input variables natfix, natfixx, natfixy and natfixz must be',ch10,&
 &     'between 0 and natom (= ',natom,'), while one of them is ',natfix,'.',ch10,&
-&     'Action: correct that occurence in your input file.'
+&     'Action: correct that occurrence in your input file.'
      MSG_ERROR(message)
    end if
 
@@ -1097,7 +1097,7 @@ subroutine ingeo (acell,amu,dtset,bravais,&
          write(message, '(a,a,a,i0,a,a,a)' )&
 &         'The input variables iatfix, iatfixx, iatfixy and iatfixz must be',ch10,&
 &         'between 1 and natom, while one of them is ',intarr(ii),'.',ch10,&
-&         'Action: correct that occurence in your input file.'
+&         'Action: correct that occurrence in your input file.'
          MSG_ERROR(message)
        end if
 !      Finally set the value of the internal iatfix array

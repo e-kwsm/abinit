@@ -171,7 +171,7 @@ piezoelectricity ...), for which some common additional information are needed:*
 **The additional information given by tutorial DFPT1 opens the door to:**
 
   * [The tutorial DFPT 2 (RF2 - response function 2)](rf2) presents the analysis of the DDBs that have been 
-    introduced in the preceeding tutorial RF1. The computation of the interatomic forces and the computation 
+    introduced in the preceding tutorial RF1. The computation of the interatomic forces and the computation
     of thermodynamical properties is an outcome of this tutorial.
 
   * [The tutorial on Optic](optic), the utility that allows to obtain

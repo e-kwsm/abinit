@@ -97,7 +97,7 @@ MODULE m_eig2d
 
   real(dp),allocatable :: eigr2d(:,:,:,:,:,:,:)
   ! eigr2d(2,mband*nsppol,nkpt,3,natom,3,natom)
-  ! Second-order derivative of eigenergies (real,im) at each
+  ! Second-order derivative of eigenenergies (real,im) at each
   ! spin,band,k-point,dir1,dir2,natom1,natom2 .
 
 
@@ -128,7 +128,7 @@ MODULE m_eig2d
 
   real(dp),allocatable :: fan2d(:,:,:,:,:,:,:)
   ! fan2d(2*mband*nsppol,nkpt,3,natom,3,natom,mband)
-  ! Second-order derivative of the eigenergies (real,im) at each
+  ! Second-order derivative of the eigenenergies (real,im) at each
   ! ispin,iband(real,im),k-point,dir1,dir2,natom1,natom2,jband
 
  end type fan_t
@@ -159,7 +159,7 @@ MODULE m_eig2d
 
   real(dp),allocatable :: gkk2d(:,:,:,:,:)
   ! gkk2d(2*mband*nsppol,nkpt,ncart,natom,mband)
-  ! Second-order derivative of the eigenergies (real,im) at each
+  ! Second-order derivative of the eigenenergies (real,im) at each
   ! ispin,iband(real,im),k-point,dir1,natom1,jband
 
  end type gkk_t

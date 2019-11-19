@@ -14,7 +14,7 @@
 !! For the initials of contributors, see ~abinit/doc/developers/contributors.txt .
 !!
 !! NOTES
-!! The new user is strongly adviced to read the
+!! The new user is strongly advised to read the
 !! latest version of the file ~abinit/doc/users/new_user_guide.html
 !! before trying to modify or even use the code.
 !! Even experienced users of the code should also be careful in coding,
@@ -494,7 +494,7 @@ program abinit
    nullify(results_out_all)
  end if
 
-!In prevision of the next two calls, some variables need to be transfered.
+!In prevision of the next two calls, some variables need to be transferred.
 !They concern the case ndtset<2, and nimage=1 so take first value.
  natom=dtsets(1)%natom ; nkpt=dtsets(1)%nkpt ; nsppol=dtsets(1)%nsppol
  nfft=dtsets(1)%nfft

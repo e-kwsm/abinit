@@ -42,7 +42,7 @@ class Netcdf_MD(QtGui.QWidget):
 
 
 #----------------------Constructor---------------------------#
-    #This class show the panel of the Molacular dynamics
+    #This class show the panel of the Molecular dynamics
     #Parameters :
     #                   - pfile  => objet of NetcdfFile
     #                   - punits => array with units
@@ -195,7 +195,7 @@ class Netcdf_MD(QtGui.QWidget):
 #        self.connect(self.RDF, QtCore.SIGNAL('clicked()'), self.showRDF)        
                 
         self.position = QtGui.QPushButton('Positions', self)
-        self.position.setStatusTip('Show positions of all the particules for all the step in 2D ')
+        self.position.setStatusTip('Show positions of all the particles for all the step in 2D ')
 #        self.connect(self.position, QtCore.SIGNAL('clicked()'), self.showPosition)
 
         self.MSD = QtGui.QPushButton('MSD(beta)', self)
@@ -650,7 +650,7 @@ class Netcdf_MD(QtGui.QWidget):
             self.GraphVAF
             #del self.vacf
             if (units == False):
-                #The velocity autocorelation will not be update if the units change
+                #The velocity autocorrelation will not be update if the units change
                 self.vacf = Analysis.Correlation(self.file1.getVel()).getCorrelationFunction(normalize = True)
                 x = linspace(self.ni,self.nf-1,len(self.vacf))# Temporarily !!!
                 self.GraphVAF.update(x,self.vacf,'step',"VAF",name = self.file1.getNameFile()+" VAF")        

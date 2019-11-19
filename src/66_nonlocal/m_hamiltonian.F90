@@ -674,7 +674,7 @@ end subroutine destroy_hamiltonian
 !!
 !! SIDE EFFECTS
 !!  Ham<gs_hamiltonian_type>=Structured datatype almost completely initialized:
-!!   * Basic variables and dimensions are transfered to the structure.
+!!   * Basic variables and dimensions are transferred to the structure.
 !!   * All pointers are allocated with correct dimensions.
 !!   * Quantities that do not depend on the k-point or spin are initialized.
 !!
@@ -1627,7 +1627,7 @@ end subroutine destroy_rf_hamiltonian
 !!
 !! SIDE EFFECTS
 !!  rf_Ham<rf_hamiltonian_type>=Structured datatype almost completely initialized:
-!!   * Basic variables and dimensions are transfered to the structure.
+!!   * Basic variables and dimensions are transferred to the structure.
 !!   * All pointers are allocated with correct dimensions.
 !!   * Quantities that do not depend on the k-point or spin are initialized.
 !!

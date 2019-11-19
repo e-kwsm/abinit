@@ -78,7 +78,7 @@
  diemix7 1
  diecut7 4.0
 
-# add to conserve old <6.10.x behaviour for the evaluation of susceptibilty matrix
+# add to conserve old <6.10.x behaviour for the evaluation of susceptibility matrix
 # (do not use)
  pawsushat 1
 

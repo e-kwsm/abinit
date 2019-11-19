@@ -13,7 +13,7 @@ wrapper scripts which will work only after a "make install" has been
 performed. These wrappers have been made available to facilitate the
 transition and will be removed in version 6.1 or 6.2.
 
-More precisely, this means that all occurences of "abinis" and "abinip"
+More precisely, this means that all occurrences of "abinis" and "abinip"
 in calculation scripts will have to be replaced by calls to "abinit", or
 by symbolic links. If you wish however to continue using concurrently a
 serial and a parallel version of Abinit, you'll have to build them

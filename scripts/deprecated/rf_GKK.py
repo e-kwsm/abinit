@@ -235,7 +235,7 @@ class system:
 # Usefull definition to avoid code duplications #
 #################################################
 def compute_dynmat(DDB):
-# Retrive the amu for each atom
+# Retrieve the amu for each atom
   amu = zeros(DDB.natom)
   for ii in N.arange(DDB.natom):
     jj = DDB.typat[ii]
@@ -656,7 +656,7 @@ def dynamic_zpm_temp(arguments,ddw_save,ddw_save2,type,temp_info,smearing,eig0,d
   return total_corr
 
 #########################################################################################################
-# Compute total weigth
+# Compute total weight
 def compute_wtq(arguments,type):
   if type == 1:
     nbqpt,wtq,eigq_files,DDB_files,EIGR2D_files,GKK_files = arguments

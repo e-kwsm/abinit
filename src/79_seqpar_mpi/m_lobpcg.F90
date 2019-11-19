@@ -77,12 +77,12 @@ CONTAINS
 !!  nspinor=number of spinorial components of the wavefunctions (on current proc)
 !!  $vect(vectsize,blocksize)=<G|H|C_{n,k}> for a block of bands$.
 !!  npw=number of planewaves at this k point.
-!!  optekin= 1 if the kinetic energy used in preconditionning is modified
+!!  optekin= 1 if the kinetic energy used in preconditioning is modified
 !!             according to Kresse, Furthmuller, PRB 54, 11169 (1996) [[cite:Kresse1996]]
 !!           0 otherwise
-!!  optpcon= 0 the TPA preconditionning matrix does not depend on band
-!!           1 the TPA preconditionning matrix (not modified)
-!!           2 the TPA preconditionning matrix is independant of iterationnumber
+!!  optpcon= 0 the TPA preconditioning matrix does not depend on band
+!!           1 the TPA preconditioning matrix (not modified)
+!!           2 the TPA preconditioning matrix is independent of iterationnumber
 !!  vectsize= size of vectors
 !!
 !! OUTPUT

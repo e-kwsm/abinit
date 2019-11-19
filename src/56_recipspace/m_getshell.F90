@@ -51,7 +51,7 @@ contains
 !!
 !! FUNCTION
 !! For each k-point, set up the shells of first neighbours and find
-!! the weigths required for the finite difference expression
+!! the weights required for the finite difference expression
 !! of Marzari and Vanderbilt (see PRB 56, 12847 (1997) [[cite:Marzari1997]]).
 !!
 !! INPUTS

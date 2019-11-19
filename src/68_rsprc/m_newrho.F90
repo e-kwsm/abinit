@@ -146,7 +146,7 @@ contains
 !!    Computations are done either on the fine FFT grid or the coarse grid (depending on dtset%pawmixdg)
 !!    All variables (nfft,ngfft,mgfft) refer to the fine FFT grid.
 !!    All arrays (densities/potentials...) are computed on this fine FFT grid.
-!!  ! Developpers have to be careful when introducing others arrays:
+!!  ! Developers have to be careful when introducing others arrays:
 !!      they have to be stored on the fine FFT grid (except f_fftgr).
 !!  In case of norm-conserving calculations the FFT grid is the usual FFT grid.
 !!

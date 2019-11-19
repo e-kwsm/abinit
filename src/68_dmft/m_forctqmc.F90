@@ -798,7 +798,7 @@ subroutine qmc_prep_ctqmc(cryst_struc,green,self,hu,paw_dmft,pawang,pawprtvol,we
 !  VARIABLES FOR CTQMC TESTS
  testcode = 0
  testrot  = 0
- opt_fk=0 ! for developpers to check Fourier transform and computes G0(tau)
+ opt_fk=0 ! for developers to check Fourier transform and computes G0(tau)
  opt_fk=1 ! usual case: for real calculations
 ! =================================================================
 

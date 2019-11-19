@@ -1,7 +1,7 @@
 # Hydrogen diatomic molecule --broyden minimization. acell much too small.
 # Multidataset testing : different k-points, with getxcart and getwfk
 # This is to determine the optimal xred, at different nkpt : convergence study.
-# Note that mkmem==0, unlike the preceeding test.
+# Note that mkmem==0, unlike the preceding test.
 
  getxcart -1
  getwfk -1

@@ -379,7 +379,7 @@ subroutine datafordmft(cryst_struc,cprj,dimcprj,dtset,eigen,fermie,&
                else
                  write(message,'(a,a,i4,i4,2a)')  ch10,&
 &                 '  Wrong use of dmftqmc_t2g',paw_dmft%dmftqmc_t2g,lpawu,ch10,&
-&                 ' Action: desactivate qmftqmc_t2g or use lpawu=1'
+&                 ' Action: deactivate qmftqmc_t2g or use lpawu=1'
                  MSG_ERROR(message)
                end if
              end if

@@ -556,7 +556,7 @@ Other related input variables are:
 The cases [[berryopt]] = -1,-2,-3, 4, 6, 7, 14, 16, and 17 have to be used with [[occopt]] = 1.
 
 The cases [[berryopt]] = -1 and 4, 6, 7, 14, 16, 17 are compatible with PAW,
-howevever, if in these cases one uses [[kptopt]] /= 3, one must also use only
+however, if in these cases one uses [[kptopt]] /= 3, one must also use only
 symmorphic symmetries (either because the space group is symmorphic or the
 variable [[symmorphi]] is set to zero).
 
@@ -2212,20 +2212,20 @@ Variable(
  '[[iprcel]] == 0': '[[diemix]]',
  '[[iscf]]<10': '[[diemix]]',
  'defaultval': '-[[diemix]]'}),
-    mnemonics="model DIElectric MIXing factor for the MAGgnetization",
+    mnemonics="model DIElectric MIXing factor for the MAGnetization",
     text="""
 Gives overall factor of the preconditioned residual magnetization/magnetic
 field to be transferred in the SCF cycle (see [[diemix]] for further
 information).
 For the time being, apply only when the SCF mixing is done on the density ([[iscf]] > =10).
 
-A negative value of [[diemixmag]] means that magnetization is only preconditionned
-by ABS([[diemixmag]]), without the use of any preconditionner.
+A negative value of [[diemixmag]] means that magnetization is only preconditioned
+by ABS([[diemixmag]]), without the use of any preconditioner.
 
 When SCF cycle has some difficulties to converge, changing the value of
 [[diemixmag]] can have a positive effect.
 In particular [[diemixmag]] = -4 is a good choice (i.e. [[diemixmag]] = 4, no other
-preconditionner on magnetization).
+preconditioner on magnetization).
 """,
 ),
 
@@ -2591,7 +2591,7 @@ Choice of solver for the Impurity model.
 
 The CT Hyb algorithm is described in [[cite:Werner2006]]. For a
 discussion of density-density approximation with respect with the
-rotationnally invariant formulation, see e.g. [[cite:Antipov2012]].
+rotationally invariant formulation, see e.g. [[cite:Antipov2012]].
 The ABINIT/CT Hyb implementation is discussed in [[cite:Gonze2016]].
 The TRIQS/CT Hyb implementation is described in [[cite:Seth2016]].
 Before using it, it has to be installed following instructions available [here](https://triqs.ipht.cnrs.fr/1.x/install.html).
@@ -3415,7 +3415,7 @@ This variable activates the interpolation of the electronic eigenvalues. It
 can be used to interpolate KS eigenvalues at the end of the GS run or to
 interpolate GW energies in sigma calculations ([[optdriver]] = 4). The k-path
 can be specified with [[kptbounds]] and [[nkpath]]. einterp consists of 4
-entries. The first element specificies the interpolation method.
+entries. The first element specifies the interpolation method.
 
   * 0 --> No interpolation (default)
   * 1 --> Star-function interpolation (Shankland-Koelling-Wood Fourier interpolation scheme, see [[cite:Pickett1988]]
@@ -4012,7 +4012,7 @@ algorithm, when the Fock operator is updated.
 
   1. If [[fockoptmix]] == 0: the SCF algorithm is not restarted
   (it continues to use the previous potential/density pairs without worrying).
-  2. If [[fockoptmix]] == 1: the SCF algorithm is restarted (the previous potential/density pairs are discarted).
+  2. If [[fockoptmix]] == 1: the SCF algorithm is restarted (the previous potential/density pairs are discarded).
 
 The second-to-last (dozen) digit governs the possible modification of the XC
 functional inside the SCF loop to take into account the lack of update of the
@@ -5376,7 +5376,7 @@ Variable(
     topics=['FrequencyMeshMBPT_expert'],
     dimensions="scalar",
     defaultval=0,
-    mnemonics="GW Contour Deformation FReQencies on REal axis - Use Tangent Grid",
+    mnemonics="GW Contour Deformation FReQuencies on REal axis - Use Tangent Grid",
     requires="[[optdriver]] in [3,4] and [[gwcalctyp]] in [2,9,12,19,22,29]",
     text="""
 [[gw_frqre_tangrid]] defines a nonuniform grid to be used in frequency, with
@@ -6462,7 +6462,7 @@ correction to the electronic eigenvalues.
 
   * If [[ieig2rf]] is set to 3, the second-order electronic eigenvalues will be
     calculated from the DFPT method (sum over states) but using a different part
-    of the code. This is equivalent to [[ieig2rf]] = 1 [debuging].
+    of the code. This is equivalent to [[ieig2rf]] = 1 [debugging].
 
   * If [[ieig2rf]] is set to 4, the second-order electronic eigenvalues will be
     calculated from the dynamical DFPT method (Sternheimer). The code will
@@ -7949,7 +7949,7 @@ Relevant only when [[positron]]/=0.
 Define the type of electron-positron correlation that is used in case of a
 electron-positron two-component DFT calculation.
 Define also the analytical formula of the enhancement factor used to compute
-the electron-positron annhilation rate:
+the electron-positron annihilation rate:
 
 Electron-positron correlation functional:
 
@@ -8174,7 +8174,7 @@ It is used to generate the circuit to be followed by the band structure, when
 [[kptopt]] is negative (it is not read if [[kptopt]] is zero or positive).
 
 There are abs([[kptopt]]) segments to be defined, each of which starting from
-the end point of the preceeding one. Thus, the number of points to be input is
+the end point of the preceding one. Thus, the number of points to be input is
 abs([[kptopt]])+1. They form a circuit starting at
 [[kptbounds]](1:3,1)/[[kptnrm]] and ending at
 [[kptbounds]](1:3,abs([[kptopt]])+1)/[[kptnrm]]. The number of divisions of
@@ -8424,7 +8424,7 @@ Variable(
     mnemonics="K-PoinTs re-Normalized and Shifted",
     characteristics=['[[INTERNAL_ONLY]]'],
     text="""
-If [[nqpt]] = 0, or if one is doing a reponse calculation, this internal
+If [[nqpt]] = 0, or if one is doing a response calculation, this internal
 variable is derived from [[kpt]] and [[kptnrm]]: [[kptns]](1:3,:)=
 [[kpt]](1:3,:)/ [[kptnrm]], so that it is [[kpt]] renormalized by [[kptnrm]].
 
@@ -8992,12 +8992,12 @@ See [[cite:Sheppard2008]].
   * 2 --> **Local Broyden-Fletcher-Goldfarb-Shanno (L-BFGS) algorithm**; each image along the band is minimized with a different instance of the BFGS optimizer.
 Compatible only with Nudged Elastic Band ([[imgmov]] = 5).
 See [[cite:Sheppard2008]].
-IN [[DEVELOP]]PMENT - NOT RELIABLE
+IN [[DEVELOP]]MENT - NOT RELIABLE
 
   * 3 --> **Global Broyden-Fletcher-Goldfarb-Shanno (GL-BFGS) algorithm**; all images along the band are minimized with a single instance of the BFGS optimizer.
 Compatible only with Nudged Elastic Band ([[imgmov]] = 5).
 See [[cite:Sheppard2008]].
-IN [[DEVELOP]]PMENT - NOT RELIABLE
+IN [[DEVELOP]]MENT - NOT RELIABLE
 
   * 4 --> **Fourth-order Runge-Kutta method**; the images along the band are moved every four steps (1 <=istep<=[[ntimimage]]) following the Runge-Kutta algorithm, the time step being [[fxcartfactor]].
 Compatible only with Simplified String Method ([[imgmov]] = 2 and
@@ -9048,7 +9048,7 @@ Variable(
 Used for the generation of alchemical pseudoatoms, that is, when [[ntypalch]]
 is non-zero.
 
-This array gives, for each type of alchemical pseudatom (there are
+This array gives, for each type of alchemical pseudoatom (there are
 [[ntypalch]] such pseudoatoms), the mixing coefficients of the basic
 [[npspalch]] pseudopotentials for alchemical use. For each type of alchemical
 pseudoatom, the sum of the mixing coefficients must equal 1.
@@ -9074,7 +9074,7 @@ Sr(0.75) potential will be:
                                ! for alchemical purposes, with znucl 56 (Ba)
                                ! and 38 (Sr).
       mixalch    0.25  0.75    ! For that unique pseudoatom to be
-                               ! generated, here are the mixing coeeficients,
+                               ! generated, here are the mixing coefficients,
                                ! to be used to combine the Ba and Sr pseudopotentials.
 
 
@@ -10436,13 +10436,13 @@ different contributions of 3rd derivatives of the energy are written in the
 output file (non time consuming).
 
 Higher values activate some internal tests for
-checking the implementation correctness (time consuming, not useable in parallel).
+checking the implementation correctness (time consuming, not usable in parallel).
 If [[nonlinear_info]] == 2, same effect than 1 and tests are done in non-linear 
 ([[optdriver]]==5 and [[usepead]] == 0).
 If [[nonlinear_info]] == 3, same effect than 1 and tests are done in rf2_init
 ([[rf2_dkdk]]/=0 or [[rf2_dkde]]/=0).
 If [[nonlinear_info]] == 4, same effect than 1 and tests are done in both non-linear and rf2_init.
-A line containining "NOT PASSED" (and other information) is added to the output file
+A line containing "NOT PASSED" (and other information) is added to the output file
 for each test that does not pass, otherwise nothing is printed. However, more information concerning
 the tests is always printed in the **standard** output file.
 """,
@@ -11896,7 +11896,7 @@ Variable(
     topics=['parallelism_basic'],
     dimensions="scalar",
     defaultval=1,
-    mnemonics="activate PARALelization over (paw) ATOMic sites",
+    mnemonics="activate PARALlelization over (paw) ATOMic sites",
     text="""
 Relevant only for PAW calculations.
 This keyword controls the parallel distribution of memory over atomic sites.
@@ -11912,7 +11912,7 @@ Variable(
     topics=['parallelism_basic'],
     dimensions="scalar",
     defaultval=0,
-    mnemonics="activate PARALelization over K-point, G-vectors and Bands",
+    mnemonics="activate PARALlelization over K-point, G-vectors and Bands",
     text="""
 **If paral_kgb is not explicitely put in the input file**, ABINIT
 automatically detects if the job has been sent in sequential or in parallel.
@@ -11953,7 +11953,7 @@ be optimal. To optimize the repartition use:
 **If paral_kgb=1** and **max_ncpus = n $\\ne$ 0** ABINIT will test automatically
 if all the processor numbers between 2 and n are convenient for a parallel
 calculation and print the possible values in the log file. A weight is
-attributed to each possible processors repartition. It is adviced to select a
+attributed to each possible processors repartition. It is advised to select a
 processor repartition for which the weight is high (as closed to the number of
 processors as possible). The code will then stop after the printing. This test
 can be done as well with a sequential as with a parallel version of the code.
@@ -12089,7 +12089,7 @@ function of the index of the k-point. The output can be readily plotted with
 the software [xmgrace](http://plasma-gate.weizmann.ac.il/Grace/) (e.g
 xmgrace FATBANDS_at0001_Ni_is2_l2_m-1). Relevant values are:
 
-  * 0: desactivated.
+  * 0: deactivated.
   * 1: The fatbands are only resolved in L.
   * 2: The fatbands are resolved in L and M.
 """,
@@ -12102,7 +12102,7 @@ Variable(
     topics=['PAW_expert'],
     dimensions="scalar",
     defaultval=10,
-    mnemonics="PAW - L angular momentum used to CUT the development in moments of the Densitites",
+    mnemonics="PAW - L angular momentum used to CUT the development in moments of the Densities",
     requires="[[usepaw]] == 1",
     text="""
 The expansion of the densities in angular momenta is performed up to
@@ -12158,7 +12158,7 @@ fine FFT grid (defined by [[pawecutdg]] or [[ngfftdg]]).
 If **pawmixdg=0** the density/potential is mixed in RECIPROCAL space using
 the coarse FFT grid (defined by [[ecut]] or [[ngfft]]). Only components of the
 coarse grid are mixed using the scheme defined by [[iscf]]; other components
-are only precondionned by [[diemix]] and simply mixed.
+are only preconditioned by [[diemix]] and simply mixed.
 This option is useful to save memory and does not affect numerical accuracy of
 converged results. If **pawmixdg=1**, density and corresponding residual are
 stored for previous iterations and are REAL arrays of size [[nfftdg]]. If
@@ -12551,7 +12551,7 @@ Ground-State calculation ([[iprcel]] > 0), the computation of the susceptibility
 matrix is required several times during the cycle. This computation is
 computer time consuming, especially -- within PAW -- because of the inclusion
 of additional terms due to the compensation charge density. As only a crude
-valuation of the susceptibilty matrix is needed (to evaluate a preconditioning
+valuation of the susceptibility matrix is needed (to evaluate a preconditioning
 matrix), the compensation charge contribution can be neglected to save CPU
 time (select [[pawsushat]] = 0). This approximation could be unfavourable in
 some cases; in the latter, we advise to put [[pawsushat]] = 1.
@@ -13205,8 +13205,8 @@ There are two typical cases which have to be differently treated:
 In that case, the positron is delocalized in the whole crystal. Its density is
 almost zero.
 Thus, the "zero density positron limit" has to be used. [[ixcpositron]] has to
-be choosen accordingly.
-In order to have the zero density positron limit it is adviced to follow these
+be chosen accordingly.
+In order to have the zero density positron limit it is advised to follow these
 points:
 
   * 1- Put a small positronic charge (by setting a [[posocc]] to a small value) **OR** use a big supercell.
@@ -14535,7 +14535,7 @@ little-endian default choice.
   * [[prtwant]] = 2 --> Use the **ABINIT- Wannier90** interface.
 
 ABINIT will produce the input files required by Wannier90 and it will run
-Wannier90 to produce the Maximally-locallized Wannier functions (see [
+Wannier90 to produce the Maximally-localized Wannier functions (see [
 http://www.wannier.org ](http://www.wannier.org) ).
 
 !!! Notes
@@ -15178,7 +15178,7 @@ Variable(
     topics=['Recursion_useful'],
     dimensions="scalar",
     defaultval=0,
-    mnemonics="RECursion - CUTing Radius",
+    mnemonics="RECursion - CUTting Radius",
     characteristics=['[[DEVELOP]]'],
     text="""
 Used in Recursion method ([[tfkinfunc]] = 2). Used to improve the computational
@@ -15610,8 +15610,8 @@ Variable(
     defaultval=0,
     mnemonics="Response Function, USER-defined",
     text="""
-Available to the developpers, to activate the use of ipert=natom+6 and
-ipert=natom+7, two sets of perturbations that the developpers can define.
+Available to the developers, to activate the use of ipert=natom+6 and
+ipert=natom+7, two sets of perturbations that the developers can define.
 
   * 0 --> no computations for ipert=natom+6 or ipert=natom+7
   * 1 --> response with respect to perturbation natom+6 will be computed
@@ -15619,13 +15619,13 @@ ipert=natom+7, two sets of perturbations that the developpers can define.
   * 3 --> responses with respect to perturbations natom+6 and natom+7 will be computed
 
 !!! important
-    In order to define and use correctly the new perturbations, the developper
+    In order to define and use correctly the new perturbations, the developer
     might have to include code lines or additional routines at the level of the
     following routines: dfpt_cgwf.F90, dfpt_dyout.F90, dfpt_symph.F90,
     dfpt_dyout.F90, dfpt_etot.F90, littlegroup_pert.F90, dfpt_looppert.F90,
     dfpt_mkcor.F90, dfpt_nstdy.F90, dfpt_nstwf.F90, respfn.F90, dfpt_scfcv.F90,
     irreducible_set_pert.F90, dfpt_vloca.F90, dfpt_vtorho.F90, dfpt_vtowfk.F90. In
-    these routines, the developper should pay a particular attention to the rfpert
+    these routines, the developer should pay a particular attention to the rfpert
     array, defined in the routine respfn (in m_respfn_driver.F90), as well as to the ipert local
     variable.
 """,
@@ -16697,7 +16697,7 @@ with [[tfkinfunc]] = 11. For the initialization steps, the [[tfw_toldfe]]
 criterion is used. When it is reached, then the Gradient Correction is added
 and the SCF cycle continues.
 Note: to obtain the convergence of a Molecular Dynamics simulation with TFW,
-it is necessary to find the best set of preconditionning parameters
+it is necessary to find the best set of preconditioning parameters
 ([[diemix]], [[diemac]], [[dielng]]) and the best value of [[npulayit]] (if
 the default Pulay mixing is used).
 
@@ -16811,9 +16811,9 @@ Variable(
     topics=['Wavelets_expert'],
     dimensions="scalar",
     defaultval=30,
-    mnemonics="TaiL maximum Number of PReConditionner Conjugate Gradient iterations",
+    mnemonics="TaiL maximum Number of PReConditioner Conjugate Gradient iterations",
     text="""
-This variable is similar to [[wvl_nprccg]] but for the preconditionner
+This variable is similar to [[wvl_nprccg]] but for the preconditioner
 iterations during the tail corrections (see [[tl_radius]]).
 """,
 ),
@@ -17710,7 +17710,7 @@ k-points convergence. Furthermore, the current implementation is compatible with
 pseudopentials, while [[usepead]]=1 is not. The drawback of the analytical method
 is one has to solve a second order Sternheimer equation before actually computing
 third derivatives of the energy, using [[rf2_dkdk]] and [[rf2_dkde]].
-This is not the most time-consumming part though.
+This is not the most time-consuming part though.
 Look at the inputs of related tests in the testsuite to see examples of the workflow.
 """,
 ),
@@ -18815,16 +18815,16 @@ The different possibilities are:
   For more information see [[cite:Bottin2008]]
 
   * [[wfoptalg]] = 10: (for PAW) standard state-by-state conjugate gradient algorithm, with no possibility to parallelize over the states,
-  but modified scheme described in [[cite:Kresse1996]] (modified kinetic energy, modified preconditionning, minimal orthogonalization, ...);
+  but modified scheme described in [[cite:Kresse1996]] (modified kinetic energy, modified preconditioning, minimal orthogonalization, ...);
 
   * [[wfoptalg]] = 14: the recommended for parallel code, the same as [[wfoptalg]] = 4 except that the preconditioning of the block vectors does not
   depend on the kinetic energy of each band, and the orthogonalization after the LOBPCG algorithm is no longer performed. The first modification increases the convergence and the second one the efficiency.
 
   * [[wfoptalg]] = 114: A new version of [[wfoptalg]] = 14 which is more efficient for few blocks and can take advantage of OpenMP if abinit is compiled with a multithreaded linear algebra library.
-  With more than 1 thread [[npfft]] shoud NOT be used for the time being.
+  With more than 1 thread [[npfft]] should NOT be used for the time being.
 
   * [[wfoptalg]] = 1: new algorithm based on Chebyshev filtering, designed for very large number of processors, in the regime
-  where LOBPCG does not scale anymore. It is not able to use preconditionning and therefore might converge slower than other algorithms.
+  where LOBPCG does not scale anymore. It is not able to use preconditioning and therefore might converge slower than other algorithms.
   By design, it will **not** converge the last bands: it is recommended to use slightly more bands than necessary.
   For usage with [[tolwfr]], it is imperative to use [[nbdbuf]]. For more performance, try [[use_gemm_nonlop]].
   For more information, see the [ performance guide ](../../theory/howto_chebfi.pdf) and the [[cite:Levitt2015]]. Status: experimental but usable.
@@ -18986,10 +18986,10 @@ Variable(
     topics=['Wavelets_expert'],
     dimensions="scalar",
     defaultval=5,
-    mnemonics="WaVeLet maximum Number of PReConditionner Conjugate Gradient iterations",
+    mnemonics="WaVeLet maximum Number of PReConditioner Conjugate Gradient iterations",
     text="""
 In the wavelet computation case, the wavefunctions are directly minimised
-using a real-space preconditionner. This preconditionner has internally some
+using a real-space preconditioner. This preconditioner has internally some
 conjugate gradient iterations. This value defines a boundary for the number of
 conjugate gradient iterations on each wavefunction convergence step.
 """,
@@ -19013,7 +19013,7 @@ provide starting coordinates).
 One and only one of [[xred]], [[xcart]] and [[xangst]] must be provided.
 The conversion factor between Bohr and Angstrom is 1 Bohr=0.5291772108
 Angstrom, see the [NIST site](http://physics.nist.gov/cuu/Constants/index.html).
-Atomic positions evolve if [[ionmov]]/=0. In constrast with [[xred]] and
+Atomic positions evolve if [[ionmov]]/=0. In contrast with [[xred]] and
 [[xcart]], [[xangst]] is not internal.
 """,
 ),

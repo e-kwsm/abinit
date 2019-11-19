@@ -59,7 +59,7 @@ module m_anaddb_dataset
 
  type anaddb_dataset_type
 
-! Variables should be declared on separated lines in order to reduce the occurence of git conflicts.
+! Variables should be declared on separated lines in order to reduce the occurrence of git conflicts.
 ! Since all these input variables are described in the anaddb_help.html
 ! file, they are not described in length here ...
 ! Integer

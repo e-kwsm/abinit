@@ -491,7 +491,7 @@ contains
  write(std_out,'(a)')trim(filnam_out)//'_Lij : Onsager kinetic coefficients'
  write(std_out,'(a)')trim(filnam_out)//'_sig : Optical conductivity'
  write(std_out,'(a)')trim(filnam_out)//'_Kth : Thermal conductivity and thermopower'
- write(std_out,'(a)')trim(filnam_out)//'_eps : Dielectric fonction'
+ write(std_out,'(a)')trim(filnam_out)//'_eps : Dielectric function'
  write(std_out,'(a)')trim(filnam_out)//'_abs : n, k, reflectivity, absorption'
 
  call WffClose(wff1,ierr)

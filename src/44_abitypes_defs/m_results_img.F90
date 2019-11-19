@@ -1250,7 +1250,7 @@ subroutine scatter_array_img(array_img,array_img_all,mpi_enreg,&
      ABI_DEALLOCATE(rbufshft)
      ABI_DEALLOCATE(rsize_img_all)
 
-!    Transfered distributed buffers into array_img (master proc only)
+!    Transferred distributed buffers into array_img (master proc only)
      ibufr=0
      do jj=1,nimage
        array_img(1:size1,1:size2,jj)=reshape(rbuffer(ibufr+1:ibufr+rsize),(/size1,size2/))

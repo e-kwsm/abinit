@@ -460,7 +460,7 @@ class TestBotSummary(object):
         """
         suite_name : string with the name of the suite.
         return (suite_status, stats) where
-          suite_status is one of the possile status in `_possible_status`
+          suite_status is one of the possible status in `_possible_status`
           stats is a dictionary : {failed:1, passed:2, succeeded:0, skipped:0}
         """
 

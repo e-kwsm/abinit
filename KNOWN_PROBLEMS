@@ -579,7 +579,7 @@ On chum/pathscale, the test mpiio/Q4  fails
 -P-0000
 -P-0000  leave_new : decision taken to exit ...
 
-So, mpiio testing has been desactivated on chum/pathscale .
+So, mpiio testing has been deactivated on chum/pathscale .
 
 P66.2 (XG110205)
 Several input variables are not documented or tested, see tests/abirules/Refs/t01.out

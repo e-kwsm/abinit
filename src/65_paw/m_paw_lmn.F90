@@ -387,7 +387,7 @@ end subroutine make_kln2ln
 !! NOTES
 !!  klm2lm can be calculated easily if we assume that all (l,m) channels
 !!  are ordered by increasing l and m. This is the standard convention
-!!  used in most of the PAW datasets. This routines, howevever, works
+!!  used in most of the PAW datasets. This routines, however, works
 !!  works also in the unlikely case in with (l,m) are not ordered.
 !!
 !! PARENTS

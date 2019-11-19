@@ -61,7 +61,7 @@ module m_sg2002
  public :: sg2002_mpiforw_wf     ! R --> G for wavefunctions
  public :: sg2002_applypot       ! Compute <G|vloc|u> where u is given in reciprocal space.
  public :: sg2002_applypot_many  ! Compute <G|vloc|u> where u is given in reciprocal space.
- public :: sg2002_accrho         ! Compute rho = weigth_r*Re(u(r))**2 + weigth_i*Im(u(r))**2
+ public :: sg2002_accrho         ! Compute rho = weight_r*Re(u(r))**2 + weight_i*Im(u(r))**2
 
 contains
 !!***

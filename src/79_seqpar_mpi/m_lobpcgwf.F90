@@ -182,7 +182,7 @@ subroutine lobpcgwf2(cg,dtset,eig,enl_out,gs_hamk,kinpw,mpi_enreg,&
    (lobpcgMem(2))/1e9, "GB"
  end if
 
- !For preconditionning
+ !For preconditioning
  ABI_MALLOC(l_pcon,(1:l_icplx*npw))
  !$omp parallel do schedule(static), shared(l_pcon,kinpw)
  do ipw=1-1,l_icplx*npw-1
@@ -228,7 +228,7 @@ subroutine lobpcgwf2(cg,dtset,eig,enl_out,gs_hamk,kinpw,mpi_enreg,&
  ! Run lobpcg
  call lobpcg_run(lobpcg,xgx0,getghc_gsc,precond,xgeigen,xgresidu,prtvol)
 
- ! Free preconditionning since not needed anymore
+ ! Free preconditioning since not needed anymore
  ABI_FREE(l_pcon)
 
  ! Scale back

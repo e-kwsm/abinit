@@ -17,8 +17,8 @@ parents:
 # Note : 43_ptgroup should not be treated because the routines have been generated automatically
 # Note : 57_iopsp_parser should not be treated because it contains now routines from pwscf, not respecting abirules (XG20180623).
 # Note : 69_wfdesc, 70_gw and 71_bse  should not be treated due a special request of Matteo
-# Note : the "Warning" occurences have been eliminated on 10 May 2011.
-# Note : the "ERROR" occurences have been eliminated on 25 December 2011, also documenting the solution for each type of problem !!
+# Note : the "Warning" occurrences have been eliminated on 10 May 2011.
+# Note : the "ERROR" occurrences have been eliminated on 25 December 2011, also documenting the solution for each type of problem !!
 # Note : 26 Feb 2012 : error messages have been improved, recursive has been allowed.
 # Should write the documentation, so that to imitate the "make parents" treatment on shiva ...
 # The treatment of $omp is still incorrect !!

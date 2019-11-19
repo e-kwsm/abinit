@@ -1,7 +1,7 @@
 #   FCC Al
 #   Check the validity of the dE/d(tsmear)=-kT*entropy relationship
 #   It does not work for occopt=6, likely due to the
-#   problem advertised in the help file, namely the occurence of negative
+#   problem advertised in the help file, namely the occurrence of negative
 #   occupation numbers.
 
  ndtset 12  udtset 4 3

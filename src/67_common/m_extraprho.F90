@@ -530,7 +530,7 @@ end subroutine extraprho
 !!  scf_history <type(scf_history_type)>=arrays obtained from previous SCF cycles
 !!
 !! NOTES
-!!  THIS ROUTINE IS NOT USEABLE AT PRESENT.
+!!  THIS ROUTINE IS NOT USABLE AT PRESENT.
 !!  SHOULD BE CAREFULY TESTED AND DEBUGGED (ESPECIALLY WITHIN PAW).
 !!
 !! PARENTS
@@ -1159,7 +1159,7 @@ end subroutine extrapwf
 !!  scf_history <type(scf_history_type)>=arrays obtained from previous SCF cycles
 !!
 !! NOTES
-!!  THIS ROUTINE IS NOT USEABLE AT PRESENT.
+!!  THIS ROUTINE IS NOT USABLE AT PRESENT.
 !!  SHOULD BE CAREFULY TESTED AND DEBUGGED (ESPECIALLY WITHIN PAW).
 !!
 !! PARENTS

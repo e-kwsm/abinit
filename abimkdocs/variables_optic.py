@@ -63,7 +63,7 @@ Variable(
     text="""
 This parameter species the step size $\Delta\omega$ for the grid over which the
 optic utility computes the susceptibilities. The maximum energy is set by the
-companion paramter [[optic:maxomega]]. The susceptibilities are thus computed at
+companion parameter [[optic:maxomega]]. The susceptibilities are thus computed at
 [[optic:maxomega]]/[[optic:domega]] energy points (zero excluded). In order
 to capture more features, decrease the step size to get a finer energy
 grid. In order to go to higher frequency, increase the maximum.
@@ -99,7 +99,7 @@ Variable(
     text="""
 This parameter species the maximum energy for the grid over which the
 optic utility computes the susceptibilities. The grid step size is set by the
-companion paramter [[optic:domega]]. The susceptibilities are thus computed at
+companion parameter [[optic:domega]]. The susceptibilities are thus computed at
 [[optic:maxomega]]/[[optic:domega]] energy points (zero excluded). In order
 to capture more features, decrease the step size to get a finer energy
 grid. In order to go to higher frequency, increase the maximum.

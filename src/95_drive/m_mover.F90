@@ -746,7 +746,7 @@ real(dp),allocatable :: fred_corrected(:,:),xred_prev(:,:)
        iexit=1
        stat4xml="Failed"
      else
-       stat4xml="Succeded"
+       stat4xml="Succeeded"
      end if
 
 !    Only if convergence is needed

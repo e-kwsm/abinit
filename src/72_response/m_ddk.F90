@@ -342,7 +342,7 @@ subroutine eph_ddk(wfk_path,dtfil,dtset,&
   MSG_ERROR("The matrix elements are only written in NETCDF format")
 #endif
 
- ! paralelism
+ ! parallelism
  my_rank = xmpi_comm_rank(comm)
  nproc = xmpi_comm_size(comm)
 

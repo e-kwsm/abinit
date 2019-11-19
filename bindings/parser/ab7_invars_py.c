@@ -192,7 +192,7 @@ static PyObject* dtsets_get(Dtsets *self, PyObject *args)
 
   DBG_printf("dtsets.get called dt = %d.\n", *self->dt);
 
-  /* Read the string id and get it from the dictionnary. */
+  /* Read the string id and get it from the dictionary. */
   if (!PyArg_ParseTuple(args, "si", &strId, &idtset))
     return NULL;
 
@@ -423,7 +423,7 @@ void FC_FUNC(wrtout, WRTOUT)(int *unit,char message[500])
      file. On the contrary, we get the message and raise an error. */
   ptError = strstr(buf, "ERROR");
   ptInvars0 = strstr(buf, "Input natom must be defined");
-  ptInstrng = strstr(buf, "The occurence of a tab");
+  ptInstrng = strstr(buf, "The occurrence of a tab");
   ptSize    = strstr(buf, "The size of your input file");
   if (ptError && !ptInvars0 && !ptInstrng && !ptSize)
     {

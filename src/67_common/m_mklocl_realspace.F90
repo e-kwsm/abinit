@@ -425,7 +425,7 @@ subroutine mklocl_realspace(grtn,icoulomb,mpi_enreg,natom,nattyp,nfft,ngfft,nscf
              write(message, '(3a,i0,a,i0,a,a)' )&
 &             '  pseudo-potential local part sampling is not wide enough', ch10, &
 &             '  want to access position ', jj, ' whereas mqgrid_vl = ', psps%mqgrid_vl, ch10, &
-&             '  Action : no idea, contact developpers...'
+&             '  Action : no idea, contact developers...'
              MSG_ERROR(message)
            end if
            delta = r - psps%qgrid_vl(jj)

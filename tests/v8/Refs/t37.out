@@ -112,31 +112,31 @@
  ============================================================================
  Shell number:           1
   Between atom    1 and     1 the distance is=    0.0000000000
-   Number of independant coefficients in this shell=           0
+   Number of independent coefficients in this shell=           0
  ============================================================================
  Shell number:           2
   Between atom    1 and     2 the distance is=    6.4315191460
-   Number of independant coefficients in this shell=           2
+   Number of independent coefficients in this shell=           2
  ============================================================================
  Shell number:           3
   Between atom    1 and     3 the distance is=    5.2513133929
-   Number of independant coefficients in this shell=           3
+   Number of independent coefficients in this shell=           3
  ============================================================================
  Shell number:           4
   Between atom    2 and     2 the distance is=    0.0000000000
-   Number of independant coefficients in this shell=           0
+   Number of independent coefficients in this shell=           0
  ============================================================================
  Shell number:           5
   Between atom    2 and     3 the distance is=    3.7132393103
-   Number of independant coefficients in this shell=           2
+   Number of independent coefficients in this shell=           2
  ============================================================================
  Shell number:           6
   Between atom    3 and     3 the distance is=    0.0000000000
-   Number of independant coefficients in this shell=           0
+   Number of independent coefficients in this shell=           0
  ============================================================================
  Shell number:           7
   Between atom    3 and     4 the distance is=    5.2513133929
-   Number of independant coefficients in this shell=           4
+   Number of independent coefficients in this shell=           4
  ============================================================================
    >>>>>> Total number of coefficients in these shells=          11
        Homogeneous q point set in the B.Z.

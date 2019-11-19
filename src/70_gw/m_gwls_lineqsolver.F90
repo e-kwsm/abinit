@@ -123,7 +123,7 @@ subroutine sqmr(b,x,lambda,project_on_what,omega,omega_imaginary,kill_Pc_x)
 !                2                projection out of subspace degenerate with lambda
 !                3                projection on states beyond all the states explicitly stored
 ! 
-! NOTE: It is the developper's responsibility to apply (H-ev) on the input 
+! NOTE: It is the developer's responsibility to apply (H-ev) on the input
 !       if the frequency is not zero.
 !--------------------------------------------------------------------------------
 
@@ -275,7 +275,7 @@ singular = norm < 1.0d-12
 ! otherwise SQMR is unstable. 
 !
 ! This is true even if the seed vector has been initially projected out of this 
-! subspace, since the preconditionning will re-introduce a non-zero component in 
+! subspace, since the preconditioning will re-introduce a non-zero component in 
 ! the subspace of the kernel of the linear operator. 
 !                 ===>   Use project_on_what==2 in such cases.
 !
@@ -286,7 +286,7 @@ singular = norm < 1.0d-12
 !--------------------------------------------------------------------------------
 
 ! Quit if the operator has an uncontrolled kernel, a sign that the routine is being 
-! misused by a developper...
+! misused by a developer...
 if (singular .and. ( (project_on_what==1 .and. (min_index > nbandv)) .or. project_on_what==0 ))  then
   write(std_out,*) "ERROR - SQMR: Quasi-singuar problem treated, min. eigenvalue of A is ", norm," < 1d-12."
   write(std_out,*) "              Yet, there is no projection out of the kernel of A.                      "

@@ -141,10 +141,10 @@ module m_effective_potential
 ! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ! This is for the parallelisation over the supercell
    type(effpot_mpi_type) :: mpi_ifc
-!  effpot_mpi_type with all the information for the IFC paralellisation
+!  effpot_mpi_type with all the information for the IFC parallelisation
 
    type(effpot_mpi_type) :: mpi_coeff
-!  effpot_mpi_type with all the information for the polynomial coefficients paralellisation
+!  effpot_mpi_type with all the information for the polynomial coefficients parallelisation
 
  end type effective_potential_type
 !!***
@@ -1344,8 +1344,8 @@ end subroutine effective_potential_setElasticDispCoupling
 !! INPUTS
 !! cutoff_disp(6) = Cutoff array for the strain
 !! cutoff_strain(ndisp) = Cutoff array for the atomic displacement
-!! factor_disp = Factor to appy to the polynomial term of the confinement (displacement)
-!! factor_strain = Factor to appy to the polynomial term of the confinement (strain)
+!! factor_disp = Factor to apply to the polynomial term of the confinement (displacement)
+!! factor_strain = Factor to apply to the polynomial term of the confinement (strain)
 !! ndisp = Number of displacement (atoms) for the cut off
 !! power_disp = Power of the polynome related to the displacement
 !! power_strain = Power of the polynome related to the strain
@@ -1921,7 +1921,7 @@ subroutine effective_potential_writeXML(eff_pot,option,filename,prt_dipdip)
 !    ....       ]
 ! Warning : The IFC are print in other order 1,mu,ia,nu,ib which is not fortran way
 !           We do like that to because the previous script was in python
-!           When you read ifc from XML file with fotran, you have to tranpose the matrix
+!           When you read ifc from XML file with fortran, you have to transpose the matrix
 !
    do irpt=1,eff_pot%harmonics_terms%ifcs%nrpt
      if(any(abs(eff_pot%harmonics_terms%ifcs%short_atmfrc(:,:,:,:,irpt))>tol20)) then

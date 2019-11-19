@@ -83,7 +83,7 @@ MODULE m_vcoul
    ! Number of small q-points around Gamma
 
   real(dp) :: alpha(3)
-   ! Lenght of the finite surface
+   ! Length of the finite surface
 
   real(dp) :: rcut
    ! Cutoff radius
@@ -1715,7 +1715,7 @@ subroutine cutoff_cylinder(nq,qpt,ng,gvec,rcut,hcyl,pdir,boxcenter,rprimd,vccut,
  npts_    =6         ! Initial number of point (only for Gauss-Legendre method).
  SMALL    =GW_TOLQ0  ! Below this value (q+G)_i is treated as zero.
  rcut_    =rcut      ! Radial cutoff, used only if method==2
- hcyl_    =hcyl      ! Lenght of cylinder along z, only if method==2
+ hcyl_    =hcyl      ! Length of cylinder along z, only if method==2
 
  write(msg,'(3a,2(a,i5,a),a,f8.5)')ch10,&
 &  ' cutoff_cylinder: Info on the quadrature method : ',ch10,&

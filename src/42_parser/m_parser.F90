@@ -502,28 +502,28 @@ recursive subroutine instrng(filnam,lenstr,option,strln,string)
    end if
 
    if (ii>0) then
-!    Check for the occurence of a minus sign followed by a blank
+!    Check for the occurrence of a minus sign followed by a blank
      ij=index(line(1:ii),'- ')
      if (ij>0 .and. option==1) then
        write(msg, '(3a,i0,11a)' ) &
 &       'It is observed in the input file:, ',TRIM(filnam),' line number ',iline,',',ch10,&
-&       'the occurence of a minus sign followed',ch10,&
+&       'the occurrence of a minus sign followed',ch10,&
 &       'by a blank. This is forbidden.',ch10,&
 &       'If the minus sign is meaningful, do not leave a blank',ch10,&
 &       'between it and the number to which it applies.',ch10,&
 &       'Otherwise, remove it.'
        MSG_ERROR(msg)
      end if
-!    Check for the occurence of a tab
+!    Check for the occurrence of a tab
      ij=index(line(1:ii),char(9))
      if (ij>0 .and. option==1 ) then
        write(msg, '(3a,i0,3a)' ) &
-&       'The occurence of a tab, in the input file: ',TRIM(filnam),' line number ',iline,',',ch10,&
+&       'The occurrence of a tab, in the input file: ',TRIM(filnam),' line number ',iline,',',ch10,&
 &       'is observed. This sign is confusing, and has been forbidden.'
        MSG_ERROR(msg)
      end if
 
-!    Check for the occurence of a include statement
+!    Check for the occurrence of a include statement
      include_found=.false.
      if (option==1) then
 !      Look for include statement
@@ -720,7 +720,7 @@ end subroutine inreplsp
 !! the ASCII collating sequence (SP is hex 20, dec 32).
 !! The use of llt is needed e.g. on the IBM 9000 because it does not
 !! handle tab characters sensibly in its AIX fortran.
-!! Also replace occurences of '=' by a SP.
+!! Also replace occurrences of '=' by a SP.
 !! (2) Removes all repeated blanks, ignoring trailing blanks
 !! after first (returns nontrailing final length in arg 'length').
 !! (3) Makes first character in string NONBLANK.  This is done
@@ -902,14 +902,14 @@ end subroutine incomprs
 !!  the first character in the input file.  This is checked in the calling
 !!  subroutine 'input'. Calls inread which performs internal read from
 !!  specified string.  Also calls upper which maps characters to all upper case.
-!!  Also checks whether there is an occurence of blank//'token'//digit,
+!!  Also checks whether there is an occurrence of blank//'token'//digit,
 !!  in which case the input file might be erroneous, so stops.
 !!
 !! If jdtset is a positive number:
 !!
 !!  (1) First search for modified string, blank//'token'//jdtset//blank
 !!
-!!  (2a) if the occurence of (1) is not found,
+!!  (2a) if the occurrence of (1) is not found,
 !!       look for other modified strings,
 !!       blank//'token'//'?'//unities//blank
 !!       or
@@ -1048,13 +1048,13 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
      call inupper(cs)
 !    Absolute index of blank//token//blank in string:
      itoken=index(string,cs(1:cslen))
-!    Look for another occurence of the same token in string, if so, leaves:
+!    Look for another occurrence of the same token in string, if so, leaves:
      itoken2=index(string,cs(1:cslen), BACK=.true. )
      if(itoken/=itoken2)then
        write(message, '(7a)' )&
-&       'There are two occurences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
+&       'There are two occurrences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
 &       'This is confusing, so it has been forbidden.',ch10,&
-&       'Action: remove one of the two occurences.'
+&       'Action: remove one of the two occurrences.'
        MSG_ERROR(message)
      end if
 
@@ -1077,13 +1077,13 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
      call inupper(cs)
 !    Absolute index of blank//token//blank in string:
      itoken=index(string,cs(1:cslen))
-!    Look for another occurence of the same token in string, if so, leaves:
+!    Look for another occurrence of the same token in string, if so, leaves:
      itoken2=index(string,cs(1:cslen), BACK=.true. )
      if(itoken/=itoken2)then
        write(message, '(7a)' )&
-&       'There are two occurences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
+&       'There are two occurrences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
 &       'This is confusing, so it has been forbidden.',ch10,&
-&       'Action: remove one of the two occurences.'
+&       'Action: remove one of the two occurrences.'
        MSG_ERROR(message)
      end if
      if(itoken/=0) then
@@ -1098,13 +1098,13 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
      call inupper(cs1)
 !    Absolute index of blank//token//blank in string:
      itoken1=index(string,cs1(1:cslen))
-!    Look for another occurence of the same token in string, if so, leaves:
+!    Look for another occurrence of the same token in string, if so, leaves:
      itoken2=index(string,cs1(1:cslen), BACK=.true. )
      if(itoken1/=itoken2)then
        write(message, '(7a)' )&
-&       'There are two occurences of the keyword "',cs1(1:cslen),'" in the input file.',ch10,&
+&       'There are two occurrences of the keyword "',cs1(1:cslen),'" in the input file.',ch10,&
 &       'This is confusing, so it has been forbidden.',ch10,&
-&       'Action: remove one of the two occurences.'
+&       'Action: remove one of the two occurrences.'
        MSG_ERROR(message)
      end if
 
@@ -1168,7 +1168,7 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
      itoken_2plus=index(string,cs2plus(1:cs1len))
      itoken_2times=index(string,cs2times(1:cs1len))
 
-!    Look for another occurence of the same tokens in string
+!    Look for another occurrence of the same tokens in string
      itoken2_colon=index(string,cscolon(1:cslen), BACK=.true. )
      itoken2_plus=index(string,csplus(1:cslen), BACK=.true. )
      itoken2_times=index(string,cstimes(1:cslen), BACK=.true. )
@@ -1224,7 +1224,7 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
 &         'to series definition in the multi-dataset mode',sum_token,' times.',ch10,&
 &         'This is not allowed, since it should be used once with ":",',ch10,&
 &         'and once with "+" or "*".',ch10,&
-&         'Action: change the number of occurences of this keyword.'
+&         'Action: change the number of occurrences of this keyword.'
          MSG_ERROR(message)
        end if
 
@@ -1260,9 +1260,9 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
        end if
        if(ier==1)then
          write(message, '(a,a,a,a,a,a,a)' )&
-&         'There are two occurences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
+&         'There are two occurrences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
 &         'This is confusing, so it has been forbidden.',ch10,&
-&         'Action: remove one of the two occurences.'
+&         'Action: remove one of the two occurrences.'
          MSG_ERROR(message)
        end if
 
@@ -1290,14 +1290,14 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
        if(itoken_colon > 0 .and. (itoken_plus==0 .and. itoken_times==0) )then
          write(message, '(13a)' )&
 &         'The keyword "',cscolon(1:cslen),'" initiate a series,',ch10,&
-&         'but there is no occurence of "',csplus(1:cslen),'" or "',cstimes(1:cslen),'".',ch10,&
+&         'but there is no occurrence of "',csplus(1:cslen),'" or "',cstimes(1:cslen),'".',ch10,&
 &         'Action: either suppress the series, or make the increment',ch10,&
 &         'or the factor available.'
          MSG_ERROR(message)
        end if
        if(itoken_plus/=0 .and. itoken_times/=0)then
          write(message, '(a,a, a,a,a,a,a)' )&
-&         'The combined occurence of keywords "',csplus(1:cslen),'" and "',cstimes(1:cslen),'" is not allowed.',ch10,&
+&         'The combined occurrence of keywords "',csplus(1:cslen),'" and "',cstimes(1:cslen),'" is not allowed.',ch10,&
 &         'Action: suppress one of them in your input file.'
          MSG_ERROR(message)
        end if
@@ -1336,13 +1336,13 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
 !    Absolute index of blank//token//blank in string:
      itoken=index(string,cs(1:cslen))
 
-!    Look for another occurence of the same token in string, if so, leaves:
+!    Look for another occurrence of the same token in string, if so, leaves:
      itoken2=index(string,cs(1:cslen), BACK=.true. )
      if(itoken/=itoken2)then
        write(message, '(a,a,a,a,a,a,a)' )&
-&       'There are two occurences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
+&       'There are two occurrences of the keyword "',cs(1:cslen),'" in the input file.',ch10,&
 &       'This is confusing, so it has been forbidden.',ch10,&
-&       'Action: remove one of the two occurences.'
+&       'Action: remove one of the two occurrences.'
        MSG_ERROR(message)
      end if
 
@@ -1356,9 +1356,9 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
 !  --------------------------------------------------------------------------
 !  If jdtset==0, means that the multi-dataset mode is not used, so
 !  checks whether the input file contains a multi-dataset keyword,
-!  and if this occurs, stop. Check also the forbidden occurence of
+!  and if this occurs, stop. Check also the forbidden occurrence of
 !  use of 0 as a multi-dataset index.
-!  Note that the occurence of series initiators has already been checked.
+!  Note that the occurrence of series initiators has already been checked.
 
    do trial_jdtset=0,9
      if(jdtset==0 .or. trial_jdtset==0)then
@@ -1367,22 +1367,22 @@ subroutine intagm(dprarr,intarr,jdtset,marr,narr,string,token,tread,typevarphys,
        trial_cslen=toklen+2
 !      Map token to all upper case (make case-insensitive):
        call inupper(trial_cs)
-!      Look for an occurence of this token in string, if so, leaves:
+!      Look for an occurrence of this token in string, if so, leaves:
        itoken2=index(string,trial_cs(1:trial_cslen))
 !      If itoken2/=0
        if(itoken2/=0)then
          if(trial_jdtset==0)then
            write(message, '(a,a,a,a,a,a,a)' )&
-&           'There is an occurence of the keyword "',trim(token),'" appended with 0 in the input file.',ch10,&
+&           'There is an occurrence of the keyword "',trim(token),'" appended with 0 in the input file.',ch10,&
 &           'This is forbidden.',ch10,&
-&           'Action: remove this occurence.'
+&           'Action: remove this occurrence.'
            call wrtout(std_out,message,'COLL')
          else
            write(message, '(a,a,a,a,a,i1,a,a,a,a,a)' )&
-&           'In the input file, there is an occurence of the ',ch10,&
+&           'In the input file, there is an occurrence of the ',ch10,&
 &           'keyword "',trim(token),'", appended with the digit "',trial_jdtset,'".',ch10,&
 &           'This is forbidden when ndtset==0 .',ch10,&
-&           'Action: remove this occurence, or change ndtset.'
+&           'Action: remove this occurrence, or change ndtset.'
            call wrtout(std_out,message,'COLL')
          end if
          MSG_ERROR(message)
@@ -3040,7 +3040,7 @@ subroutine prttagm(dprarr,intarr,iout,jdtset_,length,&
 
    if(typevarphys=='INT')then
 
-!    Determine whether the different non-default occurences are all equal
+!    Determine whether the different non-default occurrences are all equal
 
      if (use_narrm==0) then ! use of scalar 'narr' instead of array 'narrm'
        if(ndtset_alloc>1)then

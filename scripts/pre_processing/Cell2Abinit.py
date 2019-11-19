@@ -20,7 +20,7 @@ if __name__=="__main__":
 
     data=fp.readlines()
 
-    #lattice paramenters
+    #lattice parameters
     a=b=c=0.0
     #primitive vectors
     a_=b_=c_=[]

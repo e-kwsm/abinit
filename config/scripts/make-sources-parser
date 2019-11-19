@@ -29,7 +29,7 @@ dtset = pickle.load(open(os.path.join(parserdir, "dtset.pickle"), "rb"))
 #       this is directly put in ab7_invars.h.
 #  Cs : the type of each attribute, put in a separated file,
 #       later included in ab7_invars_c.c.
-#  Py : the dictionnary of all available attributes,
+#  Py : the dictionary of all available attributes,
 #       put in a separated file, later included in ab7_invars_py.c.
 #  F90: the ids as enum for each attributes of dtset. Put in a
 #       separated file, later included in ab7_invars_f90.f90.

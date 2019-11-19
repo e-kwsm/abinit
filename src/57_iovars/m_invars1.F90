@@ -1198,7 +1198,7 @@ subroutine invars1(bravais,dtset,iout,jdtset,lenstr,mband_upper,msym,npsp1,&
 
 !Special treatment of _TYPAX (from a XYZ file), taking into account
 !the fact that znucl does NOT depend on the dataset
-!Examine all occurences of '_TYPAX'
+!Examine all occurrences of '_TYPAX'
 
  do
    index_typsymb=index(string(1:lenstr),'_TYPAX')
@@ -2087,7 +2087,7 @@ subroutine indefo(dtsets,ndtset_alloc,nprocs)
 !  MG FIXME Sun Sep 6 2015: Many tests fail if IO_MODE_MPI is used as default. IO errors in v1, v2 ...
 !  with np=1 and wonderful deadlocks if np>1.
 
-!  Note that this default value might be overriden for specific datasets later, in case of parallelism
+!  Note that this default value might be overridden for specific datasets later, in case of parallelism
    dtsets(idtset)%iomode=IO_MODE_FORTRAN
 #ifdef HAVE_NETCDF_DEFAULT
    dtsets(idtset)%iomode=IO_MODE_ETSF

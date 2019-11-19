@@ -174,7 +174,7 @@ contains
     Shell2at%ncoeff     (ishell)=ncoeff
     Shell2at%ncoeff_prev(ishell)=ncoeff_prev
     ncoeff_prev=ncoeff_prev+ncoeff
-    write(InVar%stdout,*)'  Number of independant coefficients in this shell=',ncoeff
+    write(InVar%stdout,*)'  Number of independent coefficients in this shell=',ncoeff
     write(InVar%stdout,*) '============================================================================'
   end do
   write(InVar%stdout,*)'  >>>>>> Total number of coefficients in these shells=',ncoeff_prev
@@ -362,7 +362,7 @@ contains
     Shell3at%ncoeff     (ishell)=ncoeff
     Shell3at%ncoeff_prev(ishell)=ncoeff_prev
     ncoeff_prev=ncoeff_prev+ncoeff
-    write(InVar%stdout,*)'  Number of independant coefficients in this shell=',ncoeff
+    write(InVar%stdout,*)'  Number of independent coefficients in this shell=',ncoeff
     write(InVar%stdout,*) '============================================================================'
   end do
   write(InVar%stdout,*)'  >>>>>> Total number of coefficients in these shells=',ncoeff_prev

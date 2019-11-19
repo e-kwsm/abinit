@@ -3611,7 +3611,7 @@ class Message:
             sys.stdout.flush()
 
 #-----------------------
-#End of class defintions
+#End of class definitions
 #-----------------------
 
 

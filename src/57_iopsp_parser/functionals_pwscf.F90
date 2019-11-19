@@ -41,7 +41,7 @@ module funct_pwscf
 !                      enforce_input_dft
 !                      start_exx
 !                      stop_exx
-!  retrive functions:  get_dft_name
+!  retrieve functions: get_dft_name
 !                      get_iexch
 !                      get_icorr
 !                      get_igcx

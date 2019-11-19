@@ -160,7 +160,7 @@ program aim
  end if
 
 !DEBUG
-!stop   ! Works in paralel up to here
+!stop   ! Works in parallel up to here
 !ENDDEBUG
 
  unt=21 ! WARNING : this number is used to define other unit numbers, in init.f

@@ -1363,7 +1363,7 @@ CONTAINS  !=====================================================================
 !!  natom=number of atoms in cell
 !!  natpawu=number of atoms on which PAW+U is applied
 !!  nspinor=number of spinorial components of the wavefunctions
-!!  nsppol=number of independant spin components
+!!  nsppol=number of independent spin components
 !!  nsym=number of symmetry elements in space group
 !!  ntypat=number of atom types
 !!  paw_ij(my_natom) <type(paw_ij_type)>=paw arrays given on (i,j) channels
@@ -2373,7 +2373,7 @@ subroutine setrhoijpbe0(dtset,initialized,istep,istep_mix,&
    nstep1_abs=abs(nstep1)
    if (nstep1_abs==0.or.istep>nstep1_abs.or.(nstep1>0.and.initialized/=0)) then
      close(77)
-!    Reinitalize mixing when rhoij is allowed to change; for experimental purpose...
+!    Reinitialize mixing when rhoij is allowed to change; for experimental purpose...
      if (dtset%userib==1234.and.istep==1+nstep1_abs.and.(nstep1<0.or.initialized==0)) istep_mix=1
      return
    end if
@@ -2477,7 +2477,7 @@ subroutine setrhoijpbe0(dtset,initialized,istep,istep_mix,&
      nstep1_abs=abs(nstep1)
      if (nstep1_abs==0.or.istep>nstep1_abs.or.(nstep1>0.and.initialized/=0)) then
        close(77)
-!      Reinitalize mixing when rhoij is allowed to change; for experimental purpose...
+!      Reinitialize mixing when rhoij is allowed to change; for experimental purpose...
        if (dtset%userib==1234.and.istep==1+nstep1_abs.and.(nstep1<0.or.initialized==0)) istep_mix=1
        iread=1
      end if

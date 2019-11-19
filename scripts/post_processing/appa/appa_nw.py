@@ -360,7 +360,7 @@ while i<size_input :
             print "Saving File, please wait..."
             Write.SaveFile(fname).xyzFormat(pos,acell,typat,znucl)
             print  fname 
-            print 'File save sucessful!'
+            print 'File save successful!'
         except:
             print 'Unable to save file'
             
@@ -475,13 +475,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"Total Energy("+str(units['Energy'][0])+")")           
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="Total Energy("+str(units['Energy'][0])+")")
                     pdf.print_figure(fname)           
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 
                 
                 
@@ -493,13 +493,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"Potential Energy("+str(units['Energy'][0])+")")           
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="Potential Energy("+str(units['Energy'][0])+")")
                     pdf.print_figure(fname)
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 
                 
                 
@@ -512,13 +512,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"Kinetic Energy("+str(units['Energy'][0])+")")
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="Kinetic Energy("+str(units['Energy'][0])+")")
                     pdf.print_figure(fname)
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 
                 
                 
@@ -531,13 +531,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"Temperature ("+str(units['Temperature'][0])+")")
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="Temperature ("+str(units['Temperature'][0])+")")
                     pdf.print_figure(fname)
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 
             elif choiceQuantitie == 5:
                 x = linspace(MD_file.getNi(),MD_file.getNf()-1,MD_file.getNf()-MD_file.getNi())# Temporarily !!!
@@ -547,13 +547,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"Pressure ("+str(units['Pressure'][0])+")")
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="Pressure ("+str(units['Pressure'][0])+")")
                     pdf.print_figure(fname)
                     print  fname 
-                    print 'File save sucessful!'        
+                    print 'File save successful!'
                         
                         
             elif choiceQuantitie == 6:
@@ -564,14 +564,14 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"("+str(units['Pressure'][0])+") s" )
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="Stress ("+str(units['Pressure'][0])+")")
                     pdf.addLegend([r'$\sigma_1$',r'$\sigma_2$',r'$\sigma_3$',r'$\sigma_4$',r'$\sigma_5$',r'$\sigma_6$'])
                     pdf.print_figure(fname)
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
 
             elif choiceQuantitie == 7:
                 x = linspace(MD_file.getNi(),MD_file.getNf()-1,MD_file.getNf()-MD_file.getNi())
@@ -580,14 +580,14 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"acell")
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="Acell"+" ("+str(units['Distance'][0])+")")
                     pdf.addLegend([r'$a$',r'$b$',r'$c$'],markerscale=1)
                     pdf.print_figure(fname)        
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                     
                         
             elif choiceQuantitie == 8:
@@ -598,13 +598,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'Step',"VAF")
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='Step',pylbl="VAF")
                     pdf.print_figure(fname)        
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 
                 
             elif choiceQuantitie == 9:
@@ -626,13 +626,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'E (meV)',"Phonons DOS (nm^2/ps)")
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='E (meV)',pylbl= "Phonons DOS (nm^2/ps)",adjust=True)
                     pdf.print_figure(str(fname))        
                     print  fname 
-                    print 'File save sucessful!'            
+                    print 'File save successful!'
             
 
             elif choiceQuantitie == 10:
@@ -697,13 +697,13 @@ while i<size_input :
                     fname = saveFile('dat',name_quantitie)        
                     Write.SaveFile(fname).saveGraph(x,y,'R (bohr)',"RDF")
                     print  fname 
-                    print 'File save sucessful!'
+                    print 'File save successful!'
                 if choiceformat == 2 or choiceformat == 3:
                     fname = saveFile('pdf',name_quantitie)
                     pdf = Canvas.Canvas(width=10, height=8, dpi=100,x=x,y=y,pxlbl='R (bohr)',pylbl= "RDF")
                     pdf.print_figure(str(fname))        
                     print  fname 
-                    print 'File save sucessful!'                            
+                    print 'File save successful!'
                 break;
 
 

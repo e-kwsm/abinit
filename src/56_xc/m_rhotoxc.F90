@@ -234,7 +234,7 @@ contains
 !!   l... --> means laplacian of something (e.g. : lrho --> means laplacian of electron density)
 !!   d...d... --> means derivative of something with regards to something else.
 !!   (d2...d...d...  ---> means second derivative of ... with regards to ... and to ...) etc...
-!!   d... --> without the occurence of the second "d" means that this is an array of
+!!   d... --> without the occurrence of the second "d" means that this is an array of
 !!            several derivative of the same quantity (e.g. : depsxc)
 !!
 !!   ..._b ----> means a block of the quantity "..." (use in mpi loops which treat the data block by block)

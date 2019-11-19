@@ -29,7 +29,7 @@ class convert_position:
         #       False return the result in cartesian coordinates
 
         self.file = pfile
-        natom  = len(indexAtom)    # Number particule
+        natom  = len(indexAtom)    # Number particle
         
         if (reduced):
             self.pos = self.file.getXRed()   # position of atom (cartesian)
@@ -63,16 +63,16 @@ class convert_position:
 
 
     def getX(self):
-        # Return array with x postion of 1 type of particule
+        # Return array with x postion of 1 type of particle
         # This array is reshape by type x[ntime]
         return self.result[0]
 
     def getY(self):
-        # Return array with y postion of 1 type of particule
+        # Return array with y postion of 1 type of particle
         # This array is reshape by type y[ntime]
         return self.result[1]
 
     def getZ(self):
-        # Return array with z postion of 1 type of particule
+        # Return array with z postion of 1 type of particle
         # This array is reshape by type z[ntime]
         return self.result[2]

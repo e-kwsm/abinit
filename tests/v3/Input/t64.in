@@ -23,6 +23,6 @@ t64        # Root for the output name
 #%% authors = Unknown
 #%% keywords =
 #%% description = 
-#%%   Analysis of the output WF of the preceeding test
+#%%   Analysis of the output WF of the preceding test
 #%%   by cut3d : output the wavefunction for (1/2 0 0), 2nd band
 #%%<END TEST_INFO>

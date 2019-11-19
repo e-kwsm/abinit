@@ -29,7 +29,7 @@ Bugs:   If you find a bug with this program or wish to see a feature added to
 #begin main program
 
 """
-Start of definations and other useful information
+Start of definitions and other useful information
 """
 
 def GET_UNIT(string):
@@ -57,7 +57,7 @@ def READ_INPUT(user_filein):
     if check == False:
         print('')
         print('The input file was not found in the directory. \n Please correct this.')
-        print('\n Remember the input file should be formated as follows:\n\n '\
+        print('\n Remember the input file should be formatted as follows:\n\n '\
                  'filename "name of file"\n outname "name of outfile"\n temp "temperature in Kelvin"\n'
                  ' frequency "frequency in cm^-1"\n spread "spread of lorentz in cm^-1"\n '\
                  'calctype "type of calculation 0- abort, 1- powder, 2-ij polarization, 3- angle"\n')
@@ -170,7 +170,7 @@ def printout(to_output):
     Author: Nicholas Pike
     Email: Nicholas.pike@ulg.ac.be
         
-    Purpose: This defintion should print to an output file, known as the output,
+    Purpose: This definition should print to an output file, known as the output,
     in which all comments, warnings, and results are printed too. 
     """
     #print to file
@@ -745,7 +745,7 @@ if __name__ == '__main__':
     T              = 0                  # Default Temperature (user input variable)
     hplank         = 6.58211928E-16     # h in eVs
     clight         = 137.0359997566     # Speed of light in atomic units
-    width          = 0.0                # spread of lorentian (user input variable)
+    width          = 0.0                # spread of lorentzian (user input variable)
 
     if any('SPYDER' in name for name in os.environ):
         user_inputfile = 'input_raman'

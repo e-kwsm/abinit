@@ -148,14 +148,14 @@ contains
 !!     --if (idir==-7)
 !!       ffnl(ig,2:7,(l,m,n),itypat)=1/2 [d(ffnl)/dK^cart_mu K^cart_nu + d(ffnl)/dK^cart_nu K^cart_mu]
 !!                                with d(ffnl)/dK^cart_i = Sum_nu [ Gprim(nu,i) dffnl_nu ]
-!!                                for all (mu,nu) (6 independant terms)
+!!                                for all (mu,nu) (6 independent terms)
 !!     === if ider==2
 !!     --if (idir==0)
 !!       ffnl(ig,4+i,(l,m,n),itypat) = d2ffnl_mu,nu = 6 reduced coord. of d2(ffnl_1)/dK^cart.dK^cart
-!!        for all i=(mu,nu) (6 independant terms)
+!!        for all i=(mu,nu) (6 independent terms)
 !!     --if (idir==4)
 !!       ffnl(ig,4+i,(l,m,n),itypat) = d2ffnl_i =6 cart. coordinates of d2(ffnl_1)/dK^red.dK^red
-!!        for all i=(mu,nu) (6 independant terms)
+!!        for all i=(mu,nu) (6 independent terms)
 !!        = Sum_(mu1,mu2,mu3,mu4) [ Gprim(mu1,mu) Gprim(mu2,nu) Gprim(mu1,mu3) Gprim(mu2,mu4) d2ffnl_mu3,mu4 ]
 !!   --------------------------
 !!

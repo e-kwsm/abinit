@@ -283,7 +283,7 @@ def extract_errinfo_from_files(workdir):
 
 class FileToTest(object):
     """This object contains information on the output file that will be analyzed by fldiff"""
-    #  atr_name,   default, conversion function. None designes mandatory attributes.
+    #  atr_name,   default, conversion function. None designs mandatory attributes.
     _attrbs = [
         ("name",     None, str),
         ("tolnlines",None, int),    # fldiff tolerances
@@ -378,7 +378,7 @@ def _str2filestotest(string):
         for tok in tokens[1:]:
             k, v = [s.strip() for s in tok.split("=")]
             if k in d:
-                err_msg = "Found multiple occurences of keyword %s" % k
+                err_msg = "Found multiple occurrences of keyword %s" % k
                 raise AbinitTestInfoParserError(err_msg)
             d[k] = v
         files_to_test.append(FileToTest(d))
@@ -1153,7 +1153,7 @@ def input_file_has_vars(fname, ivars, comment="#", mode="any"):
         return:
             (bool, d)
             bool is True is the input file contains the specified variables
-            d is a dictionary with the matching lines (empty dict if no occurence).
+            d is a dictionary with the matching lines (empty dict if no occurrence).
     """
     # This algorithm is not very robust as it assumes that the variable and the line
     # are placed on the same line.
@@ -1541,7 +1541,7 @@ class BaseTestError(Exception):
 class BaseTest(object):
     """
     Base class describing a single test. Tests associated to other executables should
-    sublcass BaseTest and redefine the method make_stdin.
+    subclass BaseTest and redefine the method make_stdin.
     Then change exec2cls so that the appropriate instance is returned.
     """
     Error = BaseTestError
@@ -2276,7 +2276,7 @@ class BaseTest(object):
         save_files = self._files_to_keep[:]
         if other_test_files is not None: save_files += other_test_files
 
-        # Add harcoded list of files
+        # Add hardcoded list of files
         hard_files = ["perf.data", "__ABI_MPIABORTFILE__"]
         save_files += [os.path.join(self.workdir, f) for f in hard_files]
 
@@ -3387,7 +3387,7 @@ class AbinitTestSuite(object):
         try:
             self.lock.acquire()
         except self.lock.Error:
-            msg = ("Timeout occured while trying to acquire lock in:\n\t%s\n"
+            msg = ("Timeout occurred while trying to acquire lock in:\n\t%s\n"
                    "Perhaps a previous run did not exit cleanly or another process is running in the same directory.\n"
                    "If you are sure no other process is in execution, remove the directory with `rm -rf` and rerun.\n" % self.workdir)
             cprint(msg, "red")

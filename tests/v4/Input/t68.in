@@ -41,7 +41,7 @@ qph2l 0.0 0.0 1.0 0.0  ! why here the normalization factor is 0
 #%%   (and compliance) tensors under fixed-electric and under fixed-
 #%%   displacement field boundary conditions; internal strain tensors (
 #%%   force response and displacement response); relaxed ion  piezoelectric
-#%%   tensors of several different definations (e, d, g, h tensors).
+#%%   tensors of several different definitions (e, d, g, h tensors).
 #%%   Please refer to doc/theory/vanderbilt-anaddb-notes.pdf for details.
 #%%   In the previous version, only relaxed(clamped) ion dielectric, piezoelectric,
 #%%   elastic tensors and internal strain tensors were computed. In this new version,

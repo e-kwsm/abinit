@@ -27,7 +27,7 @@ class Correlation:
 
         # This class aim is to calculate the (auto)correlation function
         # the parameter is :
-        #    - pSerie witch is the serie  ([time,atom,[x,y,z]] )
+        #    - pSerie which is the serie  ([time,atom,[x,y,z]] )
 
         self.nbtime = len(serie1)               # Number of steps in the simulation
         self.nbatom = len(serie1[0])               # Number of atoms in the simulation
@@ -73,12 +73,12 @@ class DOS:
 
         # This class aim is to calculate the density of phonon states (DOS),as being the Fourier transforms of the VACF
         # the parameters are  :
-        #    - pdata witch is the array (1D) of the VACF
-        #    - pres witch is the resolution
-        #    - pdtion witch is ion time steps in atomic units of time
+        #    - pdata which is the array (1D) of the VACF
+        #    - pres which is the resolution
+        #    - pdtion which is ion time steps in atomic units of time
         self.atu = 2.41884*10**-5          # one atomic time unit (in ps)
         self.dtion = pdtion                   # ion time steps in atomic units of time
-        self.VACF = pdata                # Velocity autocorelation Function (array 1D)
+        self.VACF = pdata                # Velocity autocorrelation Function (array 1D)
         self.dt = self.dtion * self.atu        # time step (in ps)
         self.nbtime = len(pdata)        # Number of steps
         self.times = self.dt * arange(self.nbtime)# 1D array with the times of the simulation
@@ -99,7 +99,7 @@ class DOS:
 
 
     def getFrequencies(self):
-        #Return array (1D) with the frenquencies (mev)
+        #Return array (1D) with the frequencies (mev)
         frequencies = 4.1356 * arange(self.nbtime)/(2 * self.nbtime*self.dt)
         return frequencies
 
@@ -216,7 +216,7 @@ class RDF:
 
     def __init__(self, pfile, mode, atom1, atom2, box, pdr, pstep, No_Windows=False):
 
-        # This class aim is to calculate the Radial Distrubution Function
+        # This class aim is to calculate the Radial Distribution Function
         # the parameters are :
         #    - mode = 0 for normal RDF, 1 for its deconvolution
         #    - pfile  is the output file (ascii/netcdf)
@@ -260,7 +260,7 @@ class RDF:
 
         maxbin = int((rmax/deltaR))       # number of iteration
 
-        typat = file.getTypat()           # Type of particule
+        typat = file.getTypat()           # Type of particle
 
         if atom1 == 0:
             indexAtom1 = array([i for i,x in enumerate(typat) if x == 1 and 2],dtype=int) + 1
@@ -312,9 +312,9 @@ class DEC:
         # This class aim is to calculate the Deconvolution of the RDF
         # the parameters are :
         #    - pfile  is the output file (ascii/netcdf)
-        #    - n = is the neibhor number
+        #    - n = is the neighboring number
         #    - atom1/2 give the number of the atom in typat
-        #    - box : give the number of box wide for the calculculation of g(r)
+        #    - box : give the number of box wide for the calculation of g(r)
         #    - pdr   : give the radial precision of the calculation
         #    - pstep : give the self.increment for the step loop
 
@@ -345,7 +345,7 @@ class DEC:
 
         maxbin = int((rmax/deltaR))            # number of iteration
 
-        typat = file.getTypat()              # Type of particule
+        typat = file.getTypat()              # Type of particle
 
         if atom1 == 0:
             indexAtom1 = array([i for i,x in enumerate(typat) if x == 1 and 2],dtype=int) + 1
@@ -375,7 +375,7 @@ class ADF:
 
     def __init__(self, nei, pfile, atom1, atom2, pdt, pstep, No_Windows=False):
 
-        # This class aim is to calculate the Angular Distrubution Function
+        # This class aim is to calculate the Angular Distribution Function
         # the parameters are :
         #    - nei gives the number of neibours we consider
         #    - pfile  is the output file (ascii/netcdf)
@@ -399,11 +399,11 @@ class ADF:
         rprim[1] = file.getRPrim()[0,1]
         rprim[2] = file.getRPrim()[0,2]
 
-        deltaTheta = pdt                           # delta Theta  (degres)
+        deltaTheta = pdt                           # delta Theta  (degrees)
 
         maxbin = int((180./deltaTheta)) + 1            # number of iteration
 
-        typat = file.getTypat()              # Type of particule
+        typat = file.getTypat()              # Type of particle
 
         if atom1 == 0:
             indexAtom1 = array([i for i,x in enumerate(typat) if x == 1 and 2],dtype=int) + 1
@@ -437,7 +437,7 @@ class NDF:
 
     def __init__(self, nei, pfile, atom1, atom2, pdr, pstep, No_Windows=False):
 
-        # This class aim is to calculate the Neighbor Distrubution Function
+        # This class aim is to calculate the Neighbor Distribution Function
         # the parameters are :
         #    - nei gives the neith neibours we consider.
         #    - pfile  is the output file (ascii/netcdf)
@@ -463,7 +463,7 @@ class NDF:
 
         deltaR = pdr
 
-        typat = file.getTypat()              # Type of particule
+        typat = file.getTypat()              # Type of particle
 
         if atom1 == 0:
             indexAtom1 = array([i for i,x in enumerate(typat) if x == 1 and 2],dtype=int) + 1
@@ -515,7 +515,7 @@ class Proba:
 
     def __init__(self, nei, pfile, atom1, No_Windows=False):
 
-        # This class aim is to calculate the Pobability that one neighbor stay in the same neighborhood of an atom between the first step and the last step considered
+        # This class aim is to calculate the Probability that one neighbor stay in the same neighborhood of an atom between the first step and the last step considered
         # the parameters are :
         #    - nei give the number of neighbors considered
         #    - pfile  is the output file (ascii/netcdf)
@@ -535,7 +535,7 @@ class Proba:
         rprim[1] = file.getRPrim()[0,1]
         rprim[2] = file.getRPrim()[0,2]
 
-        typat = file.getTypat()              # Type of particule
+        typat = file.getTypat()              # Type of particle
 
         if atom1 == 0:
             indexAtom1 = array([i for i,x in enumerate(typat) if x == 1 and 2],dtype=int) + 1
@@ -573,7 +573,7 @@ class MSD:
 
         pos = file.getXCart()          # position of atom (cartesian)
 
-        typat = file.getTypat()        # Type of particule
+        typat = file.getTypat()        # Type of particle
         
         indexAtom1 = array([i for i,x in enumerate(typat) if x == atom1],dtype=int) + 1 #get list of the index of typat1 (+1 for fortran)
 
@@ -600,10 +600,10 @@ class elasticCalculation:
     def __init__(self,pfiles,pni,pWDData):
         # This class aim is to calculate the Elastic constant
         # the parameter is :
-        #        -pfiles : witch is dictionnay array with the path of the files
+        #        -pfiles : which is dictionary array with the path of the files
 
-        self.files   = pfiles         #Dictionnary array
-        self.elastic = {}         #Dictionnary array with the elastics constants
+        self.files   = pfiles         #Dictionary array
+        self.elastic = {}         #Dictionary array with the elastics constants
         self.ni = pni                 #Departure of the step
         self.datasetWD = pWDData #Dataset without deformation
 
@@ -617,8 +617,8 @@ class elasticCalculation:
                 self.elastic['C12'] = 0
                 self.elastic['C44'] = 0
 
-                self.M = 0 # M = C11 - C12  using in the tetragonal deformotation
-                self.T = 0 # T = C11 + 2C12 using in the isotropic deformotation
+                self.M = 0 # M = C11 - C12  using in the tetragonal deformation
+                self.T = 0 # T = C11 + 2C12 using in the isotropic deformation
 
                 #print self.deformation
                 #for key in self.deformation:

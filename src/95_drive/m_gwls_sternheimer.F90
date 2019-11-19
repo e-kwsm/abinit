@@ -145,11 +145,11 @@ integer :: GWLS_TIMAB, OPTION_TIMAB
  master_debug = .false.
 !master_debug = .true.
 
-!Governs the status of all opened files formerly with the status 'new' harcoded.
-!It is initialized in the m_gwls_utility module as 'new'; this default is overriden here if desired.
+!Governs the status of all opened files formerly with the status 'new' hardcoded.
+!It is initialized in the m_gwls_utility module as 'new'; this default is overridden here if desired.
  files_status_new = 'unknown'
-!Governs the status of all opened files formerly with the status 'old' harcoded.
-!It is initialized in the m_gwls_utility module as 'old'; this default is overriden here if desired.
+!Governs the status of all opened files formerly with the status 'old' hardcoded.
+!It is initialized in the m_gwls_utility module as 'old'; this default is overridden here if desired.
  files_status_old = 'unknown'
 
 ! Test the input to make sure it is consistent with what

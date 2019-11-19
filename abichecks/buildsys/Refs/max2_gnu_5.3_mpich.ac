@@ -54,7 +54,7 @@
 #     * naughty  : paranoid debugging with array bound checks
 #
 # Levels other than no and yes are "profile mode" levels in which
-# user-defined flags are overriden and optimizations disabled (see
+# user-defined flags are overridden and optimizations disabled (see
 # below)
 #
 # Note: debug levels are incremental, i.e. the flags of one level are
@@ -84,7 +84,7 @@
 #     * aggressive : build very fast code, regardless of reliability
 #
 # Levels other than no and yes are "profile mode" levels in which
-# user-defined flags are overriden
+# user-defined flags are overridden
 #
 # Note:
 #

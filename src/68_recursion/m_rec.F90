@@ -521,7 +521,7 @@ subroutine InitRec(dtset,mpi_ab,rset,rmet,mproj)
  !------------------------------------------------------------
  !--DETERMINING WHICH POINT WILL COMPUTE THAT PROC
  !----------------------------------------------------------
- !--Paralelism using the band communicator (not used in the recursion)
+ !--Parallelism using the band communicator (not used in the recursion)
  !--Distribution on procs with cuda
 
 
@@ -1241,7 +1241,7 @@ real(dp) :: inf_rmet(3,3)
 
  end if
 
-!--For now, recursion method doesn't use paralelism on FFT - which would require a great number of processors
+!--For now, recursion method doesn't use parallelism on FFT - which would require a great number of processors
  nfftrec = product(ngfftrec(1:3))
  ngfftrec(9:11) = (/0,1,0/)   !--(/ paral, nproc, %me \)
  ngfftrec(12:13) = ngfftrec(2:3)   ! n2proc ! n3proc

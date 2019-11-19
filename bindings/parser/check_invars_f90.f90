@@ -40,7 +40,7 @@ program toto
      write(*, "(A,3F12.6,A)") "box definition: (", rprimd(:, 1), ")"
      write(*, "(A,3F12.6,A)") "                (", rprimd(:, 2), ")"
      write(*, "(A,3F12.6,A)") "                (", rprimd(:, 3), ")"
-     write(*, "(A,I0,A,I0)") "Size of coordiantes array in dataset ", idtset, ": ", size(coord)
+     write(*, "(A,I0,A,I0)") "Size of coordinates array in dataset ", idtset, ": ", size(coord)
      write(*, "(A,I0,A)") "Coordinates in dataset ", idtset, ":"
      do i = 0, size(coord) / 3 - 1, 1
         write(*, "(3F12.6)") coord(i * 3 + 1), coord(i * 3 + 2), coord(i * 3 + 3)

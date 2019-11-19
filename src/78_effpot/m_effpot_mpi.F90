@@ -5,7 +5,7 @@
 !! m_effpot_mpi
 !!
 !! FUNCTION
-!! Module for using the paralelisation of effective potential
+!! Module for using the parallelisation of effective potential
 !! Container type is defined, and destruction, print subroutines
 !! This module is still experimental
 !!

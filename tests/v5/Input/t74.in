@@ -61,7 +61,7 @@ prtwf 0
 #%% authors = PM. Anglade
 #%% keywords = 
 #%% description = 
-#%%   Simple test for rsprc preconditionner (not already effective)
+#%%   Simple test for rsprc preconditioner (not already effective)
 #%%   simple scf calculation
 #%%   following part of the code are tested:
 #%%   04rsprc/prcrscgres2.F90

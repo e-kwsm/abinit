@@ -1019,7 +1019,7 @@ The columns are
   * **Hhartree**: diagonal expectation value of the Hartree Hamiltonian (equal to E_lda - Vxclda for the first iteration only)   
   * **SigX**: diagonal expectation value of the exchange self-energy   
   * **SigC[E(N-1)]**: diagonal expectation value of the correlation self-energy 
-    (evaluated for the energy of the preceeding iteration)   
+    (evaluated for the energy of the preceding iteration)   
   * **Z**: quasiparticle renormalization factor Z (taken equal to 1 in methods HF, SEX, COHSEX and model GW)   
   * **dSigC/dE**: Derivative of the correlation self-energy with respect to the energy   
   * **Sig[E(N)]**: Total self-energy for the new quasiparticle energy   

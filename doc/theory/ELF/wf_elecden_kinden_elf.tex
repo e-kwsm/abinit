@@ -46,7 +46,7 @@ u_{n\mathbf{k}}(\mathbf{r}) &=& \sum_{\mathbf{G_{\mathbf{k}}}} c_{n\mathbf{k}}(\
 \psi_{n\mathbf{k}}(\mathbf{r}) &=& \sum_{\mathbf{G_{\mathbf{k}}}} c_{n\mathbf{k}}(\mathbf{G}_{\mathbf{k}}) e^{i2\pi \left(  \mathbf{k} +\mathbf{G}_{\mathbf{k}}\right) \cdotp\mathbf{r}}
 \end{eqnarray}
 
-where $e^{i2\pi\mathbf{G}_{\mathbf{k}}\cdotp\mathbf{r}}$ are the plane waves and $c_{n\mathbf{k}}(\mathbf{G}_{\mathbf{k}})$ are their corresponding weigth and actually nothingelse than the Fourier transform components of $u_{n\mathbf{k}}(\mathbf{r})$. Here $\mathbf{G_{\mathbf{k}}}$ are any linear combinations of the reciprocal lattice vectors $\mathbf{G}_{latt}$\footnote{We remind that $\mathbf{G}_{latt}$ is obtained with $\mathbf{G}_{latt,i}\cdotp\mathbf{R}_{latt,j} = \delta_{ij}$. In many textbook you can find $\mathbf{G}_{latt,i}\cdotp\mathbf{R}_{latt,j} = 2\pi \delta_{ij}$ but then you have to define Bloch wavefunction as $\psi_{n\mathbf{k}}(\mathbf{r}) = u_{n\mathbf{k}}(\mathbf{r}) e^{i\mathbf{k}\cdotp\mathbf{r}}$. Both convention are possible it is up to you, here we use the one of Abinit.}. Other theoretical considerations  for Abinit code can be find in \cite{doc1WF_gonze}.\\
+where $e^{i2\pi\mathbf{G}_{\mathbf{k}}\cdotp\mathbf{r}}$ are the plane waves and $c_{n\mathbf{k}}(\mathbf{G}_{\mathbf{k}})$ are their corresponding weight and actually nothingelse than the Fourier transform components of $u_{n\mathbf{k}}(\mathbf{r})$. Here $\mathbf{G_{\mathbf{k}}}$ are any linear combinations of the reciprocal lattice vectors $\mathbf{G}_{latt}$\footnote{We remind that $\mathbf{G}_{latt}$ is obtained with $\mathbf{G}_{latt,i}\cdotp\mathbf{R}_{latt,j} = \delta_{ij}$. In many textbook you can find $\mathbf{G}_{latt,i}\cdotp\mathbf{R}_{latt,j} = 2\pi \delta_{ij}$ but then you have to define Bloch wavefunction as $\psi_{n\mathbf{k}}(\mathbf{r}) = u_{n\mathbf{k}}(\mathbf{r}) e^{i\mathbf{k}\cdotp\mathbf{r}}$. Both convention are possible it is up to you, here we use the one of Abinit.}. Other theoretical considerations  for Abinit code can be find in \cite{doc1WF_gonze}.\\
 In the previous equation we notice the index $\mathbf{k}$ on $\mathbf{G_{\mathbf{k}}}$ which comes from the fact that in practice, to avoid an infinite sum over $\mathbf{G}$ vectors, we limit us (for each $\mathbf{k}$) to a finite number of $\mathbf{G}$ vectors defined by the cut-off energy $E_{kin-cut}$. Therefore $\mathbf{G}_{\mathbf{k}}$ is such that
 
 \begin{equation}
@@ -212,7 +212,7 @@ which actually means that the symmetrized wavefunction $\psi_{n\mathbf{k}}'$ is 
 \left( S_{\mathbf{t}} \left( \psi_{n\mathbf{k}}\right) \right) (\mathbf{r}) \stackrel{L.C.}{=} \psi_{n\mathbf{k}}'(\mathbf{r}) \stackrel{L.C.}{=} \psi_{n\mathbf{k}'}(\mathbf{r}) \label{symrel_psikkprime}
 \end{equation}
 
-In Abinit code we store only the weigth of each plane wave ($c_{n\mathbf{k}}(\mathbf{G_{\mathbf{k}}})$) so we are more interested to find relation between $c_{n\mathbf{k}}(\mathbf{G_{\mathbf{k}}})$
+In Abinit code we store only the weight of each plane wave ($c_{n\mathbf{k}}(\mathbf{G_{\mathbf{k}}})$) so we are more interested to find relation between $c_{n\mathbf{k}}(\mathbf{G_{\mathbf{k}}})$
 
 \begin{eqnarray}
 \left( S_{\mathbf{t}} \left( \psi_{n\mathbf{k}}\right) \right) (\mathbf{r}) &\stackrel{L.C.}{=}&  \psi_{n\mathbf{k}'}(\mathbf{r}) \nonumber \\

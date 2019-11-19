@@ -107,7 +107,7 @@ contains
   !                         ABINIT uses  ???
 
   ! !-----------------------------------------
-  ! Transfered in gstate
+  ! Transferred in gstate
   ! call lotfvar_init(natom,&
   !   &               2, & !--version: set type of MD algo
   !   &           itime, & !--nstart: initial step
@@ -617,7 +617,7 @@ contains
          end if
        end do
 
-      ! In paralell all this is going to cause trouble...........................
+      ! In parallel all this is going to cause trouble...........................
       !      call dlvsum(lotfvar%me-1,lotfvar%nproc,dcost_dalpha,3*nbondex)
       !......... check later more operations over dcost_dalpha...................
 
@@ -1512,7 +1512,7 @@ contains
 
 ! *************************************************************************
 
-  !--inital values for position and forces
+  !--initial values for position and forces
    xcartfit(:,:) = xcart(:,:)
    velfit(:,:) = vel(:,:)
 

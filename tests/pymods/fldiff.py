@@ -344,7 +344,7 @@ class Diff(object):
         "s" for string difference
         "a" for absolute difference
         "r" for relative difference
-        "e" if an error occured (diff of objects of different class
+        "e" if an error occurred (diff of objects of different class
     """
     POSSIBLE_CODES = ["e", "r", "a", "s", ]
 
@@ -508,7 +508,7 @@ class DiffLineException(DiffException):
 
 
 class DiffNumberOfTokens(DiffException):
-    """Line compasison cannot be done..."""
+    """Line comparison cannot be done..."""
 
 
 class FileLine(namedtuple("FileLine", "opos, string")):

@@ -211,7 +211,7 @@ subroutine frskerker2__newvres2(nv1,nv2,x, grad, vrespc)
 !! frskerker2__pf
 !!
 !! FUNCTION
-!! penalty function associated with the preconditionned residuals
+!! penalty function associated with the preconditioned residuals
 !!
 !! INPUTS
 !!

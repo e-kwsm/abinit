@@ -776,9 +776,9 @@ class winRDF(QtGui.QWidget):
             y = self.AngularDistrib.getADF()
         
             try:
-                self.GraphADF.update(x,y,'Theta (degres)', "Angular Distribution",name = self.name)
+                self.GraphADF.update(x,y,'Theta (degrees)', "Angular Distribution",name = self.name)
             except:
-                self.GraphADF = Graph.graphic(x,y,'Theta (degres)', "Angular Distribution", average=False,name = self.name)
+                self.GraphADF = Graph.graphic(x,y,'Theta (degrees)', "Angular Distribution", average=False,name = self.name)
             #self.connect(self.GraphRDF, QtCore.SIGNAL("myCustomizedSignal()"), self.close)
             self.GraphADF.show()
 

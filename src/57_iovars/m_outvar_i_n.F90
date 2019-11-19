@@ -327,7 +327,7 @@ subroutine outvar_i_n (dtsets,iout,&
  do idtset=0,ndtset_alloc       ! specific size for each dataset
    narrm(idtset)=dtsets(idtset)%natsph
    if(idtset==0)narrm(idtset)=mxvals%natsph
-!  Need to be printed only if there is some occurence of prtdos==3 or pawfatbnd
+!  Need to be printed only if there is some occurrence of prtdos==3 or pawfatbnd
    if (narrm(idtset)>0) then
      intarr(1:narrm(idtset),idtset)=dtsets(idtset)%iatsph(1:narrm(idtset))
    end if
@@ -840,7 +840,7 @@ subroutine outvar_i_n (dtsets,iout,&
  call prttagm(dprarr,intarr,iout,jdtset_,2,marr,1,narrm,ncid,ndtset_alloc,'natom','INT',0,forceprint=2)
 
 !natsph
-!Need to be printed only if there is some occurence of prtdos==3 or
+!Need to be printed only if there is some occurrence of prtdos==3 or
 !pawfatbnd>0
  narr=1                      ! default size for all datasets
  do idtset=0,ndtset_alloc       ! especific size for each dataset

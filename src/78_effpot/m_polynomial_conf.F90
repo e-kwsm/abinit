@@ -60,10 +60,10 @@ module m_polynomial_conf
 !  Power of the polynome related to the strain
 
    real(dp):: factor_disp = 0
-!  Factor to appy to the polynomial term of the confinement (displacement)
+!  Factor to apply to the polynomial term of the confinement (displacement)
 
    real(dp):: factor_strain = 0
-!  Factor to appy to the polynomial term of the confinement (strain)
+!  Factor to apply to the polynomial term of the confinement (strain)
 
    real(dp):: cutoff_strain(6)
 !  Cutoff array for the strain
@@ -92,8 +92,8 @@ CONTAINS  !=====================================================================
 !! INPUTS
 !! cutoff_disp(6) = Cutoff array for the strain
 !! cutoff_strain(ndisp) = Cutoff array for the atomic displacement
-!! factor_disp = Factor to appy to the polynomial term of the confinement (displacement)
-!! factor_strain = Factor to appy to the polynomial term of the confinement (strain)
+!! factor_disp = Factor to apply to the polynomial term of the confinement (displacement)
+!! factor_strain = Factor to apply to the polynomial term of the confinement (strain)
 !! ndisp = Number of displacement (atoms) for the cut off
 !! power_disp = Power of the polynome related to the displacement
 !! power_strain = Power of the polynome related to the strain
@@ -227,13 +227,13 @@ end subroutine polynomial_conf_free
 !!  polynomial_conf_evaluate
 !!
 !! FUNCTION
-!!  This fonction evaluate the energy, (soon forces and stresses) with  the confinement potential
+!!  This function evaluate the energy, (soon forces and stresses) with  the confinement potential
 !!
 !! INPUTS
 !!   disp(3,natom_sc) = atomic displacments of a specific patern wrt to reference structure
 !!   disp_ref(natom_uc) = Cutoff array for the atomic displacement
-!!   factor_disp = Factor to appy to the polynomial term of the confinement (displacement)
-!!   factor_strain = Factor to appy to the polynomial term of the confinement (strain)
+!!   factor_disp = Factor to apply to the polynomial term of the confinement (displacement)
+!!   factor_strain = Factor to apply to the polynomial term of the confinement (strain)
 !!   strain(6) =   strain of a specific structure wrt to reference
 !!   strain_ref(6) = Cutoff array for the strain
 !!   power_disp = Power of the polynome related to the displacement

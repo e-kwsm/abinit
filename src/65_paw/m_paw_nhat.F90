@@ -1973,7 +1973,7 @@ end subroutine nhatgrid
 !!    pawfgrtab(natom)%rfgd(3,nfgd)= coordinates of r-r_atom around each atom
 !!
 !! NOTES
-!!   PENDING: ADD PARALELLISM OVER ATOMS:
+!!   PENDING: ADD PARALLELISM OVER ATOMS:
 !!   COPY NHATGRID
 !!
 !! PARENTS

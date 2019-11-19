@@ -272,7 +272,7 @@ ABI_RELEVANCES = OrderedDict([
 class Variable(object):
     """
     This object gathers information about a single variable. name, associated topics, description etc
-    It's constructed from the variables_CODENANE.py modules but client code usually
+    It's constructed from the variables_CODENAME.py modules but client code usually
     interact with variables via the :class:`VarDatabase` dictionary.
     """
     def __init__(self,
@@ -503,7 +503,7 @@ class Variable(object):
         if self.requires is not None:
             parent_names.extend([m.group(1) for m in re.finditer(WIKILINK_RE, self.requires) if m])
 
-        # Convert to set and remove possibile self-reference.
+        # Convert to set and remove possible self-reference.
         parent_names = set(parent_names)
         parent_names.discard(self.name)
         return parent_names
@@ -654,7 +654,7 @@ class Variable(object):
         #        print('The field varset of %s should be one of the valid varsets' % str(self))
 
         if len(self.name) > 20:
-            eapp("Lenght of `%s` is longer than 20 characters." % svar)
+            eapp("Length of `%s` is longer than 20 characters." % svar)
 
         if errors:
             raise ValueError("\n".join(errors))
@@ -999,7 +999,7 @@ class InputVariables(OrderedDict):
         return od
 
     def get_vartabs_html(self, website, page_rpath):
-        """Return HTML string with all the variabes in tabular format."""
+        """Return HTML string with all the variables in tabular format."""
         ch2vars = self.groupby_first_letter()
         ch2vars["All"] = self.values()
         # http://getbootstrap.com/javascript/#tabs

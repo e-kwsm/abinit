@@ -260,7 +260,7 @@ extern "C" void gpu_sphere_out_(double *cg,double *cfft,int *kg_k,int *npw,int *
   bloc.x = BLOCK_SIZE;
   grid.x = min((*npw  + bloc.x - 1 )/bloc.x ,MAX_GRID_SIZE);
   grid.y = *ndat;
-  //Extract wave functions and appy fft normalisation factor before storing
+  //Extract wave functions and apply fft normalisation factor before storing
   kernel_sphere_out<<<grid,bloc,0,*compute_stream>>>(cfft,cg,kg_k,*npw,*ndat,*n1,*n2,*n3,norme);
 
 }//end subroutine gpu_sphere_out

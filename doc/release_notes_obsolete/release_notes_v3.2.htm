@@ -171,19 +171,19 @@ __________________________________________________________________
 
 C.  WARNINGS
 
-C1. For developpers : there has been big changes due to the
+C1. For developers : there has been big changes due to the
     introduction of structured (derived) datatypes, and
     the associated modules defs_common.f, ...
     For example, the number of arguments of gstate.f has changed
     from 90 to 25 !
-    It is strongly adviced to the developpers to carefully read
+    It is strongly advised to the developers to carefully read
     the defs_*.f files contained in the subdirectory Src_defs .
 
-C2. For developpers : the name of the module
+C2. For developers : the name of the module
     basis_defs.f has been changed to defs_basis.f . This module
     is used in all ABINIT routines.
 
-C3. For developpers : the unit number associated with the main abinit
+C3. For developers : the unit number associated with the main abinit
     output, previously "iout" is now defined
     in the module defs_basis.f , and no more
     in the abinit.f file.  It is called ab_out .
@@ -195,7 +195,7 @@ C3. For developpers : the unit number associated with the main abinit
     defs_basis.f, with the name tmp_unit . Many routines have left
     their "unit00" argument.
 
-C4. For developpers : the routine rhohxc.f has been moved to
+C4. For developers : the routine rhohxc.f has been moved to
     rhohxc_coll.f , due to the implementation of the non-collinear
     magnetism. A new rhohxc.f is the interface towards rhohxc_coll.f
     in non-spin-polarized and collinear magnetization cases.

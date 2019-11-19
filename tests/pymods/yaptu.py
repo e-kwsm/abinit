@@ -121,7 +121,7 @@ One last, plain line at the end.""".split('\n')]
 
 __doc__ = """
 We may often want to copy some "template" text (normally from an input file) to an output
-file-like object, while expanding Python expressions (and possibily executing Python
+file-like object, while expanding Python expressions (and possibly executing Python
 statements, e.g. for selection or repetition) that may be "embedded" in the template text.
 
 YAPTU is a small but complete Python module for this purpose, suitable for processing most

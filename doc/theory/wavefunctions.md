@@ -362,7 +362,7 @@ $$ ({\bf k}')_{\beta} = (S_{\bf t}({\bf k}))_{\beta} = \sum_{\beta} S^{-1}_{\bet
 
 i.e. the inverse transpose of $S_{\alpha\beta}$ is used.
 
-The preceeding result means
+The preceding result means
 
 \begin{eqnarray*}
 \psi_{n(S^{-1,t}{\bf k})}

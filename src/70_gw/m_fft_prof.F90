@@ -52,7 +52,7 @@ MODULE m_FFT_prof
 !! FFT_test_t
 !!
 !! FUNCTION
-!! Structure storing the set of paramenters passed to the FFT routines used in
+!! Structure storing the set of parameters passed to the FFT routines used in
 !! abinit (fourdp|fourwf).
 !!
 !! SOURCE

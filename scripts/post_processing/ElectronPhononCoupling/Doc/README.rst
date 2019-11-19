@@ -1,4 +1,4 @@
 
-This directory contains documentation for the users and the developpers
+This directory contains documentation for the users and the developers
 (that is, anyone).
 

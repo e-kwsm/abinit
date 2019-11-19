@@ -313,7 +313,7 @@ CONTAINS  !===========================================================
 !******************************************************************
 
 #ifdef HAVE_LINALG_SCALAPACK
-!Scalapack initalization
+!Scalapack initialization
  if (eigen_group_size>0) then
    abi_communicator = comm_scalapack
    rank=xmpi_comm_rank(comm_scalapack)

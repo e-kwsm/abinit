@@ -27,7 +27,7 @@
 !Self-consistent cycle for the electronic relaxation
  toldfe 1.0d-10           ! Stopping criterium
  nstep 20                 ! Max. number of SCF cycles
- diemac 12.               ! Precondionning of SCF cycle
+ diemac 12.               ! Preconditioning of SCF cycle
 
 !Plane-wave basis
  ecut 10.                 ! PW cut-off for WF

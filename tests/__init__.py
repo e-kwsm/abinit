@@ -243,7 +243,7 @@ class Suite(object):
         return subsuite_name in self.subsuites
 
     def inputs_of_subsuite(self, subsuite_name):
-        """Return the absolut path of the input files in the subsuite."""
+        """Return the absolute path of the input files in the subsuite."""
         return self.subsuites[subsuite_name]
 
     def __str__(self):
@@ -926,7 +926,7 @@ KNOWN_KEYWORDS = {
     "PBE0": "PBE0 calculations",
     "cRPA": "RPA for correlated electrons.",
     "FAILS_IFMPI": "Tests failing if MPI is used",
-    'NVT': "(N,V,T) enseble",
+    'NVT': "(N,V,T) ensemble",
     'ELASTIC': "Calculations of elastic constants",
     'INTERNAL_STRAIN': "Calculations of internal strain",
     'DFT-D3(BJ)': "DFT-D3 dispersion correction",

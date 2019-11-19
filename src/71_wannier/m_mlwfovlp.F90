@@ -1644,7 +1644,7 @@ end subroutine mlwfovlp_seedname
 !!  natom=number of atoms in cell.
 !!  nkpt=number of k points.
 !!  num_bands(isppol)=number of bands actually used to construct the wannier function
-!!  nwan(isppol)= number of wannier fonctions (read in wannier90.win).
+!!  nwan(isppol)= number of wannier functions (read in wannier90.win).
 !!  dtset <type(dataset_type)>=all input variables for this dataset
 !!  real_lattice(3,3)=dimensional primitive translations for real space
 !!                 in format required by wannier90
@@ -2320,7 +2320,7 @@ subroutine mlwfovlp_pw(cg,cm1,g1,iwav,kg,mband,mkmem,mpi_enreg,mpw,nfft,ngfft,nk
 !!  nsppol=1 for unpolarized, 2 for spin-polarized
 !!  ntypat=number of types of atoms in unit cell.
 !!  num_bands=number of bands actually used to construct the wannier function
-!!  nwan= number of wannier fonctions (read in wannier90.win).
+!!  nwan= number of wannier functions (read in wannier90.win).
 !!  proj_l(mband)= angular part of the projection function (quantum number l)
 !!  proj_m(mband)= angular part of the projection function (quantum number m)
 !!  proj_radial(mband)= radial part of the projection.
@@ -2835,13 +2835,13 @@ end subroutine mlwfovlp_proj
 !!  mband= maximum number of bands
 !!  mkmem= number of k points which can fit in memory; set to 0 if use disk
 !!  natom= number of atoms in cell.
-!!  nband(nkpt*nsppol)= array cointaining number of bands at each k-point and isppol
+!!  nband(nkpt*nsppol)= array containing number of bands at each k-point and isppol
 !!  nkpt=number of k points.
 !!  num_bands=number of bands actually used to construct the wannier function (NOT USED IN 6.7.1 SO WAS TEMPORARILY REMOVED)
 !!  nspinor=number of spinorial components of the wavefunctions
 !!  nsppol=1 for unpolarized, 2 for spin-polarized
 !!  ntypat=number of types of atoms in unit cell.
-!!  nwan= number of wannier fonctions (read in wannier90.win).
+!!  nwan= number of wannier functions (read in wannier90.win).
 !!  pawrad(ntypat)= type(pawrad_type) radial information of paw objects
 !!  pawtab(ntypat)= For PAW, TABulated data initialized at start
 !!  proj_l(mband)= angular part of the projection function (quantum number l)

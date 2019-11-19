@@ -5,7 +5,7 @@
 !!
 !! FUNCTION
 !! This modules defines arrays and data used for the real-space kerker
-!! preconditionning of potential residuals.
+!! preconditioning of potential residuals.
 !!
 !! COPYRIGHT
 !! Copyright (C) 2009-2018 ABINIT group (PMA).

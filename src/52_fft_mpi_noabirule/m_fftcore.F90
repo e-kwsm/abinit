@@ -4985,7 +4985,7 @@ end subroutine kgindex
 !!  lot=2nd Leading dimension of zw (cache blocking factor).
 !!  n1dfft=Number of 1D FFTs along y performed.
 !!  zw(2,lot,n2)=Array with the x-y planes (wavefunction in real space).
-!!  weigth=Weight factor for the density.
+!!  weight=Weight factor for the density.
 !!
 !! SIDE EFFECTS
 !!   rhopart(nd1,nd2)=density in the x-y plane, accumulated in output.

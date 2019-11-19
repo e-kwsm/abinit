@@ -1680,7 +1680,7 @@ subroutine setup_bse(codvsn,acell,rprim,ngfftf,ngfft_osc,Dtset,Dtfil,BS_files,Ps
    ng0sh_opt(:)=(/zero,zero,zero/)
  else
    ! * Here I have to be sure that Qmesh%bz is always inside the BZ, not always true since bz is buggy
-   ! * -one is used because we loop over all the possibile differences, unlike screening
+   ! * -one is used because we loop over all the possible differences, unlike screening
    call get_ng0sh(my_k2-my_k1+1,Kmesh%bz(:,my_k1:my_k2),Kmesh%nbz,Kmesh%bz,&
 &    Qmesh%nbz,Qmesh%bz,-one,ng0sh_opt)
  end if

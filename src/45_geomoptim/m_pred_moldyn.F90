@@ -257,7 +257,7 @@ real(dp),pointer :: fcart_cur(:,:),fcart_prev(:,:),fcart_prev2(:,:)
 !      write(std_out,*) '05'
 !      ##########################################################
 !      ### 05. Initialization (itime==1):
-!      ###     4 calls to obtain the forces are neeeded
+!      ###     4 calls to obtain the forces are needed
 !      ###     The variables vec_tmp2 and vec_tmp1 from previous
 !      ###     calls are used in the following ones.
        if(itime==1)then

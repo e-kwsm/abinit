@@ -452,7 +452,7 @@ class QptAnalyzer(object):
             ntemp = self.ntemp
             temperatures = self.temperatures
 
-            # Bose-Enstein occupation number
+            # Bose-Einstein occupation number
             # nmode, ntemp
             n_B = self.ddb.get_bose(temperatures)
 
@@ -601,9 +601,9 @@ class QptAnalyzer(object):
         mode:
             Keep mode decomposition (additional dimension)
         temperature:
-            Inlcude temperature depdencente (additional dimension).
+            Include temperature dependence (additional dimension).
         omega:
-            Inlcude frequency depdencente (additional dimension).
+            Include frequency dependence (additional dimension).
         dynamical:
             Use the full dynamical theory by including the phonon frequencies
             in the location of the poles of the self-energy.
@@ -650,9 +650,9 @@ class QptAnalyzer(object):
         mode:
             Keep mode decomposition (additional dimension)
         temperature:
-            Inlcude temperature depdencente (additional dimension).
+            Include temperature dependence (additional dimension).
         omega:
-            Inlcude frequency depdencente (additional dimension).
+            Include frequency dependence (additional dimension).
         dynamical:
             Use the full dynamical theory by including the phonon frequencies
             in the location of the poles of the self-energy.
@@ -728,7 +728,7 @@ class QptAnalyzer(object):
             ntemp = self.ntemp
             temperatures = self.temperatures
 
-            # Bose-Enstein occupation number
+            # Bose-Einstein occupation number
             # nmode, ntemp
             n_B = self.ddb.get_bose(temperatures)
 
@@ -839,7 +839,7 @@ class QptAnalyzer(object):
         from one q-point.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega) = Sigma_kn(omega + E^0_kn)
 
@@ -862,7 +862,7 @@ class QptAnalyzer(object):
         dynamical self-energy from one q-point.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega,T) = Sigma_kn(omega + E^0_kn, T)
     
@@ -887,7 +887,7 @@ class QptAnalyzer(object):
         Only include the active space contribution.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega) = Sigma_kn(omega + E^0_kn)
 
@@ -911,7 +911,7 @@ class QptAnalyzer(object):
         Only include the Sternheimer contribution.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega) = Sigma_kn(omega + E^0_kn)
 
@@ -935,7 +935,7 @@ class QptAnalyzer(object):
         Only include the active space contribution.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega,T) = Sigma_kn(omega + E^0_kn, T)
     
@@ -959,7 +959,7 @@ class QptAnalyzer(object):
         Only include the Sternheimer contribution.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega,T) = Sigma_kn(omega + E^0_kn, T)
     

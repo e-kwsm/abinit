@@ -696,7 +696,7 @@ subroutine mpi_setup(dtsets,filnam,lenstr,mpi_enregs,ndtset,ndtset_alloc,string)
      if (.not.mpi_distrib_is_ok(mpi_enregs(idtset),mband_upper,&
 &     dtsets(idtset)%nkpt,dtsets(idtset)%mkmem,nsppol,msg=message)) then
        write(message,'(5a)') trim(message),ch10,&
-&       'YOU ARE STRONGLY ADVICED TO ACTIVATE AUTOMATIC PARALLELIZATION!',ch10,&
+&       'YOU ARE STRONGLY ADVISED TO ACTIVATE AUTOMATIC PARALLELIZATION!',ch10,&
 &       'PUT "AUTOPARAL=1" IN THE INPUT FILE.'
        MSG_WARNING(message)
      end if
@@ -970,7 +970,7 @@ end subroutine mpi_setup
 !! INPUTS
 !!  dtsets(0:ndtset_alloc)=<type datafiles_type>contains all input variables,
 !!   for all datasets; at this stage only datasets with index lower than
-!!   idtset are already initalized
+!!   idtset are already initialized
 !!  filnam(5)=character strings giving file names
 !!  idtset=number of the current dataset
 !!  mpi_enreg=information about MPI parallelization
@@ -1574,7 +1574,7 @@ end subroutine mpi_setup
    return
  end if
 
-!* HF or hybrid calculation: no use of the fonction "autoparal"
+!* HF or hybrid calculation: no use of the function "autoparal"
  if ((dtset%usefock==1).AND.(dtset%nphf/=1)) then
    write(message,'(a,i5,2a,i6,a)')  &
    'Hartree-Fock or hybrid calculation : Your input dataset does not let Abinit find an appropriate process distribution.'

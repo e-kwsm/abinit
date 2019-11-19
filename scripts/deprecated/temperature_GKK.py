@@ -103,7 +103,7 @@ else:
   energy = None
 
 # Temperature dependence analysis?
-user_input = raw_input('Do you want to compute the change of eigenergies with temperature? [y/n]\n')
+user_input = raw_input('Do you want to compute the change of eigenenergies with temperature? [y/n]\n')
 temperature =user_input.split()[0]
 if temperature == 'y':
   temperature = True
@@ -240,9 +240,9 @@ total_corr = total.total_corr
 
 if (EIGR2D.wtq != 0):
   total_wtq = total.total_wtq
-  print "Total weigth is ",total_wtq
+  print "Total weight is ",total_wtq
   if (total_wtq < 0.9 or total_wtq > 1.1):
-    raise Exception("The total weigth is not equal to 1.0. Check that you provide all the q-points.")
+    raise Exception("The total weight is not equal to 1.0. Check that you provide all the q-points.")
 
 
 # Report wall time (before writing final result to be able to include it)

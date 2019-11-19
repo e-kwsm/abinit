@@ -42,7 +42,7 @@ int main(int argc, const char *argv[])
 	     rprimd[1][0], rprimd[1][1], rprimd[1][2]);
       printf("                (%12.6f%12.6f%12.6f)\n",
 	     rprimd[2][0], rprimd[2][1], rprimd[2][2]);
-      printf("Size of coordiantes array in dataset %d: %d\n", idtset, n);
+      printf("Size of coordinates array in dataset %d: %d\n", idtset, n);
       printf("Coordinates in dataset %d:\n", idtset);
       for (j = 0; j < dims[1]; j++)
 	{

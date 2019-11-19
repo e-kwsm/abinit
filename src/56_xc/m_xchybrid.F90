@@ -394,7 +394,7 @@ subroutine hybrid_corr(dtset,ixc,nkxc,mpi_enreg,nfft,ngfft,nspden,rhor,rprimd,hy
  dtLocal%intxc = 0
  dtLocal%ixc   = -101
 
- ! Reinitialize the libxc module with the overriden values
+ ! Reinitialize the libxc module with the overridden values
  if (dtset%ixc<0) then
    call libxc_functionals_end()
  end if

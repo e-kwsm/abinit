@@ -26,13 +26,13 @@
  rfphon2   0
  iscf2    -2
  qpt2   0.11 0.0 0.0
- wtq2    0.1  # Random weigth value for testing purposes. 
+ wtq2    0.1  # Random weight value for testing purposes.
 
 # Computation at an other q point
  getwfk3  -2
  getwfq3  -1
  qpt3   0.11 0.0 0.0
- wtq3    0.1  # Random weigth value for testing purposes. 
+ wtq3    0.1  # Random weight value for testing purposes.
 
 # Common input variables, to be superceded in some cases
  nqpt     1

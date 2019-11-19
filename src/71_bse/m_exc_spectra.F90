@@ -78,7 +78,7 @@ contains
 !! INPUTS
 !!  usepaw=1 for PAW calculations, 0 otherwise.
 !!  drude_plsmf=Drude plasma frequency.
-!!  Bsp<excparam>=Data type gathering the paramenters used for the Bethe-Salpeter calculation.
+!!  Bsp<excparam>=Data type gathering the parameters used for the Bethe-Salpeter calculation.
 !!    inclvkb=If different from 0, [Vnl,r] is included in the calculation of the matrix elements of the velocity operator.
 !!  BS_files<excfiles>=filenames used in the Bethe-Salpeter part.
 !!  Kmesh<kmesh_t>=the k-point sampling for the wave functions.
@@ -1265,7 +1265,7 @@ end subroutine exc_write_tensor
 !!
 !! INPUTS
 !!  ncid =NC file handle
-!!  Bsp<excparam>=Data type gathering the paramenters used for the Bethe-Salpeter calculation.
+!!  Bsp<excparam>=Data type gathering the parameters used for the Bethe-Salpeter calculation.
 !!  eps_exc = Excitonic MDF
 !!  eps_rpanlf = KS-RPA MDF without local-field effects.
 !!  eps_gwnlf = GW-RPA MDF without local-field effects.

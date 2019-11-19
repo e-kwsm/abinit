@@ -15,7 +15,7 @@
 !! NOTES
 !!  This file comes directly from defs_basis.F90 module delivered with ABINIT.
 !!
-!!  FOR DEVELOPPERS: in order to preserve the portability of libPAW library,
+!!  FOR DEVELOPERS: in order to preserve the portability of libPAW library,
 !!  please consult ~abinit/src/??_libpaw/libpaw-coding-rules.txt
 !!
 !! SOURCE

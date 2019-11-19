@@ -171,7 +171,7 @@ CONTAINS
 !!  natom= number of atoms
 !!  nband= number of bands
 !!  nkpt= number of k-points
-!!  nsppol= number of independant spin components
+!!  nsppol= number of independent spin components
 !!
 !! SIDE EFFECTS
 !!  results_out(:)=<type(results_out_type)>=results_out datastructure array

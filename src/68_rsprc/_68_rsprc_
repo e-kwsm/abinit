@@ -4,7 +4,7 @@
 !!
 !! DESCRIPTION
 !! This directory contains
-!! - some routines used for real-space preconditionning of the scf cycle
+!! - some routines used for real-space preconditioning of the scf cycle
 !!
 !! COPYRIGHT
 !! Copyright (C) 1998-2018 ABINIT group (TD)

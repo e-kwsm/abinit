@@ -1061,7 +1061,7 @@ subroutine find_rstar_gen(skw, cryst, nrwant, rmax, or2vals, comm)
  !write(66,*)nstars; do ish=1,nstars; write(66,*)rgen(:,ish); end do
 
  ! Distribute shells among processor so that we can parallelize the search algorithm.
- ! Each proc works on a contigous block of shells, then we have to gather the results.
+ ! Each proc works on a contiguous block of shells, then we have to gather the results.
  ABI_MALLOC(sh_start, (0:nprocs-1))
  ABI_MALLOC(sh_stop, (0:nprocs-1))
  call xmpi_split_work2_i4b(nsh, nprocs, sh_start, sh_stop, msg, ierr)

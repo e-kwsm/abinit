@@ -1969,7 +1969,7 @@ istwfk(:)=dtset%istwfk
 !Initializing variables from gs_hamk
 ucvol = gs_hamk%ucvol
 ABI_ALLOCATE(gbound,(2*mgfft+8,2))
-!gbound = gs_hamk%gbound_k !Must be done later for bandft paralelism
+!gbound = gs_hamk%gbound_k !Must be done later for bandft parallelism
 
 !Parameters which need to be set by hand for now...
 weight           = 1           ! The weight of the k-pts, which sum to 1.

@@ -23,5 +23,5 @@ t59        # Root for the output name
 #%% keywords = NC
 #%% authors = JF. Briere
 #%% description = 
-#%%   Analysis of the output WF of the preceeding test by cut3d : output the wavefunction for second k point, third band.
+#%%   Analysis of the output WF of the preceding test by cut3d : output the wavefunction for second k point, third band.
 #%%<END TEST_INFO>

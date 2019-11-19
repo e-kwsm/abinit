@@ -229,7 +229,7 @@ class Website(object):
         """
         global _WEBSITE
         if _WEBSITE is not None:
-            raise RuntimeError("website has been already costructed")
+            raise RuntimeError("website has been already constructed")
         _WEBSITE = cls(root, deploy, verbose=verbose)
         return _WEBSITE
 
@@ -238,7 +238,7 @@ class Website(object):
         """Return Website instance. Assume object already initialized with build_website."""
         global _WEBSITE
         if _WEBSITE is None:
-            raise RuntimeError("website must be constructuted by calling `Website.build`")
+            raise RuntimeError("website must be constructed by calling `Website.build`")
         return _WEBSITE
 
     def __init__(self, root, deploy, verbose=0):
@@ -258,7 +258,7 @@ class Website(object):
         # Build parser to convert Markdown to HTML.
         # The parser must support the same extensions as those used by mkdocs
         # so we initialize it from the options specified in mkdocs.yml
-        # This implies that all extensions requirining the website singlecto must post-pone the import.
+        # This implies that all extensions requiring the website singlecto must post-pone the import.
         #   * extensions: A list of extensions, which can either
         #       be strings or objects.  See the docstring on Markdown.
         #   * configs: A dictionary mapping module names to config options
@@ -466,7 +466,7 @@ Change the input yaml files or the python code
                 self.ignored_paths.append(dest)
 
     def generate_page_with_ac_examples(self):
-        """Generate markdown pages with all ac exaples found in config-examples."""
+        """Generate markdown pages with all ac examples found in config-examples."""
         dirpath = os.path.join(self.root, "build", "config-examples")
         md_lines = []
         app = md_lines.append

@@ -580,7 +580,7 @@ subroutine wvl_prcref(dielar,iprcel,my_natom,nfftprc,npawmix,nspden,pawrhoij,&
  if (nspden/=1) vrespc(:,2:nspden)=diemixmag*vresid(:,2:nspden)
 
 !3) PAW only : precondition the rhoij quantities (augmentation
-!occupancies) residuals. Use a simple preconditionning
+!occupancies) residuals. Use a simple preconditioning
 !with the same mixing factor as the model dielectric function.
 
  if (usepaw==1.and.my_natom>0) then

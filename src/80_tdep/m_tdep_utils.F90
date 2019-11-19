@@ -1176,7 +1176,7 @@ subroutine tdep_calc_nbcoeff(distance,iatcell,InVar,ishell,jatom,katom,ncoeff,no
 ! When some constraints have been found
   ncount=const_tot
   write(16,*) ' '
-  write(16,*) 'There is a total of ',ncount,' non-independant constraints for this shell'
+  write(16,*) 'There is a total of ',ncount,' non-independent constraints for this shell'
   ii=0
   ABI_MALLOC(tab_vec,(norder,ncount)); tab_vec(:,:)=czero
   do isyminv=1,nsyminv
@@ -1236,10 +1236,10 @@ subroutine tdep_calc_nbcoeff(distance,iatcell,InVar,ishell,jatom,katom,ncoeff,no
   end do  
   write(16,*) '  =======Au total, il y a ',ncount,' vecteurs independants'
   if (ncount.gt.8.and.order==2) then
-    MSG_ERROR('There are too many independant vectors')
+    MSG_ERROR('There are too many independent vectors')
   end if
   if (ncount.gt.26.and.order==3) then
-    MSG_ERROR('There are too many independant vectors')
+    MSG_ERROR('There are too many independent vectors')
   end if
 
 ! On cherche les (norder-ncount) vecteurs orthogonaux aux vecteurs non-nuls

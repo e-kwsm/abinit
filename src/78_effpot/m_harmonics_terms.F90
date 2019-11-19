@@ -573,7 +573,7 @@ end subroutine harmonics_terms_setDynmat
 !!  harmonics_terms_evaluateIFC
 !!
 !! FUNCTION
-!!  This fonction compute the contribution of the ifc harmonic part of
+!!  This function compute the contribution of the ifc harmonic part of
 !!  the energy and forces.
 !!
 !! INPUTS

@@ -1,6 +1,6 @@
 #Test linear chain of atoms
 #Two different psps (Si+Ge), differ from those of
-#preceeding test
+#preceding test
 
  npsp        2            # Two pseudopotentials to be read
  znucl       14.0  32.0   # znucl(npsp) : Silicon then Germanium

@@ -71,6 +71,6 @@
 #%%   Test the automatic detection of the GPU and the automatic setting of
 #%%   use_gpu_cuda keyword according to the requested calculation.
 #%%   Ground-states calculations should be run with use_gpu_cuda activated
-#%%   (except if set to 0 in input file) while response fonction calculations
+#%%   (except if set to 0 in input file) while response function calculations
 #%%   should be run with use_gpu_cuda deactivated (at present : ABINIT v7.0).
 #%%<END TEST_INFO>

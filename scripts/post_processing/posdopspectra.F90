@@ -89,7 +89,7 @@ program posdopspectra
 
 
 ! Calculate the number of different points in the three directions (or equivalent)
-! and attribute the lenght of the corresponding vector
+! and attribute the length of the corresponding vector
 
  ALLOCATE(vec001 (nfft*nkpt))
  ALLOCATE(vec011 (nfft*nkpt))
@@ -162,7 +162,7 @@ program posdopspectra
    weight3(ii)=count((ipoint3(1:nfft*nkpt)==ii))
  end do
 
-! Transform vector lenght to mrad
+! Transform vector length to mrad
 
  vec001(1:npoints1)=vec001(1:npoints1)*two_pi*1000_dp/InvFineStruct
  vec011(1:npoints2)=vec011(1:npoints2)*two_pi*1000_dp/InvFineStruct

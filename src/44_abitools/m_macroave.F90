@@ -41,7 +41,7 @@ subroutine iorho( task, fname, cell, mesh, nsm, maxp, nspin, f, found )
 ! Saves/recovers the electron density at the mesh points.
 ! This simplified version reads only files written in serial mode.
 
-! Writen by J.Soler July 1997.
+! Written by J.Soler July 1997.
 ! Copyright (C) 1997-2003 J.Soler, P. Ordejon, J. Junquera
 ! This file is distributed under the terms of the
 ! GNU General Public License, see ~abinit/COPYING

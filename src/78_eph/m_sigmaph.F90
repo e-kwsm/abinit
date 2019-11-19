@@ -361,7 +361,7 @@ subroutine sigmaph(wfk0_path,dtfil,ngfft,ngfftf,dtset,cryst,ebands,dvdb,ifc,&
  integer :: nbcalc_ks,nbsum,bstart_ks,ikcalc
  real(dp),parameter :: tol_enediff=0.001_dp*eV_Ha
  real(dp) :: cpu,wall,gflops,cpu_all,wall_all,gflops_all
- real(dp) :: ecut,eshift,dotr,doti,dksqmax,weigth_q,rfact,alpha,beta,gmod2,hmod2
+ real(dp) :: ecut,eshift,dotr,doti,dksqmax,weight_q,rfact,alpha,beta,gmod2,hmod2
  complex(dpc) :: cfact,dka,dkap,dkpa,dkpap,my_ieta,cplx_ediff
  logical,parameter :: have_ktimerev=.True.
  logical :: isirr_k,isirr_kq,gen_eigenpb,isqzero
@@ -827,7 +827,7 @@ subroutine sigmaph(wfk0_path,dtfil,ngfft,ngfftf,dtset,cryst,ebands,dvdb,ifc,&
          eig0mkq = ebands%eig(ibsum_kq,ikq_ibz,spin)
          f_mkq = ebands%occ(ibsum_kq,ikq_ibz,spin)
          if (nsppol == 1 .and. nspinor == 1 .and. nspden == 1) f_mkq = f_mkq * half
-         weigth_q = sigma%wtq_k(iq_ibz)
+         weight_q = sigma%wtq_k(iq_ibz)
 
          do nu=1,natom3
            ! Ignore acoustic or unstable modes.
@@ -839,7 +839,7 @@ subroutine sigmaph(wfk0_path,dtfil,ngfft,ngfftf,dtset,cryst,ebands,dvdb,ifc,&
            do ib_k=1,nbcalc_ks
              band = ib_k + bstart_ks - 1
              eig0nk = ebands%eig(band,ik_ibz,spin)
-             gkk2 = weigth_q * (gkk_nu(1,ib_k,nu) ** 2 + gkk_nu(2,ib_k,nu) ** 2)
+             gkk2 = weight_q * (gkk_nu(1,ib_k,nu) ** 2 + gkk_nu(2,ib_k,nu) ** 2)
 
              do it=1,sigma%ntemp
                !nqnu = one; f_mkq = one
@@ -866,7 +866,7 @@ subroutine sigmaph(wfk0_path,dtfil,ngfft,ngfftf,dtset,cryst,ebands,dvdb,ifc,&
                if (sigma%has_nuq_terms) then
                  !TODO: in principle iq_ibz --> iq_bz
                  sigma%vals_nuq(it, ib_k, nu, iq_ibz, 1) = sigma%vals_nuq(it, ib_k, nu, iq_ibz, 1) + &
-                   gkk2 * cfact / weigth_q
+                   gkk2 * cfact / weight_q
                end if
 
                ! Accumulate dSigma(w)/dw(w=eKS) derivative for state ib_k
@@ -1015,14 +1015,14 @@ subroutine sigmaph(wfk0_path,dtfil,ngfft,ngfftf,dtset,cryst,ebands,dvdb,ifc,&
      do iq_ibz=1,nq
        if (mod(iq_ibz, nprocs) /= my_rank) cycle  ! MPI parallelism
 #if 0
-       qpt = sigma%qbz(:,iq_ibz); weigth_q = one / sigma%nqbz
+       qpt = sigma%qbz(:,iq_ibz); weight_q = one / sigma%nqbz
 #else
        if (abs(sigma%symsigma) == 1) then
-         qpt = sigma%qibz(:,iq_ibz); weigth_q = sigma%wtq(iq_ibz)
-         !qpt = sigma%qibz_k(:,iq_ibz); weigth_q = sigma%wtq_k(iq_ibz)
+         qpt = sigma%qibz(:,iq_ibz); weight_q = sigma%wtq(iq_ibz)
+         !qpt = sigma%qibz_k(:,iq_ibz); weight_q = sigma%wtq_k(iq_ibz)
        else
-         qpt = sigma%qbz(:,iq_ibz); weigth_q = one / sigma%nqbz
-         !qpt = sigma%qibz_k(:,iq_ibz); weigth_q = sigma%wtq_k(iq_ibz)
+         qpt = sigma%qbz(:,iq_ibz); weight_q = one / sigma%nqbz
+         !qpt = sigma%qibz_k(:,iq_ibz); weight_q = sigma%wtq_k(iq_ibz)
        end if
 #endif
 
@@ -1137,7 +1137,7 @@ subroutine sigmaph(wfk0_path,dtfil,ngfft,ngfftf,dtset,cryst,ebands,dvdb,ifc,&
 
              ! accumulate DW for each T, add it to Sigma(e0) and Sigma(w) as well
              do it=1,sigma%ntemp
-               cfact = - weigth_q * gdw2_mn(ibsum, ib_k) * (two * nqnu_tlist(it) + one)  / cplx_ediff
+               cfact = - weight_q * gdw2_mn(ibsum, ib_k) * (two * nqnu_tlist(it) + one)  / cplx_ediff
                rfact = real(cfact)
                sigma%dw_vals(it, ib_k) = sigma%dw_vals(it, ib_k) + rfact
                sigma%vals_e0ks(it, ib_k) = sigma%vals_e0ks(it, ib_k) + rfact
@@ -1152,7 +1152,7 @@ subroutine sigmaph(wfk0_path,dtfil,ngfft,ngfftf,dtset,cryst,ebands,dvdb,ifc,&
                if (sigma%has_nuq_terms) then
                  ! TODO: in principle iq_ibz --> iq_bz if symsigma == 0
                  sigma%vals_nuq(it, ib_k, nu, iq_ibz, 2) = sigma%vals_nuq(it, ib_k, nu, iq_ibz, 2) + &
-                   gkk2 * rfact / weigth_q
+                   gkk2 * rfact / weight_q
                end if
              end do
 

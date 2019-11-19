@@ -823,8 +823,8 @@ subroutine init_Er_from_file(Er,fname,mqmem,npwe_asked,comm)
  Er%fform      =fform
  Er%Tordering=Er%Hscr%Tordering
 
-!TODO these quantitities should be checked and initiliazed in mkdump_Er
-!BEGIN HARCODED
+!TODO these quantities should be checked and initialized in mkdump_Er
+!BEGIN HARDCODED
  Er%nI       = 1
  Er%nJ       = 1
  Er%ikxc     = 0

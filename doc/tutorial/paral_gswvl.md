@@ -127,7 +127,7 @@ efficiency of the wavelet mode more accurately:
           21           7.5        35.6
     
 With the percentages of the `time.prc` file, one can see that, for this
-example, the time is mostly spent in the precondionner and the application of
+example, the time is mostly spent in the preconditioner and the application of
 the local part of the Hamiltonian on the wavefunctions. Let's categorise the
 time information:
 

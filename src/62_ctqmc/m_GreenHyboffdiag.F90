@@ -499,7 +499,7 @@ END SUBROUTINE GreenHyboffdiag_setOperW
 !! INPUTS
 !!  op=Green
 !!  Mmatrix=M matrix for the current flavor
-!!  ListCdagC_1=list of all creator and annhilator operators
+!!  ListCdagC_1=list of all creator and annihilator operators
 !!  updated=should we accumulate or not
 !!
 !! OUTPUT

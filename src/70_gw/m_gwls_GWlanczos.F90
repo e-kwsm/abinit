@@ -223,7 +223,7 @@ implicit none
 !***        yields an error. I suppose makemake simply      ***
 !***        parses for the word "implicit" without regards  ***
 !***        for the fact that it may simply be part of a    ***
-!***        naive developper's chosen name for the routine. ***
+!***        naive developer's chosen name for the routine. ***
 !***        Correspondingly, I change the name to           ***
 !***        "matrix_function" to avoid problems.            ***
 !***                                                        ***

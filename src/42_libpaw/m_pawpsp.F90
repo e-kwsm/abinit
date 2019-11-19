@@ -750,7 +750,7 @@ end subroutine pawpsp_cg
 !!   * creatorID= ID of psp generator
 !!   creatorid=1xyz : psp generated from Holzwarth AtomPAW generator version x.yz
 !!   creatorid=2xyz : psp generated from Vanderbilt ultra-soft generator version x.yz
-!!   creatorid=-1: psp for tests (for developpers only)
+!!   creatorid=-1: psp for tests (for developers only)
 !!   * mesh_type= type of radial mesh
 !!   mesh_type=1 (regular grid): rad(i)=(i-1)*AA
 !!   mesh_type=2 (logari. grid): rad(i)=AA*(exp[BB*(i-1)]-1)

@@ -280,7 +280,7 @@ class FortranFile(object):
 
     #def write_notebook(self, nbpath=None):
     #    """
-    #    Write a jupyter_ notebook to ``nbpath``. If nbpath is None, a temporay file in the current
+    #    Write a jupyter_ notebook to ``nbpath``. If nbpath is None, a temporary file in the current
     #    working directory is created. Return path to the notebook.
     #    """
     #    nbformat, nbv, nb = self.get_nbformat_nbv_nb(title=None)
@@ -425,7 +425,7 @@ class AbinitProject(object):
         "ABI_ASYNC": ",asynchronous",
         "ABI_PRIVATE": ",private",
         "ABI_PROTECTED": ",protected",
-        "ABI_CONTIGUOUS": "contigous,",
+        "ABI_CONTIGUOUS": "contiguous,",
         # Libpaw.
         "USE_DEFS": "use defs_basis",
         "USE_MPI_WRAPPERS": "use m_xmpi",
@@ -546,7 +546,7 @@ class AbinitProject(object):
             # Remove blas and lapack routines.
             miss = miss.difference(blas_routines)
             miss = miss.difference(lapack_routines)
-            # Remove pblas and scalalapack routines.
+            # Remove pblas and scalapack routines.
             miss = miss.difference("p" + n for n in blas_routines)
             miss = miss.difference("p" + n for n in lapack_routines)
             # Remove public interfaces.

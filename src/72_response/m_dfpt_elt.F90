@@ -123,7 +123,7 @@ contains
 !!
 !! NOTES
 !!      Much of the code in versions of this routine prior to 4.4.5
-!!      has been transfered to its child eltxccore.
+!!      has been transferred to its child eltxccore.
 !!
 !! PARENTS
 !!      respfn

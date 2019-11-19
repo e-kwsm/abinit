@@ -1061,7 +1061,7 @@ subroutine littlegroup_q(nsym,qpt,symq,symrec,symafm,timrev,prtvol,use_sym)
        end if
      end if
 
-!    If the operation succeded, change shift from real(dp) to integer, then exit loop
+!    If the operation succeeded, change shift from real(dp) to integer, then exit loop
      if(symq(4,itirev,isym)/=0)then
        if (my_prtvol>0) then
          if(itirev==1)write(message,'(a,i4,a)')' littlegroup_q : found symmetry',isym,' preserves q '

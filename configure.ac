@@ -641,17 +641,17 @@ if test "${enable_debug}" != "no" -a "${enable_debug}" != "yes"; then
   if test "${CFLAGS}" = ""; then
     ABI_CC_DBGFLAGS
   else
-    AC_MSG_NOTICE([debugging profile overriden by user-defined CFLAGS])
+    AC_MSG_NOTICE([debugging profile overridden by user-defined CFLAGS])
   fi
   if test "${CXXFLAGS}" = ""; then
     ABI_CXX_DBGFLAGS
   else
-    AC_MSG_NOTICE([debugging profile overriden by user-defined CXXFLAGS])
+    AC_MSG_NOTICE([debugging profile overridden by user-defined CXXFLAGS])
   fi
   if test "${FCFLAGS}" = ""; then
     ABI_FC_DBGFLAGS
   else
-    AC_MSG_NOTICE([debugging profile overriden by user-defined FCFLAGS])
+    AC_MSG_NOTICE([debugging profile overridden by user-defined FCFLAGS])
   fi
 fi
 
@@ -694,17 +694,17 @@ if test "${enable_optim}" != "no" -a "${enable_optim}" != "yes"; then
   if test "${CFLAGS}" = ""; then
     ABI_CC_OPTFLAGS
   else
-    AC_MSG_NOTICE([optimization profile overriden by user-defined CFLAGS])
+    AC_MSG_NOTICE([optimization profile overridden by user-defined CFLAGS])
   fi
   if test "${CXXFLAGS}" = ""; then
     ABI_CXX_OPTFLAGS
   else
-    AC_MSG_NOTICE([optimization profile overriden by user-defined CXXFLAGS])
+    AC_MSG_NOTICE([optimization profile overridden by user-defined CXXFLAGS])
   fi
   if test "${FCFLAGS}" = ""; then
     ABI_FC_OPTFLAGS
   else
-    AC_MSG_NOTICE([optimization profile overriden by user-defined FCFLAGS])
+    AC_MSG_NOTICE([optimization profile overridden by user-defined FCFLAGS])
   fi
 fi
 

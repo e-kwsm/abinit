@@ -184,7 +184,7 @@ subroutine outwant(dtset,eig,cg,kg,npwarr,mband,mcg,nkpt,nsppol,mkmem,mpw,prtwan
    end do
  end if
 
-!Now finding the no of k-pt for each direction PARALEL with the
+!Now finding the no of k-pt for each direction PARALLEL with the
 !generators of the first B.Z.
 !First decide if we have the Gamma point in the list; its index in the list is ... index
  nk(:)=1
@@ -238,7 +238,7 @@ subroutine outwant(dtset,eig,cg,kg,npwarr,mband,mcg,nkpt,nsppol,mkmem,mpw,prtwan
        scal=scal+t2(ii)*gmat(j,ii)
      end do
      scal=abs(scal)
-!    Compare scal(tt,gmat) with simple product of modules -> paralel or not
+!    Compare scal(tt,gmat) with simple product of modules -> parallel or not
      if(abs(scal-tt*gmod(j))<tol8) nk(j)=2
    end do
 
@@ -265,7 +265,7 @@ subroutine outwant(dtset,eig,cg,kg,npwarr,mband,mcg,nkpt,nsppol,mkmem,mpw,prtwan
            scal=scal+t2(ii)*gmat(j,ii)
          end do
          scal=abs(scal)
-!        Compare scal(t1,gmat) with simple product of modules -> paralel or not
+!        Compare scal(t1,gmat) with simple product of modules -> parallel or not
          if(abs(scal-tt*gmod(j))<tol8) nk(j)=nk(j)+1
        end do
      end if

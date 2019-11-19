@@ -272,13 +272,13 @@ type,public :: kpath_t
 !! including the operations such as
 !!  -Sq = q+ G0.
 !!
-!! The operations belongin to the little group define an irriducible wedge in the Brillouin zone
-!! that is, usually, larger than the irredubile zone defined by the space group.
+!! The operations belonging to the little group define an irreducible wedge in the Brillouin zone
+!! that is, usually, larger than the irreducible zone defined by the space group.
 !! The two zone coincide when q=0
 !!
 !! TODO
 !! Rationalize most of the arrays, in particular the tables
-!! This structure shoud be rewritten almost from scratch, thus avoid using it
+!! This structure should be rewritten almost from scratch, thus avoid using it
 !! for your developments.
 !!
 !! SOURCE

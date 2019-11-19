@@ -58,7 +58,7 @@ B.  Most noticeable achievements
 
 B.1 For the massively parallel computations (ground state), there is a new algorithm based on Chebyshev filtering, 
     designed for very large number of processors, in the regime where LOBPCG does not scale anymore (typically beyond 500 procs for band-FFT work)
-    It is not able to use preconditionning and therefore might converge slower than other algorithms; when convergence is poor, a good idea is to use
+    It is not able to use preconditioning and therefore might converge slower than other algorithms; when convergence is poor, a good idea is to use
     more bands than strictly necessary, by increasing nband and using nbdbuf input variable.
     Use the input variable wfoptalg=1, and test patal#30. 
     See also the new input variable use_gemm_nonlop, for more performance in case a good BLAS GEMM routine is available (at the expense of memory).

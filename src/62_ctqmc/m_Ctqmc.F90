@@ -3198,7 +3198,7 @@ SUBROUTINE Ctqmc_printQMC(this)
   END IF
   ! Check sign problem for diagonal hybridization.
   IF ( (this%stats(CTQMC_SEGME+CTQMC_DETSI) + this%stats(CTQMC_ANTIS+CTQMC_DETSI)) .GT. 1.d-10 ) THEN
-    CALL WARNALL("Ctqmc_printQMC : at least one negative sign occured. There might be a bug in the CT-QMC")
+    CALL WARNALL("Ctqmc_printQMC : at least one negative sign occurred. There might be a bug in the CT-QMC")
   END IF
 
   IF ( ABS(this%b_Noise+0.5)/0.5d0 .GE. 0.05d0 ) &
@@ -3522,7 +3522,7 @@ END SUBROUTINE Ctqmc_printPerturbation
 !!  Ctqmc_printCorrelation
 !!
 !! FUNCTION
-!!  print correlation fonctions
+!!  print correlation functions
 !!
 !! COPYRIGHT
 !!  Copyright (C) 2013-2018 ABINIT group (J. Bieder)

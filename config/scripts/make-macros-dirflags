@@ -96,7 +96,7 @@ def macro_optflags(name):
   else
     if test "${fcflags_opt_%s}" != ""; then
       fcflags_opt_%s=""
-      AC_MSG_NOTICE([fcflags_opt_%s overriden by FCFLAGS])
+      AC_MSG_NOTICE([fcflags_opt_%s overridden by FCFLAGS])
     fi
   fi
   AC_SUBST(fcflags_opt_%s)

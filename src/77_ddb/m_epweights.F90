@@ -139,7 +139,7 @@ subroutine d2c_weights(elph_ds,elph_tr_ds)
    do jkpt = 1, nkpt_phon2
      do kkpt = 1, nkpt_phon3
        ikpt_phon = kkpt + (jkpt-1)*nkpt_phon3 + (ikpt-1)*nkpt_phon2*nkpt_phon3
-!      inside the paralellepipe
+!      inside the parallel pipe
        do ii = -((nscale1+1)/2-1), ((nscale1+1)/2-1)
          do jj = -((nscale2+1)/2-1), ((nscale2+1)/2-1)
            do kk = -((nscale3+1)/2-1), ((nscale3+1)/2-1)
@@ -982,7 +982,7 @@ subroutine d2c_wtq(elph_ds)
    do jkpt = 1, nkpt_phon2
      do kkpt = 1, nkpt_phon3
        ikpt_phon = kkpt + (jkpt-1)*nkpt_phon3 + (ikpt-1)*nkpt_phon2*nkpt_phon3
-!      inside the paralellepipe
+!      inside the parallel pipe
        do ii = -((nscale1+1)/2-1), ((nscale1+1)/2-1)
          do jj = -((nscale2+1)/2-1), ((nscale2+1)/2-1)
            do kk = -((nscale3+1)/2-1), ((nscale3+1)/2-1)

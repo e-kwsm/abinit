@@ -54,7 +54,7 @@ def main():
     except Exception, exc:
         show_examples_and_exit(str(exc))
 
-    # Lauch the tests in a subprocess (non blocking algorithm)
+    # Launch the tests in a subprocess (non blocking algorithm)
     processes = []
     for s in test_strings:
         for mpi_nprocs in MPI_NPROCS_LIST:

@@ -45,7 +45,7 @@ Variable(
     defaultval=0,
     mnemonics="Dipole-Dipole interaction",    
     text="""
-Depending of the cases, the range of the dipole-dipole interaction will be parameted by:
+Depending of the cases, the range of the dipole-dipole interaction will be parameterized by:
 
 * dipdip_range if superior to ncell and superior to short-range interaction
 * ncell if dipdip_range inferior to ncell

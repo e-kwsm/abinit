@@ -27,7 +27,7 @@ Here below is the proposition:\\
 \begin{itemize}
  \item \texttt{rho} ($\rho$) is the electronic density
  \item \texttt{tau} ($\tau$) is the kinetic energy density
- \item \texttt{exc} ($\varepsilon_{xc}$) is the exchange-correlation energy density per particule
+ \item \texttt{exc} ($\varepsilon_{xc}$) is the exchange-correlation energy density per particle
  \item \texttt{epsxc} ($\epsilon_{xc}$) is the exchange-correlation energy density ($\epsilon_{xc}=\rho\times\varepsilon_{xc}$)
  \item \texttt{vxc} ($v_{xc}$) is the exchange-correlation potential
  \item \texttt{bigexc} ($E_{xc}$) is the exchange-correlation energy (for the moment it is still named "\texttt{enxc}")
@@ -39,7 +39,7 @@ Here below is the proposition:\\
  \item \texttt{d...d...} means first derivative of something with regards to something else ($\frac{\partial}{\partial}$).
  \item \texttt{d2...d...d...} means second derivative of \texttt{...} with regards to \texttt{...} and to \texttt{...} ($\frac{\partial^2}{\partial\,\,\partial}$)
  \item etc...
- \item \texttt{d...} without the occurence of the second "\texttt{d}" means that this is an array which regroups several derivatives of the same quantity (e.g. : \texttt{depsxc} can contain $\frac{\partial \epsilon_{xc}}{\partial \rho}$ but also $\frac{\partial \epsilon_{xc}}{\partial \vert \nabla \rho\vert}\cdotp \frac{1}{\vert \nabla \rho\vert}$)\\\\
+ \item \texttt{d...} without the occurrence of the second "\texttt{d}" means that this is an array which regroups several derivatives of the same quantity (e.g. : \texttt{depsxc} can contain $\frac{\partial \epsilon_{xc}}{\partial \rho}$ but also $\frac{\partial \epsilon_{xc}}{\partial \vert \nabla \rho\vert}\cdotp \frac{1}{\vert \nabla \rho\vert}$)\\\\
 
  \item \texttt{...\_b} means a block of the quantity \texttt{...} ( this is use in mpi loops which treat the data block by block)
  \item \texttt{...\_updn} means that spin up and spin down are available in that array such as data\_updn(..,1) and data\_updn(..,2). (if \texttt{nspden} $\geq2$ off course, otherwise if \texttt{nspden}$=1$ data\_up(..,1) contains the total quantity).

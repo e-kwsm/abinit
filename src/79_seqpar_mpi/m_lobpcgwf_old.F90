@@ -215,7 +215,7 @@ subroutine lobpcgwf(cg,dtset,gs_hamk,gsc,icg,igsc,kinpw,mcg,mgsc,mpi_enreg,&
    vectsize=npw_k*my_nspinor
  end if
 
-!For preconditionning
+!For preconditioning
  optekin=0;if (dtset%wfoptalg>10) optekin=0
  optpcon=1;if (dtset%wfoptalg>10) optpcon=0
 

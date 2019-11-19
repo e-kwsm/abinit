@@ -770,7 +770,7 @@ subroutine fock_init(atindx,cplex,dtset,fock,gsqcut,kg,mpi_enreg,nattyp,npwarr,p
 
 !  Set the hybrid parameters if functional from libxc for which parameters can be changed, or if the user asked to do so.
 !  Usually, these parameters were obtained from libxc,
-!  but the user might have possibly modified them. By the way, must define them here for the usual changeable fonctionals,
+!  but the user might have possibly modified them. By the way, must define them here for the usual changeable functionals,
 !  since otherwise might inherit them from the previous dataset !
    if(dtset%ixc<0)then
      if (dtset%ixc==-406.or.dtset%ixc==-427.or.dtset%ixc==-428 .or. &
@@ -1547,7 +1547,7 @@ end subroutine fock_ACE_destroy
 !!
 !! NOTES
 !! If the cgocc_bz are not updated at each iteration, be careful to calculate Fock energy at the same frequency.
-!! TO CHECK == CHANGE IN SOME DEFINTIONS
+!! TO CHECK == CHANGE IN SOME DEFINITIONS
 !!
 !! PARENTS
 !!      vtorho

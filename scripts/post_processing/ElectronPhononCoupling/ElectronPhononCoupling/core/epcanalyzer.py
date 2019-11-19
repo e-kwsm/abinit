@@ -501,7 +501,7 @@ class EpcAnalyzer(object):
 
         if i_am_master:
 
-            # Contruct an array with the shape of partial,
+            # Construct an array with the shape of partial,
             # adding a dimension of length nqpt.
             total = np.zeros([self.nqpt] + list(partial.shape[1:]),
                              dtype=partial.dtype)
@@ -840,7 +840,7 @@ class EpcAnalyzer(object):
         Compute the zero-point frequency-dependent self-energy.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega) = Sigma_kn(omega + E^0_kn)
     
@@ -853,7 +853,7 @@ class EpcAnalyzer(object):
         Compute the temperature-dependent frequency-dependent self-energy.
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega,T) = Sigma_kn(omega + E^0_kn,T)
     
@@ -869,7 +869,7 @@ class EpcAnalyzer(object):
         to the self-energy is evaluated at the bare energy.
 
         The spectral function is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
 
             A'_kn(omega) = A_kn(omega + E^0_kn)
 
@@ -895,7 +895,7 @@ class EpcAnalyzer(object):
         to the self-energy is evaluated at the bare energy.
 
         The spectral function is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
 
             A'_kn(omega) = A_kn(omega + E^0_kn)
 
@@ -1005,7 +1005,7 @@ class EpcAnalyzer(object):
         (EIGR2D).
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega,T) = Sigma_kn(omega + E^0_kn,T)
     
@@ -1019,7 +1019,7 @@ class EpcAnalyzer(object):
         part only (GKK), neglecting the Sternheimer part (EIGR2D).
     
         The self-energy is evaluated on a frequency mesh 'omegase'
-        that is shifted by the bare energies, such that, what is retured is
+        that is shifted by the bare energies, such that, what is returned is
     
             Simga'_kn(omega,T) = Sigma_kn(omega + E^0_kn,T)
     

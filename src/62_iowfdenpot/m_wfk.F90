@@ -1709,7 +1709,7 @@ subroutine wfk_read_bks(wfk, band, ik_ibz, spin, sc_mode, cg_bks, eig1_bks)
      ABI_CHECK_MPI(mpierr,"xmpio_create_fstripes")
 
      !call MPI_TYPE_CONTIGUOUS(nband_disk,MPI_DOUBLE_COMPLEX,gkk_type,mpierr)
-     !ABI_CHECK_MPI(mpierr,"type_contigous")
+     !ABI_CHECK_MPI(mpierr,"type_contiguous")
      !call MPI_TYPE_COMMIT(gkk_type,mpierr)
      !ABI_CHECK_MPI(mpierr,"mpi_commit")
      !my_offpad = 0
@@ -1766,7 +1766,7 @@ subroutine wfk_read_bks(wfk, band, ik_ibz, spin, sc_mode, cg_bks, eig1_bks)
         (2*nband_disk*xmpi_bsize_dp + 2*xmpio_bsize_frm) )
 
      call MPI_TYPE_CONTIGUOUS(npw_disk*nspinor_disk,MPI_DOUBLE_COMPLEX,cg_type,mpierr)
-     ABI_CHECK_MPI(mpierr,"type_contigous")
+     ABI_CHECK_MPI(mpierr,"type_contiguous")
      call MPI_TYPE_COMMIT(cg_type,mpierr)
      ABI_CHECK_MPI(mpierr,"mpi_commit")
 
@@ -1831,7 +1831,7 @@ end subroutine wfk_read_bks
 !!  wfk_write_band_block
 !!
 !! FUNCTION
-!!  Write a block of contigous bands.
+!!  Write a block of contiguous bands.
 !!
 !! INPUTS
 !!  Wfk<type(wfk_t)>=
@@ -2577,7 +2577,7 @@ subroutine wfk_read_bmask(Wfk,bmask,ik_ibz,spin,sc_mode,kg_k,cg_k,eig_k,occ_k)
      case (1,2)
        ABI_CHECK(wfk%formeig == 0, "formeig == 1 not coded")
        call MPI_TYPE_CONTIGUOUS(npw_disk*nspinor_disk,MPI_DOUBLE_COMPLEX,cg_type,mpierr)
-       ABI_CHECK_MPI(mpierr,"type_contigous")
+       ABI_CHECK_MPI(mpierr,"type_contiguous")
 
        if (method==1) then
          ncount = nb_tot

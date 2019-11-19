@@ -51,7 +51,7 @@ contains
 !!
 !! FUNCTION
 !!  Velocity Verlet (VV) predictor of ionic positions (ionmov = 24).
-!!  In constrast to Verlet algorithm, Velocity Verlet is a
+!!  In contrast to Verlet algorithm, Velocity Verlet is a
 !!  SYMPLECTIC integrator (for small enough step sizes "dtion",
 !!  it better conserves the total energy and time-reversibility).
 !!  VV is a second order integration scheme that requires a single

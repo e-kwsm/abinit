@@ -128,7 +128,7 @@ class DdbFile(EpcFile):
         Format the dynamical matrix in a 3Nx3N matrix,
         scale with masses, and transform into Cartesian coordinates.
         """
-        # Retrive the amu for each atom
+        # Retrieve the amu for each atom
         amu = zeros(self.natom)
         for ii in np.arange(self.natom):
           jj = self.typat[ii]
@@ -199,7 +199,7 @@ class DdbFile(EpcFile):
         """
         asr = asr if asr is not None else self.asr
     
-        # Retrive the amu for each atom
+        # Retrieve the amu for each atom
         amu = zeros(self.natom)
         for ii in np.arange(self.natom):
           jj = self.typat[ii]

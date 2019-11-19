@@ -18,7 +18,7 @@
 !!  (4) Document each of its records, except if they are described elsewhere
 !!      (this exception is typically the case of the dataset associated with
 !!      input variables, for which there is a help file)
-!!  (5) Declare variables on separated lines in order to reduce the occurence of git conflicts.
+!!  (5) Declare variables on separated lines in order to reduce the occurrence of git conflicts.
 !!
 !! List of datatypes :
 !! * aim_dataset_type : the "dataset" for aim
@@ -72,7 +72,7 @@ module defs_abitypes
 ! WARNING : if you modify this datatype, please check whether there might be creation/destruction/copy routines,
 ! declared in another part of ABINIT, that might need to take into account your modification.
 
-! Variables should be declared on separated lines in order to reduce the occurence of git conflicts.
+! Variables should be declared on separated lines in order to reduce the occurrence of git conflicts.
 
 ! Since all these input variables are described in the aim_help.html
 ! file, they are not described in length here ...
@@ -159,7 +159,7 @@ type dataset_type
 ! creation/destruction/copy routines, declared in another part of ABINIT,
 ! that might need to take into account your modification.
 
-! Variables should be declared on separated lines in order to reduce the occurence of git conflicts.
+! Variables should be declared on separated lines in order to reduce the occurrence of git conflicts.
 
 ! Since all these input variables are described in the abinit_help.html and
 ! associated html files they are not described in length here ...
@@ -971,7 +971,7 @@ type dataset_type
 
 ! WARNING : if you modify this datatype, please check whether there might be creation/destruction/copy routines,
 ! declared in another part of ABINIT, that might need to take into account your modification.
-! Variables should be declared on separated lines in order to reduce the occurence of git conflicts.
+! Variables should be declared on separated lines in order to reduce the occurrence of git conflicts.
 
 ! *****************************************************************************************
 ! Please make sure that initmpi_seq is changed so that any variable or any flag in MPI_type

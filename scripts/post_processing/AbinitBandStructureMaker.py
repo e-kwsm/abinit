@@ -197,8 +197,8 @@ def clean2(list):
             list[L-1-i] = "#"
 
 def rmrepetitions(list,pairedlist=None):
-    # type(list) = any list whith all elements of the same length
-    # removes repeated entries in the list, keeping only the first occurence
+    # type(list) = any list with all elements of the same length
+    # removes repeated entries in the list, keeping only the first occurrence
     # (if a paired list is specified, data removed from list will be removes from pairedlist too)
     #     example : rmrepetition([1,2,2,3,4,4,4,8,7,6,7]) = [1,2,3,4,8,7,6]
     L = len(list)
@@ -216,8 +216,8 @@ def rmrepetitions(list,pairedlist=None):
         i+=1
 
 def rmsuccessiverepetitions(list,pairedlist=None):
-    # type(list) = any list whith all elements of the same length
-    # removes repeated successives entries in the list, keeping only the first occurence.
+    # type(list) = any list with all elements of the same length
+    # removes repeated successives entries in the list, keeping only the first occurrence.
     # (if a paired list is specified, data removed from list will be removes from pairedlist too)
     #     example : rmrepetition([1,2,2,3,4,4,4,1,2,3,3]) = [1,2,3,4,1,2,3]
     L = len(list)
@@ -556,9 +556,9 @@ if setautolaunch+setenergyshift+setlinecolor+setlinewidth+setspacewidth+setup!=0
 
     if setenergyshift==True:
         #change energy shift --> ctrl.energyshift
-        ctrl.energyshift = raw_input('\nshift energy eigeivalues to bring the fermi energy to zero (yes ; no) ? ')
+        ctrl.energyshift = raw_input('\nshift energy eigenvalues to bring the fermi energy to zero (yes ; no) ? ')
         while ctrl.energyshift not in ['yes','no']:
-            ctrl.energyshift = raw_input('shift energy eigeivalues to bring the fermi energy to zero (yes ; no) ? ')
+            ctrl.energyshift = raw_input('shift energy eigenvalues to bring the fermi energy to zero (yes ; no) ? ')
 
     if setlinecolor==True:
         #change valence bands color --> ctrl.valbandcolor
@@ -750,7 +750,7 @@ if ctrl.filetype == 'out':
     if ctrl.debugmode==True:print '\n--> list of used datasets computed\n    %s' %ctrl.useddataset
 
     #get type of each atom --> data.typat
-    #(assuming only one occurence of "typat" is present in the .out file)
+    #(assuming only one occurrence of "typat" is present in the .out file)
     try:
         flag_typat = False
         k=0
@@ -773,7 +773,7 @@ if ctrl.filetype == 'out':
     if ctrl.debugmode==True:print '\n--> typat found\n    %s' %data.typat
 
     #compute number of valence bands --> ctrl.nvalenceband
-    #(assuming only one occurence of "- pspini" is present for each atom type)
+    #(assuming only one occurrence of "- pspini" is present for each atom type)
     try:
         nion = list()
         for i in range(len(ctrl.filedata)):
@@ -796,7 +796,7 @@ if ctrl.filetype == 'out':
     if ctrl.debugmode==True:print '\n--> number of valence bands computed\n    %s' %ctrl.nvalenceband
 
     #get fermi energy --> data.fermienergy
-    #(assuming only one occurence of "Fermi energy" is present in the .out file)
+    #(assuming only one occurrence of "Fermi energy" is present in the .out file)
     try:
         for i in range(len(ctrl.filedata)):
             if ctrl.filedata[i].split()[0] == 'Fermi':

@@ -206,7 +206,7 @@ CONTAINS
 !!  nsppol=number of spin channels for this dataset
 !!  only_part= --optional, default=false--
 !!            if this flag is activated only the following parts of results_gs
-!!            are initalized: all scalars, fcart,fred,strten
+!!            are initialized: all scalars, fcart,fred,strten
 !!
 !! OUTPUT
 !!
@@ -302,7 +302,7 @@ end subroutine init_results_gs
 !!  nsppol=number of spin channels for this dataset
 !!  only_part= --optional, default=false--
 !!            if this flag is activated only the following parts of results_gs
-!!            are initalized: all scalars, fcart,fred,strten
+!!            are initialized: all scalars, fcart,fred,strten
 !!
 !! OUTPUT
 !!

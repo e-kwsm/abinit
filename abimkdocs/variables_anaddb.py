@@ -889,7 +889,7 @@ Variable(
     mnemonics="K PoinT Reciprocal LATTice",
     text="""
 Unnormalized lattice vectors for the k-point grid in reciprocal space (see
-[[kptrlatt]] abinit variable definitionas well). Input needed in electron-phonon
+[[kptrlatt]] abinit variable definition as well). Input needed in electron-phonon
 calculations using nesting functions or tetrahedron integration.
 """,
 ),

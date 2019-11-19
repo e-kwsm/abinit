@@ -279,7 +279,7 @@ class AbimemParser(object):
                 # Store new entry in list if the ptr is not in d
                 # else we check if there's an allocation that matches a previous allocation
                 # (zero-sized arrays are not included)
-                # else there's a possible memory leak or some undected problems.
+                # else there's a possible memory leak or some undetected problems.
                 if p not in heap:
                     if newe.isalloc:
                         heap[p] = [newe]

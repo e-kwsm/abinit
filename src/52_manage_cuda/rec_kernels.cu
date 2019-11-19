@@ -43,7 +43,7 @@ setting_un(cureal* un,    //un(height_max,un_pitch)=delta(i) Initial vector
 	   int pos0,      //first pt to calculate
 	   int pos1,      //last pt to calculate
 	   cureal scale)  //weight of the dirac delta
-{ /* Kernel to initalise the arrays on the Device if gratio==1*/
+{ /* Kernel to initialise the arrays on the Device if gratio==1*/
  int x = IMUL(blockDim.x,blockIdx.x) + threadIdx.x;
  int y = IMUL(blockDim.y,blockIdx.y) + threadIdx.y;
   
@@ -74,7 +74,7 @@ set_un_gratio(cureal* un,    //un(height_max,un_pitch)=delta(i) Initial vector
 	      int maxcoord,  //max of pt to calculate
 	      cureal scale,  //weight of the dirac delta
 	      int gratio)    //gratio                              
-{ /* Kernel to initalise the arrays on the Device when grati>1*/
+{ /* Kernel to initialise the arrays on the Device when grati>1*/
  int x = IMUL(blockDim.x,blockIdx.x) + threadIdx.x;
  int y = IMUL(blockDim.y,blockIdx.y) + threadIdx.y;
  
@@ -104,7 +104,7 @@ setting_un_cut(cureal* un,    //un(height_max,un_pitch)=delta(i) Initial vector
 	       cureal* bn2,   //bn2(height_max)=0 recursion coeff bn2
 	       cureal scale,  //weight of the dirac delta
 	       int target)    //position of the zero
-{ /* Kernel to initalise the arrays on the Device if gratio==1*/
+{ /* Kernel to initialise the arrays on the Device if gratio==1*/
  int x = IMUL(blockDim.x,blockIdx.x) + threadIdx.x;
  int y = IMUL(blockDim.y,blockIdx.y) + threadIdx.y;
 
@@ -388,7 +388,7 @@ oldtonew(cureal* un,     //inout un(height_max,dc_pthsize)=delta(i)
 __host__ void 
 find_positions(const int3* pt0,  //first pt to calculate
                const int3* pt1,  //last pt to calculate
-	       int delta,        //inital linear point
+	       int delta,        //initial linear point
 	       int final,        //final lineat point
 	       int* pos_cpu,     //points where compute recursion
 	       const int* ngfft, //grid 

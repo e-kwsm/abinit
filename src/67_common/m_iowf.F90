@@ -191,7 +191,7 @@ subroutine outwf(cg,dtset,psps,eigen,filnam,hdr,kg,kptns,mband,mcg,mkmem,&
 &   'WF file is written using standard Fortran I/O',ch10,&
 &   'and Kpt-band-FFT parallelization is active !',ch10,&
 &   'This is only allowed for testing purposes.',ch10,&
-&   'The produced WF file will be incomplete and not useable.'
+&   'The produced WF file will be incomplete and not usable.'
    MSG_WARNING(msg)
  end if
 
@@ -206,7 +206,7 @@ subroutine outwf(cg,dtset,psps,eigen,filnam,hdr,kg,kptns,mband,mcg,mkmem,&
 &   'WF file is written using standard Fortran I/O',ch10,&
 &   'and HF parallelization is active !',ch10,&
 &   'This is only allowed for testing purposes.',ch10,&
-&   'The produced WF file will be incomplete and not useable.'
+&   'The produced WF file will be incomplete and not usable.'
    MSG_WARNING(msg)
  end if
 

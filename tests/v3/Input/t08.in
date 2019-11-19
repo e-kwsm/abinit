@@ -68,7 +68,7 @@
 #%% keywords = NC, DFPT
 #%% description = 
 #%%     H2 molecule, using a local pseudopotential, and GGA.
-#%%     Similar to test 33 of v2, and preceeding test,
+#%%     Similar to test 33 of v2, and preceding test,
 #%%     but use the full XC PBE functional.
 #%%     Also, tolvrs is better.
 #%%     Compute the interatomic force constant for the

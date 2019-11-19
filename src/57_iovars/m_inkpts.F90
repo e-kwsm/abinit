@@ -534,7 +534,7 @@ end subroutine inkpts
 !! OUTPUT
 !!  qptn(3)=reduced coordinates of eventual q point (normalisation is already included)
 !!  kptrlatt(3,3)=q-point lattice specification (if kptopt/=0)
-!!  wtqc=weigth of the eventual current q point
+!!  wtqc=weight of the eventual current q point
 !!
 !! SIDE EFFECTS
 !!

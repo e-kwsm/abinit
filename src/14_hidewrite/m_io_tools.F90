@@ -253,7 +253,7 @@ end function file_exists
 !!  fname=The name of the file.
 !!
 !! OUTPUT
-!!  ierr=Non-zero value indicates that a problem occured.
+!!  ierr=Non-zero value indicates that a problem occurred.
 !!   111 = To signal that the file does not exist.
 !!   112 = File exist, is open but no associated unit is found!
 !!   Other values are system-dependent as the value is returned by a open or close

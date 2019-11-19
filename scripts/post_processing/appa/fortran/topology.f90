@@ -306,7 +306,7 @@ subroutine rdf_deconvolution(nei,iter1,nbtime,position,inc,a,b,c,deltaR,indexAto
 
      do j=1,size(indexAtom1)
 
-        l = Org(j,nei)    !number of the neith neibor of the atom j (on the first iteration) at the iteration i.
+        l = Org(j,nei)    !number of the neith neighbor of the atom j (on the first iteration) at the iteration i.
 
         x = position(i,indexAtom1(j),1)-position(i,l,1)
         y = position(i,indexAtom1(j),2)-position(i,l,2)

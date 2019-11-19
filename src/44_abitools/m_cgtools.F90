@@ -3507,7 +3507,7 @@ end subroutine cgpaw_gramschmidt
 !!    if scprod_io=1, scprod is input
 !!
 !! NOTES
-!!  1) MPIWF Might have to be recoded for efficient paralellism
+!!  1) MPIWF Might have to be recoded for efficient parallelism
 !!
 !!  2) The new version employs BLAS2 routine so that the OMP parallelism is delegated to BLAS library.
 !!
@@ -3856,14 +3856,14 @@ end subroutine cg_normev
 !!  nspinor=number of spinorial components of the wavefunctions
 !!  $vect(2,npw)=<G|H|C_{n,k}>$.
 !!  npw=number of planewaves at this k point.
-!!  optekin= 1 if the kinetic energy used in preconditionning is modified
+!!  optekin= 1 if the kinetic energy used in preconditioning is modified
 !!             according to Kresse, Furthmuller, PRB 54, 11169 (1996) [[cite:Kresse1996]]
 !!           0 otherwise
 !!  mg_g0=1 if the node treats G0.
 !!  comm=MPI communicator
 !!
 !! OUTPUT
-!!  pcon(npw)=preconditionning matrix
+!!  pcon(npw)=preconditioning matrix
 !!  vect(2,npw*nspinor)=<G|(H-eval)|C_{n,k}>*(polynomial ratio)
 !!
 !! PARENTS
@@ -3996,12 +3996,12 @@ end subroutine cg_precon
 !!  nspinor=number of spinorial components of the wavefunctions (on current proc)
 !!  $vect(vectsize,blocksize)=<G|H|C_{n,k}> for a block of bands$.
 !!  npw=number of planewaves at this k point.
-!!  optekin= 1 if the kinetic energy used in preconditionning is modified
+!!  optekin= 1 if the kinetic energy used in preconditioning is modified
 !!             according to Kresse, Furthmuller, PRB 54, 11169 (1996) [[cite:Kresse1996]]
 !!           0 otherwise
-!!  optpcon= 0 the TPA preconditionning matrix does not depend on band
-!!           1 the TPA preconditionning matrix (not modified)
-!!           2 the TPA preconditionning matrix is independant of iterationnumber
+!!  optpcon= 0 the TPA preconditioning matrix does not depend on band
+!!           1 the TPA preconditioning matrix (not modified)
+!!           2 the TPA preconditioning matrix is independent of iterationnumber
 !!  vectsize= size of vectors
 !!  mg_g0=1 if this node has Gamma, 0 otherwise.
 !!
@@ -4009,7 +4009,7 @@ end subroutine cg_precon
 !!  vect(2,npw)=<g|(h-eval)|c_{n,k}>*(polynomial ratio)
 !!
 !! SIDE EFFECTS
-!!  pcon(npw,blocksize)=preconditionning matrix
+!!  pcon(npw,blocksize)=preconditioning matrix
 !!            input  if optpcon=0,2 and iterationnumber/=1
 !!            output if optpcon=0,2 and iterationnumber==1
 !!
@@ -4296,12 +4296,12 @@ end subroutine cg_precon_block
 !!  nspinor=number of spinorial components of the wavefunctions (on current proc)
 !!  $vect(vectsize,blocksize)=<G|H|C_{n,k}> for a block of bands$.
 !!  npw=number of planewaves at this k point.
-!!  optekin= 1 if the kinetic energy used in preconditionning is modified
+!!  optekin= 1 if the kinetic energy used in preconditioning is modified
 !!             according to Kresse, Furthmuller, PRB 54, 11169 (1996) [[cite:Kresse1996]]
 !!           0 otherwise
-!!  optpcon= 0 the TPA preconditionning matrix does not depend on band
-!!           1 the TPA preconditionning matrix (not modified)
-!!           2 the TPA preconditionning matrix is independant of iterationnumber
+!!  optpcon= 0 the TPA preconditioning matrix does not depend on band
+!!           1 the TPA preconditioning matrix (not modified)
+!!           2 the TPA preconditioning matrix is independent of iterationnumber
 !!  vectsize= size of vectors
 !!  comm=MPI communicator.
 !!
@@ -4309,7 +4309,7 @@ end subroutine cg_precon_block
 !!  vect(2,npw)=<g|(h-eval)|c_{n,k}>*(polynomial ratio)
 !!
 !! SIDE EFFECTS
-!!  pcon(npw,blocksize)=preconditionning matrix
+!!  pcon(npw,blocksize)=preconditioning matrix
 !!            input  if optpcon=0,2 and iterationnumber/=1
 !!            output if optpcon=0,2 and iterationnumber==1
 !!

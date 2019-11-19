@@ -16,7 +16,7 @@
 !! or http://www.gnu.org/copyleft/gpl.txt .
 !!
 !! NOTES
-!!  FOR DEVELOPPERS: in order to preserve the portability of libPAW library,
+!!  FOR DEVELOPERS: in order to preserve the portability of libPAW library,
 !!  please consult ~abinit/src/??_libpaw/libpaw-coding-rules.txt
 !!
 !! SOURCE
@@ -139,7 +139,7 @@ MODULE m_paw_ij
    ! Number of spin-density components (may be different from dtset%nspden if spin-orbit)
 
   integer :: nsppol
-   ! Number of independant spin-components
+   ! Number of independent spin-components
 
 
 !Real (real(dp)) arrays

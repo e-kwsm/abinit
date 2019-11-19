@@ -580,7 +580,7 @@ subroutine hscr_io(hscr,fform,rdwr,unt,comm,master,iomode)
    if (iomode==IO_MODE_FORTRAN .or. iomode==IO_MODE_MPI) then
      ! Write the abinit header.
      call hdr_fort_write(hscr%hdr, unt, fform, ierr)
-     ABI_CHECK(ierr == 0, "hdr_fort_write retured ierr != 0")
+     ABI_CHECK(ierr == 0, "hdr_fort_write returned ierr != 0")
 
      write(unt, err=10, iomsg=errmsg)hscr%titles
 

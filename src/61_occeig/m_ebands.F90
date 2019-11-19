@@ -3663,7 +3663,7 @@ subroutine ebands_expandk(inb, cryst, ecut_eff, force_istwfk1, dksqmax, bz2ibz, 
  ABI_FREE(my_kibz)
  ABI_FREE(wtk)
 
- ! Costruct full BZ and create mapping BZ --> IBZ
+ ! Construct full BZ and create mapping BZ --> IBZ
  ! Note:
  !   - we don't change the value of nsppol hence sppoldbl is set to 1
  !   - we use symrel so that bz2ibz can be used to reconstruct the wavefunctions.
@@ -3716,7 +3716,7 @@ subroutine ebands_expandk(inb, cryst, ecut_eff, force_istwfk1, dksqmax, bz2ibz, 
    end if
  end do
 
- ! Recostruct eig, occ and doccde in the BZ.
+ ! Reconstruct eig, occ and doccde in the BZ.
  bantot = sum(nband); mband = maxval(nband)
 
  ABI_MALLOC(doccde_3d, (mband, nkfull, nsppol))

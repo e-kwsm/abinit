@@ -15,7 +15,7 @@
 !! or http://www.gnu.org/copyleft/gpl.txt .
 !!
 !! NOTES
-!!  FOR DEVELOPPERS: in order to preserve the portability of libPAW library,
+!!  FOR DEVELOPERS: in order to preserve the portability of libPAW library,
 !!  please consult ~abinit/src/??_libpaw/libpaw-coding-rules.txt
 !!
 !! SOURCE
@@ -189,7 +189,7 @@ CONTAINS
 !! [my_atmtab(:)] = Index of atoms treated by current proc (OPTIONAL)
 !! nspden=number of spin-components for rhoij
 !! nsppol=number of spinorial components for rhoij
-!! nsppol=number of independant spin-components for rhoij
+!! nsppol=number of independent spin-components for rhoij
 !! typat(:)=types of atoms
 !! [lmnsize(:)]=array of (l,m,n) sizes for rhoij for each type of atom (OPTIONAL)
 !!              must be present if [pawtab] argument is not passed

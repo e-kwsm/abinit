@@ -95,7 +95,7 @@ MODULE m_scf_history
    ! Size of FFT grid (for density)
 
   integer :: nspden
-   ! Number of independant spin components for density
+   ! Number of independent spin components for density
 
   integer :: usecg
    ! usecg=0 if the extrapolation/mixing of the density/potential is active but not the one of the wavefunction

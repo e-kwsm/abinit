@@ -34,5 +34,5 @@ present topic.
 
 ## Tutorials
 
-* [[tutorial:rf2|The tutorial Response-Function 2 (RF2)]] presents the analysis of the DDBs that have been introduced in the preceeding tutorial RF1. The computation of the interatomic forces and the computation of thermodynamical properties is an outcome of this tutorial.
+* [[tutorial:rf2|The tutorial Response-Function 2 (RF2)]] presents the analysis of the DDBs that have been introduced in the preceding tutorial RF1. The computation of the interatomic forces and the computation of thermodynamical properties is an outcome of this tutorial.
 

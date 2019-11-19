@@ -911,7 +911,7 @@ end subroutine xmpi_allgatherv_coeff2d
 !!  xval_in = coeff2d_type array structure
 !!  spaceComm= MPI communicator
 !!  indx= gives the indexes of xval_in in xval_out.
-!!        xval_in(i) will be transfered in xval_out(indx(i))
+!!        xval_in(i) will be transferred in xval_out(indx(i))
 !!
 !! OUTPUT
 !!  xval_out = coeff2d_type array structure

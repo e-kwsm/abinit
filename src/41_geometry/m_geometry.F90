@@ -517,7 +517,7 @@ end subroutine acrossb
 !! OUTPUT
 !!  npts=number of points falling inside the Wigner-Seitz cell
 !!  irvec(3,npts)=Reduced coordinated of the points inside the W-S cell
-!!  ndegen(npts)=Weigths associated to each point.
+!!  ndegen(npts)=Weights associated to each point.
 !!
 !! SIDE EFFECTS
 !!  irvec and ndegen are are allocated with the correct
@@ -3025,7 +3025,7 @@ subroutine remove_inversion(nsym,symrel,tnons,nsym_out,symrel_out,tnons_out,pinv
 
  MSG_WARNING('Removing inversion related symmetrie from initial set')
 
- ! Find the occurence of the inversion symmetry.
+ ! Find the occurrence of the inversion symmetry.
  call set2unit(inversion) ; inversion=-inversion
 
  is_inv=0; found=.FALSE.

@@ -113,7 +113,7 @@ def gather_from_OUTCAR(filename):
     Purpose: Gather data from the output of a VASP calculation for the elastic tensor
     
     OUTPUT: Returns the system name, elastic tensor, ion mass, volume in (m^3), 
-            and the nultiplicity of each atom in the unit cell
+            and the multiplicity of each atom in the unit cell
     
     """
     system_name = ''
@@ -156,7 +156,7 @@ def gather_from_ANADDB(fileout,fileddb):
     Purpose: Gather data from the output of an ANADDB calculation for the elastic tensor
     
     OUTPUT: Returns the system name, elastic tensor, ion mass, volume in (m^3), 
-            and the nultiplicity of each atom in the unit cell
+            and the multiplicity of each atom in the unit cell
     
     """
     elasten     = np.empty(shape=(6,6))

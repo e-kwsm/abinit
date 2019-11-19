@@ -327,7 +327,7 @@ type(t_tetrahedron) function tetra_from_kptrlatt( &
    ierr = 2; goto 10
  end if
 
- ! Costruct full BZ and create mapping BZ --> IBZ
+ ! Construct full BZ and create mapping BZ --> IBZ
  ! Note:
  !   - we don't change the value of nsppol hence sppoldbl is set to 1
  !   - we use symrec (operations in reciprocal space)

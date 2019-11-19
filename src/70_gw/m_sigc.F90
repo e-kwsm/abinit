@@ -134,11 +134,11 @@ contains
 !!  eig(Sigp%nbnds,Kmesh%nibz,Wfd%nsppol)=KS or QP energies for k-points, bands and spin
 !!  occ(Sigp%nbnds,Kmesh%nibz,Wfd%nsppol)=occupation numbers, for each k point in IBZ, each band and spin
 !!  Paw_pwff<pawpwff_t>=Form factor used to calculate the onsite mat. elements of a plane wave.
-!! allQP_sym(Wfd%nkibz,Wfd%nsppol)<esymm_t>=Datatype collecting data on the irreducible representaions of the
+!! allQP_sym(Wfd%nkibz,Wfd%nsppol)<esymm_t>=Datatype collecting data on the irreducible representations of the
 !!    little group of kcalc in the KS representation as well as the symmetry of the bdgw_k states.
 !!  Sr=sigma_t (see the definition of this structured datatype)
 !!  use_aerhor=1 is aepaw_rhor is used, 0 otherwise.
-!!  aepaw_rhor(rho_nfftot,Wfd%nspden*use_aerhor)=AE PAW density used to generate PPmodel paramenters if mqmem==0
+!!  aepaw_rhor(rho_nfftot,Wfd%nspden*use_aerhor)=AE PAW density used to generate PPmodel parameters if mqmem==0
 !!
 !! OUTPUT
 !!

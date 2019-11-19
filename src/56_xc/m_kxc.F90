@@ -22,7 +22,7 @@
 !!  Moreover one has to reinstate the old functional before returning so that the other routines
 !!  will continue to used the previous ixc. This task can be accomplished with the following pseudocode
 !!
-!!   ! Reinitialize the libxc module with the overriden values
+!!   ! Reinitialize the libxc module with the overridden values
 !!   if (old_ixc<0)  call libxc_functionals_end()
 !!   if (new_ixc<0) call libxc_functionals_init(new_ixc,nspden)
 !!   ! Compute XC stuff here.
@@ -478,7 +478,7 @@ subroutine kxc_alda(dtset,ixc,kxcg,mpi_enreg,nfft,ngfft,nspden,option,rhor,rhocu
 
  call xcdata_init(xcdata,dtset=dtset,intxc=0,ixc=ixc,nspden=nspden)
 
- ! Reinitialize the libxc module with the overriden values
+ ! Reinitialize the libxc module with the overridden values
  if (dtset%ixc<0) then
    call libxc_functionals_end()
  end if
@@ -1162,7 +1162,7 @@ subroutine kxc_driver(Dtset,Cryst,ixc,ngfft,nfft_tot,nspden,rhor,npw,dim_kxcg,kx
  nk3xc=1
  izero=0
 
- ! Reinitialize the libxc module with the overriden values
+ ! Reinitialize the libxc module with the overridden values
  if (dtset%ixc<0) then
    call libxc_functionals_end()
  end if
@@ -1486,7 +1486,7 @@ subroutine kxc_ADA(Dtset,Cryst,ixc,ngfft,nfft,nspden,rhor,&
  end if
 !DEBUG
 
- ! Reinitialize the libxc module with the overriden values
+ ! Reinitialize the libxc module with the overridden values
  if (dtset%ixc<0) then
    call libxc_functionals_end()
  end if

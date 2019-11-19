@@ -256,7 +256,7 @@ subroutine vtorhorec(dtset,&
  n4 = n3
 
 !--time switch to measure gpu-cpu syncrhonisation
- swt_tm = 0 ; !no gpu initally
+ swt_tm = 0 ; !no gpu initially
 
  exppot = zero
  nullify(gcart_loc)
@@ -2023,7 +2023,7 @@ end subroutine gran_potrec
 !!  trotter=trotter parameter
 !!  tol=tolerance criteria for stopping recursion_nl
 !!  ngfft=information about FFT(dtset%ngfft a priori different from ngfftrec)
-!!  mpi_enreg=information about MPI paralelisation
+!!  mpi_enreg=information about MPI parallelisation
 !!  rset<recursion_type> contains all parameter of recursion
 !!  typat(natom)=type of pseudo potential associated to any atom
 !!  natom=number of atoms
@@ -2491,7 +2491,7 @@ end subroutine first_rec
 !!  debug_rec=debugging variable
 !!
 !! OUTPUT
-!!  ZT_p=fourier transforme of the Green kernel
+!!  ZT_p=fourier transform of the Green kernel
 !!
 !! PARENTS
 !!      first_rec
@@ -2651,7 +2651,7 @@ end subroutine green_kernel
 !!  typat(:)=type of psp associated to any atom
 !!  tol=tolerance criteria for stopping recursion
 !!  debug=debugging variable
-!!  mpi_enreg=information about MPI paralelisation
+!!  mpi_enreg=information about MPI parallelisation
 !!  nfft=number of points in FFT grid
 !!  ngfft=information about FFT
 !!  metrec<type(metricrec_type)>=information concerning the infinitesimal metrics

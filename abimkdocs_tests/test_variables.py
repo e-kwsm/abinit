@@ -53,7 +53,7 @@ class VariablesTest(AbimkdocsTest):
         symsigma_parents = abinit_vars["symsigma"].get_parent_names()
         assert len(symsigma_parents) > 0 and "optdriver" in symsigma_parents
 
-        # The text of this variable contaings greek symbols in HTML.
+        # The text of this variable contains greek symbols in HTML.
         var = abinit_vars["cd_frqim_method"]
         repr(var); str(var)
 

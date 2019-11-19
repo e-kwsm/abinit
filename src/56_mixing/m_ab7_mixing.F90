@@ -1080,7 +1080,7 @@ subroutine scfcge(cplex,dbl_nnsclo,dtn_pc,etotal,f_atm,&
 !considered successfull
  reduction=0.1_dp
 
-!nlinear increases with the number of times the 2D minimization succeded
+!nlinear increases with the number of times the 2D minimization succeeded
 !to reach the true minimum directly. It is a measure of the
 !degree of parabolicity of the problem, and is used to
 !skip some steps by performing extrapolation.
@@ -1540,7 +1540,7 @@ subroutine scfcge(cplex,dbl_nnsclo,dtn_pc,etotal,f_atm,&
 !    In region I, the line search is
 !    along vtrial-vtrial_old.
 !    The closest point is the new point
-!    thus to be transfered in the "old" locations
+!    thus to be transferred in the "old" locations
 
      do isp=1,nspden
        do ifft=1,cplex*nfft

@@ -107,7 +107,7 @@ MODULE m_xmpi
 #endif
 
  ! The byte size and the MPI type of the Fortran record marker.
- ! These quantities are compiler-dependent and are initalized here
+ ! These quantities are compiler-dependent and are initialized here
  ! for selected compilers or in xmpio_get_info_frm that is called by xmpi_init (only if MPI-IO is on).
 #if defined HAVE_MPI && (defined FC_INTEL || defined FC_GNU || defined FC_IBM)
  integer,save,public ABI_PROTECTED :: xmpio_bsize_frm   =4
@@ -4388,7 +4388,7 @@ end subroutine xmpio_write_frmarkers
 !!  To read the columns from (1,2) up to (2,2) one should use array_of_starts=(1,2) and array_of_ends=(2,2).
 !!  The MPI-IO file view should be created by moving the file pointer so that it points to the elements (1,2).
 !!
-!!  File views for C-streams is not optimal since one can use a single slice of contigous data.
+!!  File views for C-streams is not optimal since one can use a single slice of contiguous data.
 !!
 !! PARENTS
 !!      exc_build_block

@@ -27,7 +27,7 @@ inclvkb2    2        # Treat the non-analytic behaviour of heads and wings of ch
 optdriver3  4        # Self-Energy calculation
 #symsigma3   1       # At present, cannot use symmetries.
 nomegasi3    10       # No. of points for \Sigma(i\omega) sampled along the imaginary axis
-omegasimax3  10 eV    # Max imaginary freq. As a rule of thumb, it shoud be at least twice the max
+omegasimax3  10 eV    # Max imaginary freq. As a rule of thumb, it should be at least twice the max
                      # real frequency where \Sigma(\omega) is extrapolated (Middle of the gap is taken as referece energy)
 
 getwfk3     1       # Obtain the WFK file from dataset 1
@@ -45,7 +45,7 @@ icutcoul3  3  # old deprecated value of icutcoul, only used for legacy
 optdriver4  4        # Self-Energy calculation
 #symsigma4   1       # At present, cannot use symmetries.
 nomegasi4   10       # No. of points for \Sigma(i\omega) sampled along the imaginary axis
-omegasimax4 10 eV    # Max imaginary freq. As a rule of thumb, it shoud be at least twice the max
+omegasimax4 10 eV    # Max imaginary freq. As a rule of thumb, it should be at least twice the max
                      # real frequency where \Sigma(\omega) is extrapolated (Middle of the gap is taken as referece energy)
 
 getwfk4     1       # Obtain the WFK file from dataset 1
@@ -64,7 +64,7 @@ icutcoul4  3  # old deprecated value of icutcoul, only used for legacy
 optdriver5  4        # Self-Energy calculation
 #symsigma5   1       # At present, cannot use symmetries.
 nomegasi5   10       # No. of points for \Sigma(i\omega) sampled along the imaginary axis
-omegasimax5 10 eV    # Max imaginary freq. As a rule of thumb, it shoud be at least twice the max
+omegasimax5 10 eV    # Max imaginary freq. As a rule of thumb, it should be at least twice the max
                      # real frequency where \Sigma(\omega) is extrapolated (Middle of the gap is taken as referece energy)
 
 getwfk5     1       # Obtain the WFK file from dataset 1

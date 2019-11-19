@@ -394,7 +394,7 @@ class Patcher(object):
                 string with the name of the utility we want to use
                 for generating/applying patchers
                 If patcher is None, we use the applications specified
-                in the env variables PATHCHER or vimdiff if $PATHCHER is
+                in the env variables PATCHER or vimdiff if $PATCHER is
                 not defined
         """
         if patcher is None:

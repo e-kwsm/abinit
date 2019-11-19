@@ -174,7 +174,7 @@ def get_abinit_group(tokens):
 def get_abinit_chars(tokens):
 	"""Retrieve characters and frequencies for modes from anaddb output file"""
 
-#  find the correct occurence of Phonon which is followed by the gamma point freqs
+#  find the correct occurrence of Phonon which is followed by the gamma point freqs
 	for ii in range(tokens.count('Phonon')):
 		ind1 = tokens.index('Phonon')
 		if tokens[ind1+1] != 'wavevector' or tokens[ind1+2] != '(reduced' :
@@ -281,7 +281,7 @@ def get_sym_corresp(abinit_sym_elem,bilbao_sym_elem):
 	return abi_to_bilbao
 
 def get_bilbao_symbols(bilbao_sym_elem,bilbao_irreps_chars):
-	"""Deteremine irreps names from symmetry considerations"""
+	"""Determine irreps names from symmetry considerations"""
 	
 	iident = find_ident(bilbao_sym_elem)
 	iinv = -1
@@ -379,7 +379,7 @@ def find_princ_rotation(sym_elem,has_inv,iinv):
 		# if we found an S operation (axis+Inverse) dont count it
 		#   should have a corresponding C operation
 		#   the danger is that order(S) = 2*order(C) and we want the C
-		#   to deterine the principal rotation
+		#   to determine the principal rotation
 		if is_Sop == 1:
 			break
 		if iorder > morder:

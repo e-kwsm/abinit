@@ -100,10 +100,10 @@ inp_files = [
 "t94.in",
 "-t95.in",   # TOOOO SLOW and not portable (to be debugged)
 "-t96.in",   # TOOOO SLOW and not portable (to be debugged)
-"-t121.in",  # Transfered to seq  
-"-t122.in",  # Transfered to seq 
-"-t123.in",  # Transfered to seq 
-"-t124.in",  # Transfered to seq 
-"-t125.in",  # Transfered to seq 
-"-t126.in",  # Transfered to seq 
+"-t121.in",  # Transferred to seq
+"-t122.in",  # Transferred to seq
+"-t123.in",  # Transferred to seq
+"-t124.in",  # Transferred to seq
+"-t125.in",  # Transferred to seq
+"-t126.in",  # Transferred to seq
 ]

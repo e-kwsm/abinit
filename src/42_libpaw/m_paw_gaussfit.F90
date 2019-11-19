@@ -13,7 +13,7 @@
 !!  or http://www.gnu.org/copyleft/gpl.txt .
 !!
 !! NOTES
-!!  FOR DEVELOPPERS: in order to preserve the portability of libPAW library,
+!!  FOR DEVELOPERS: in order to preserve the portability of libPAW library,
 !!  please consult ~abinit/src/??_libpaw/libpaw-coding-rules.txt
 !!
 !! SOURCE
@@ -1638,7 +1638,7 @@ end subroutine gaussfit_calc_deriv_c4
 !!  or http://www.gnu.org/copyleft/gpl.txt .
 !!  The original Levemberg Marquardt routines were written by Armando Sole
 !!  These were modified for the ARPUS spectra in the BigDFT code by A. Mirone.
-!!  These were re-writen in Fortran and further modified in ABINIT for our particular needs.
+!!  These were re-written in Fortran and further modified in ABINIT for our particular needs.
 !!
 !! INPUTS
 !!  option=1 fit to a1 cos(a2 x^2)+ a3 sin( a4 x^2)
@@ -1829,7 +1829,7 @@ end subroutine gaussfit_rlsf
 !!  or http://www.gnu.org/copyleft/gpl.txt .
 !!  The original Levemberg Marquardt routines were written by Armando Sole
 !!  These were modified for the ARPUS spectra in the BigDFT code by A. Mirone.
-!!  These were re-writen in Fortran and further modified in ABINIT for our particular needs.
+!!  These were re-written in Fortran and further modified in ABINIT for our particular needs.
 !!
 !! INPUTS
 !!

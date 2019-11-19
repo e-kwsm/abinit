@@ -86,7 +86,7 @@ contains
 !!     change of atomic positions.
 !! 2) Precondition the residual, get first part of proposed trial
 !!     potential change.
-!! 3) PAW only: precondition the rhoij residuals (simple preconditionning)
+!! 3) PAW only: precondition the rhoij residuals (simple preconditioning)
 !! 4) Take into account the proposed change of atomic positions to
 !!     modify the proposed trial potential change.
 !!
@@ -139,7 +139,7 @@ contains
 !!  my_natom=number of atoms treated by current processor
 !!  nattyp(ntypat)=number of atoms of each type in cell.
 !!  nfft=number of fft grid points
-!!  nfftprc=size of FFT grid on which the potential residual will be preconditionned
+!!  nfftprc=size of FFT grid on which the potential residual will be preconditioned
 !!  ngfft(18)=contain all needed information about 3D FFT, see ~abinit/doc/variables/vargs.htm#ngfft
 !!  ngfftprc(18)=contain all needed information about 3D FFT for the grid corresponding to nfftprc
 !!  nkxc=second dimension of the array kxc, see rhotoxc.F90 for a description
@@ -171,7 +171,7 @@ contains
 !!                                          in reduced coordinates
 !!  vrespc(optreal*nfftprc,nspden)=preconditioned residual of the potential
 !!  ==== if psps%usepaw==1
-!!    rhoijrespc(npawmix)= preconditionned rhoij residuals at output
+!!    rhoijrespc(npawmix)= preconditioned rhoij residuals at output
 !!
 !! SIDE EFFECT
 !!  dielinv(2,npwdiel,nspden,npwdiel,nspden)=
@@ -304,7 +304,7 @@ subroutine prcref(atindx,dielar,dielinv,&
 &       vresid,vrespc,dtset%natom,xred,mpi_enreg,ucvol)
      end if
    else
-!    If preconditionning has to be done on a coarse grid,
+!    If preconditioning has to be done on a coarse grid,
 !    has to transfer several arrays
      ABI_ALLOCATE(work1,(nfftprc,dtset%nspden))
      ABI_ALLOCATE(work3,(nfftprc,dtset%nspden))
@@ -481,7 +481,7 @@ subroutine prcref(atindx,dielar,dielinv,&
 !#######################################################################
 
 !3) PAW only : precondition the rhoij quantities (augmentation
-!occupancies) residuals. Use a simple preconditionning
+!occupancies) residuals. Use a simple preconditioning
 !with the same mixing factor as the model dielectric function.
 
  if (psps%usepaw==1.and.my_natom>0) then
@@ -685,7 +685,7 @@ subroutine prcref(atindx,dielar,dielinv,&
    else                 ! Array vresid contains a density residual
 !    -----------------------------------------------------------------
 
-!    Only have to compute the modified preconditionned density residual
+!    Only have to compute the modified preconditioned density residual
      option=2
      ABI_ALLOCATE(gresid,(3,dtset%natom))
      ABI_ALLOCATE(grxc,(3,dtset%natom))
@@ -734,7 +734,7 @@ end subroutine prcref
 !!     change of atomic positions.
 !! 2) Precondition the residual, get first part of proposed trial
 !!     potential change.
-!! 3) PAW only: precondition the rhoij residuals (simple preconditionning)
+!! 3) PAW only: precondition the rhoij residuals (simple preconditioning)
 !! 4) Take into account the proposed change of atomic positions to
 !!     modify the proposed trial potential change.
 !!
@@ -786,7 +786,7 @@ end subroutine prcref
 !!  my_natom=number of atoms treated by current processor
 !!  nattyp(ntypat)=number of atoms of each type in cell.
 !!  nfft=number of fft grid points
-!!  nfftprc=size of FFT grid on which the potential residual will be preconditionned
+!!  nfftprc=size of FFT grid on which the potential residual will be preconditioned
 !!  ngfft(18)=contain all needed information about 3D FFT, see ~abinit/doc/variables/vargs.htm#ngfft
 !!  ngfftprc(18)=contain all needed information about 3D FFT for the grid corresponding to nfftprc
 !!  nkxc=second dimension of the array kxc, see rhotoxc.f for a description
@@ -820,7 +820,7 @@ end subroutine prcref
 !!                                          in reduced coordinates
 !!  vrespc(optreal*nfftprc,nspden)=preconditioned residual of the potential
 !!  ==== if psps%usepaw==1
-!!    rhoijrespc(npawmix)= preconditionned rhoij residuals at output
+!!    rhoijrespc(npawmix)= preconditioned rhoij residuals at output
 !!
 !! SIDE EFFECT
 !!  dielinv(2,npwdiel,nspden,npwdiel,nspden)=
@@ -961,7 +961,7 @@ end subroutine prcref
 &       vresid,vrespc,dtset%natom,xred,mpi_enreg,ucvol)
      end if
    else
-!    If preconditionning has to be done on a coarse grid,
+!    If preconditioning has to be done on a coarse grid,
 !    has to transfer several arrays
      ABI_ALLOCATE(work1,(nfftprc,dtset%nspden))
      ABI_ALLOCATE(work3,(nfftprc,dtset%nspden))
@@ -1125,7 +1125,7 @@ end subroutine prcref
 !#######################################################################
 
 !3) PAW only : precondition the rhoij quantities (augmentation
-!occupancies) residuals. Use a simple preconditionning
+!occupancies) residuals. Use a simple preconditioning
 !with the same mixing factor as the model dielectric function.
 
  if (psps%usepaw==1.and.my_natom>0) then
@@ -1449,7 +1449,7 @@ subroutine moddiel(cplex,dielar,mpi_enreg,nfft,ngfft,nspden,optreal,optres,paral
 
  dielng=dielar(2) ; diemac=dielar(3) ; diemix=dielar(4) ; diemixmag=dielar(7)
 
- magn_precon=(diemixmag>=zero) ! Set to true if magnetization has to be preconditionned
+ magn_precon=(diemixmag>=zero) ! Set to true if magnetization has to be preconditioned
  diemixmag=abs(diemixmag)
 
 !DEBUG
@@ -1464,7 +1464,7 @@ subroutine moddiel(cplex,dielar,mpi_enreg,nfft,ngfft,nspden,optreal,optres,paral
    if (nspden/=1) vrespc(:,2:nspden)=diemixmag*vresid(:,2:nspden)
  else
 
-!  Magnetization is not preconditionned
+!  Magnetization is not preconditioned
    if (optres==1.and.nspden>1.and.(.not.magn_precon)) vrespc(:,2:nspden)=diemixmag*vresid(:,2:nspden)
 
 !  Here, model dielectric function (G-diagonal operator)
@@ -2445,7 +2445,7 @@ end subroutine dieltcel
 !! prcrskerker1
 !!
 !! FUNCTION
-!! preconditionning by a real-space conjugate gradient on residual
+!! preconditioning by a real-space conjugate gradient on residual
 !! using a model dielectric function in real space
 !!
 !! INPUTS
@@ -2582,7 +2582,7 @@ subroutine prcrskerker1(dtset,mpi_enreg,nfft,nspden,ngfft,dielar,etotal,gprimd,v
 !call random_number(deltaW)
 !call random_number(vrespc)
 !******************************************************************
-!Finding the preconditionned residuals which minimizes          **
+!Finding the preconditioned residuals which minimizes          **
 !half*(vrespc*(1-dielng2/4pi2 nabla2) vrespc) - vrespc * deltaW **
 !***********************************************************************
  vrespc(:,1)=diemix*vrespc(:,1)
@@ -2671,7 +2671,7 @@ end subroutine prcrskerker1
 !! prcrskerker2
 !!
 !! FUNCTION
-!! preconditionning by a real-space conjugate gradient on residual
+!! preconditioning by a real-space conjugate gradient on residual
 !! using a model dielectric function in real space
 !! differing from prcrskerker1 by the
 !! use of a linear response approach
@@ -2980,7 +2980,7 @@ subroutine prcrskerker2(dtset,nfft,nspden,ngfft,dielar,gprimd,rprimd,vresid,vres
  DE=C1/(one-C2)
 
 !******************************************************************
-!compute the new preconditionned residuals
+!compute the new preconditioned residuals
 !******************************************************************
  vrespc(:,1)=diemix*(V1(:,1)+DE*V2(:,1))
  if (nspden>1) vrespc(:,2:nspden)=abs(diemixmag)*(V1(:,2:nspden)+DE*V2(:,2:nspden))

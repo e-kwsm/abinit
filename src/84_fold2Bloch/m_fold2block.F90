@@ -114,7 +114,7 @@ CONTAINS  !===========================================================
    end do
  end do
 
- !Sorts the energy coeeficients
+ !Sorts the energy coefficients
  do jj=1, (NV)
    remainder_x=MODULO(Vector(1,jj), FX)
    remainder_y=MODULO(Vector(2,jj), FY)

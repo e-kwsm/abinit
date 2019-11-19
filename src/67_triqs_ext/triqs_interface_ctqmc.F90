@@ -2,7 +2,7 @@
 #include "config.h"
 #endif
 ! =====================================================================
-!    Fortran Module Interface for C++ fonction using ISO_C_BINDING
+!    Fortran Module Interface for C++ function using ISO_C_BINDING
 ! =====================================================================
 !
 ! CHILDREN: Ctqmc_triqs_run() ; hellocpp()

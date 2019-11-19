@@ -1103,7 +1103,7 @@ subroutine dvdb_readsym_allv1(db, iqpt, cplex, nfft, ngfft, v1scf, comm)
  ! Perturbation are missing and we have to reconstruct them by symmetry.
  ! This is the common case when DFPT calculations are done for independent perturbations only.
  if (db%debug) then
-   write(std_out,*)sjoin("Will use symmetries to recostruct:", itoa(3*db%natom - npc), "perturbations")
+   write(std_out,*)sjoin("Will use symmetries to reconstruct:", itoa(3*db%natom - npc), "perturbations")
  end if
 
  ! 0 if pert is not available.
@@ -1352,14 +1352,14 @@ pcase_loop: &
  ! Handle possible error.
  if (any(pflag == 0)) then
    write(std_out,"(2a)")&
-     "The following perturbations cannot be recostructed by symmetry for q-point: ",trim(ktoa(qpt))
+     "The following perturbations cannot be reconstructed by symmetry for q-point: ",trim(ktoa(qpt))
    do ipert=1,cryst%natom
      do idir=1,3
         if (pflag(idir, ipert) == 0) write(std_out,"(2(a,i0))")"idir= ",idir,", ipert= ",ipert
      end do
    end do
    write(msg,"(5a)")&
-     "Cannot recostruct all 3*natom atomic perturbations from file",ch10,&
+     "Cannot reconstruct all 3*natom atomic perturbations from file",ch10,&
      "This usually happens when the DVDB does not contain all the independent perturbations for this q-point",ch10,&
      "See message above for further information."
    MSG_ERROR(msg)

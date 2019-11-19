@@ -15,7 +15,7 @@
 !! For the initials of contributors, see ~abinit/doc/developers/contributors.txt.
 !!
 !! NOTES
-!!  FOR DEVELOPPERS: in order to preserve the portability of libPAW library,
+!!  FOR DEVELOPERS: in order to preserve the portability of libPAW library,
 !!  please consult ~abinit/src/??_libpaw/libpaw-coding-rules.txt
 !!
 !! SOURCE
@@ -187,7 +187,7 @@ subroutine get_my_atmtab(comm_atom,my_atmtab,my_atmtab_allocated,paral_atom,nato
          if (my_natom==natom) then
            my_atmtab(1:my_natom)=(/(iatom,iatom=1,natom)/)
          else
-!          The atoms are distributed contigously by egal part
+!          The atoms are distributed contiguously by egal part
 !          (the rest is distributed on all the procs)
            nmod=mod(natom,nproc)
            if (me<=(nmod-1)) then
@@ -337,7 +337,7 @@ end subroutine free_my_atmtab
 ! Get table of atoms
  if (natom_out>0) then
    LIBPAW_ALLOCATE(atmtab,(natom_out))
-!  The atoms are distributed contigously by egal part
+!  The atoms are distributed contiguously by egal part
 !  The rest is distributed on all the procs
 !  (see get_my_atmtab)
    nmod=mod(natom,nproc)
@@ -384,7 +384,7 @@ end subroutine get_proc_atmtab
 !! proc_list(:) = index of procs
 !!
 !! NOTES
-!!  The atoms are distributed contigously by egal part; the rest is distributed
+!!  The atoms are distributed contiguously by egal part; the rest is distributed
 !!  on all the procs (see get_my_atmtab).
 !!  In case of modification of the distribution of atom over proc, this routine
 !!  must be modified accordingly.

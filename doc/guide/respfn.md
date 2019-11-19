@@ -589,7 +589,7 @@ are needed, check the convergence of phonon frequencies !
 
 The user should note that for bands with very small occupancy in the metallic
 case as well as unoccupied bands for insulators, the ground state run
-preceeding response function runs will not necessarily converge these
+preceding response function runs will not necessarily converge these
 wavefunctions using usual ground-state tests such as [[toldfe]] or (better)
 [[tolvrs]]. To be sure that inaccuracies are not introduced into the response
 function calculation by poorly converged unoccupied bands, a separate run

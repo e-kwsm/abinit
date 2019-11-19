@@ -645,7 +645,7 @@ AC_DEFUN([ABI_LINALG_DETECT],[
   LIBS="${with_linalg_libs} ${LIBS}"
   AC_LANG_PUSH([Fortran])
 
-  dnl Make sure the 'none' flavor is not overriden
+  dnl Make sure the 'none' flavor is not overridden
   if test "${with_linalg_flavor}" = "none"; then
     if test "${with_linalg_incs}" != "" -o \
             "${with_linalg_libs}" != ""; then
